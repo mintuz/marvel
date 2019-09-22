@@ -1,9 +1,10 @@
-import { rem } from 'polished';
+import { rem } from 'polished'
 
 const primitives = {
     breakpoints: ['400px', '640px', '900px', '1008px', '1280px'],
     space: [0, 4, 8, 12, 16],
     fontSizes: [16, 20, 24, 32],
+    fontFamily: "'Open Sans', sans-serif",
     lineHeights: [24, 28, 32, 40],
     fontWeights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
     colors: {
@@ -39,29 +40,29 @@ const primitives = {
             'rgba(255,255,255,.9)',
         ],
     },
-};
+}
 
 export default {
     ...primitives,
     grid: {
         default: {
             marginLeft: -8,
-            marginRight: -8
+            marginRight: -8,
         },
         none: {
             marginLeft: 0,
-            marginRight: 0
-        }
+            marginRight: 0,
+        },
     },
     gridItem: {
         default: {
             paddingLeft: 8,
-            paddingRight: 8
+            paddingRight: 8,
         },
         none: {
             paddingLeft: 0,
-            paddingRight: 0
-        }
+            paddingRight: 0,
+        },
     },
     textStyle: {
         body: {
@@ -79,7 +80,7 @@ export default {
         displayThree: {
             fontSize: rem(primitives.fontSizes[3]),
             lineHeight: rem(primitives.lineHeights[3]),
-        }
+        },
     },
     buttons: {
         primary: {
@@ -91,4 +92,4 @@ export default {
             color: primitives.colors.black,
         },
     },
-};
+}
