@@ -29,7 +29,7 @@ export const tabs = () => (
                 </p>
             </Tab>
             <Tab title="Item 2" id="item2">
-                <h2>Item 1 html</h2>
+                <h2>Item 2 html</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Sint culpa cupiditate sed repellendus accusantium saepe
@@ -48,7 +48,7 @@ export const tabs = () => (
                 </p>
             </Tab>
             <Tab title="Item 3" id="item3">
-                <h2>Item 1 html</h2>
+                <h2>Item 3 html</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Sint culpa cupiditate sed repellendus accusantium saepe
