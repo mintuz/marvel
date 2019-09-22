@@ -1,0 +1,44 @@
+{
+  "name": "marvel",
+  "version": "1.0.0",
+  "description": "A collection of UI components built in React",
+  "main": "dist/index.js",
+  "scripts": {
+    "prettier": "prettier",
+    "test": "cypress run",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "babel": "babel src --out-dir dist",
+    "build": "npm run babel"
+  },
+  "author": "Adam Bulmer <github@mintuz.com>",
+  "license": "MIT",
+  "dependencies": {
+    "polished": "^3.4.1",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "styled-components": "^4.3.2",
+    "styled-system": "^5.0.16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
+    "@babel/plugin-transform-classes": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "@cypress/webpack-preprocessor": "^1.0.0",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-links": "^5.2.1",
+    "@storybook/addons": "^5.2.1",
+    "@storybook/react": "^5.2.1",
+    "@testing-library/cypress": "^4.0.4",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.6",
+    "cypress": "^3.3.2",
+    "cypress-react-unit-test": "^2.4.3",
+    "prettier": "1.18.2"
+  }
+}
