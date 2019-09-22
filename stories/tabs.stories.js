@@ -3,7 +3,7 @@ import Theme from '../src/Components/ThemeProvider'
 import { Tabs, Tab } from '../src/Components/Tabs'
 
 export default {
-    title: '2. Components|Tabs',
+    title: '3. Components|Tabs',
 }
 
 export const tabs = () => (
