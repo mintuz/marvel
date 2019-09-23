@@ -87,7 +87,7 @@ export default {
             color: primitives.colors.white,
             backgroundColor: primitives.colors.black,
         },
-        ghost: {
+        secondary: {
             border: `1px solid ${primitives.colors.black}`,
             color: primitives.colors.black,
         },

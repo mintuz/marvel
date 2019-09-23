@@ -1,0 +1,29 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import Theme from '../src/Components/ThemeProvider'
+import Button from '../src/Components/Button'
+
+<Meta title="3. Components|Button" component={Button} />
+
+# Button
+
+Clickable element to trigger an action on the **current** page.
+
+Primary action within a context.
+
+<Preview>
+    <Story name="Primary">
+        <Theme>
+            <Button variant="primary">Primary Button</Button>
+        </Theme>
+    </Story>
+</Preview>
+
+Secondary action within a context.
+
+<Preview>
+    <Story name="Secondary">
+        <Theme>
+            <Button variant="secondary">Secondary Button</Button>
+        </Theme>
+    </Story>
+</Preview>
