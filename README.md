@@ -3,7 +3,7 @@ Marvel UI is a component library that aims to be fully accessible and customizab
 
 ## Getting Started
 1. `yarn add @mintuz/marvel-ui`
-2. See [documentation]() for importing a specific component
+2. See [documentation](https://mintuz.github.io/marvel-ui/?path=/docs/) for importing a specific component
 
 ## Development
 

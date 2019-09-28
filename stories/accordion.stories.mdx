@@ -1,9 +1,9 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
 import Theme from '../src/Components/ThemeProvider'
-import Accordion from '../src/Components/Accordion'
+import { Accordion, AccordionItem } from '../src/Components/Accordion'
 import Typography from '../src/Components/Typography'
 
-<Meta title="2. Components|Accordion" component={Accordion} />
+<Meta title="3. Components|Accordion" component={Accordion} />
 
 # Accordion
 
@@ -16,23 +16,29 @@ An accordion allows a user to toggle the display of a section of content. They s
                 <AccordionItem
                     header={
                         <React.Fragment>
-                            <Typography mb={0} as="h2">
+                            <Typography mt={0} mb={0} as="h2">
                                 Item 1
                             </Typography>
-                            <Typography as="p" mb={0}>
+                            <Typography as="p" mt={0} mb={0}>
                                 Some description text underneith
                             </Typography>
                         </React.Fragment>
                     }
                 >
-                    <Typography as="p" mb={0}>
+                    <Typography as="p" mt={0} mb={0}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Optio nemo odit temporibus illo quo eos ipsum atque!
                         Distinctio, vel tempora placeat quasi voluptatibus
                         aperiam ad adipisci iste deserunt illo voluptas.
                     </Typography>
                 </AccordionItem>
-                <AccordionItem header={<Typography as="h2">Item 2</Typography>}>
+                <AccordionItem
+                    header={
+                        <Typography mt={0} mb={0} as="h2">
+                            Item 2
+                        </Typography>
+                    }
+                >
                     <Typography as="p" mb={0}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Optio nemo odit temporibus illo quo eos ipsum atque!
