@@ -8,13 +8,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-			  uses: actions/checkout@master
-			- name: Install
-			  uses: Borales/actions-yarn@master
-			- name: Build
-			  uses: Borales/actions-yarn@master
-			  with:
-				args: build-storybook
+              uses: actions/checkout@master
+            - name: Install
+              uses: Borales/actions-yarn@master
+            - name: Build
+              uses: Borales/actions-yarn@master
+              with:
+              args: build-storybook
             - name: Deploy
               uses: JamesIves/github-pages-deploy-action@master
               env:
