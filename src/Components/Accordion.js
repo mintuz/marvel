@@ -8,7 +8,7 @@ const AccordionList = styled.ul`
 `
 
 const AccordionItemContainer = styled.div`
-    border: 1px solid RGB(239, 239, 239);
+    border: 1px solid rgb(239, 239, 239);
     margin-top: -1px;
 `
 
@@ -19,8 +19,8 @@ const AccordionTitle = styled.button`
     border: none;
     padding: 16px;
 
-    :not(.is-open) &:hover {
-        background-color: RGB(239, 239, 239);
+    :not(.mv-c-accordion-item--is-open) &:hover {
+        background-color: rgb(239, 239, 239);
     }
 `
 
@@ -28,14 +28,16 @@ const AccordionContent = styled.div`
     display: none;
     padding: 16px;
 
-    .is-open & {
+    .mv-c-accordion-item--is-open & {
         display: block;
     }
 `
 
 export const AccordionItem = ({ header, children, onClick, isOpen, id }) => {
     return (
-        <AccordionItemContainer className={isOpen ? 'is-open' : ''}>
+        <AccordionItemContainer
+            className={isOpen ? 'mv-c-accordion-item--is-open' : ''}
+        >
             <AccordionTitle
                 aria-expanded={isOpen}
                 aria-controls={`accordion-item--${id}`}

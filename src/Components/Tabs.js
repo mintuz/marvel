@@ -14,10 +14,12 @@ const TabItem = styled.li`
     margin-bottom: -1px;
     padding: 8px;
 
-    a {
+    button {
         display: block;
         padding: 8px;
         background-color: red;
+        border: none;
+        width: 100%;
     }
 
     &.mv-c-tab--is-active {
@@ -26,7 +28,7 @@ const TabItem = styled.li`
         border-right: 1px solid black;
         border-bottom: 1px solid white;
 
-        a {
+        button {
             background: transparent;
             text-decoration: none;
         }
@@ -50,12 +52,13 @@ export const Tabs = ({ children, activeTab }) => {
         <React.Fragment>
             <TabItems>
                 {React.Children.map(children, child => {
-                    const isActive = active === child.props.id
+                    const isOpen = active === child.props.id
                     return (
                         <TabItem
-                            className={isActive ? 'mv-c-tab--is-active' : ''}
+                            className={isOpen ? 'mv-c-tab--is-active' : ''}
                         >
                             {React.cloneElement(child, {
+                                isOpen,
                                 onClick() {
                                     setActive(child.props.id)
                                 },
@@ -66,11 +69,12 @@ export const Tabs = ({ children, activeTab }) => {
             </TabItems>
             <div>
                 {React.Children.map(children, child => {
-                    const isActive = active === child.props.id
+                    const isOpen = active === child.props.id
                     return (
                         <TabContent
-                            id={child.props.id}
-                            className={isActive ? 'mv-c-tab--is-active' : ''}
+                            aria-hidden={!isOpen}
+                            id={`tab-item-${child.props.id}`}
+                            className={isOpen ? 'mv-c-tab--is-active' : ''}
                         >
                             {child.props.children}
                         </TabContent>
@@ -81,10 +85,14 @@ export const Tabs = ({ children, activeTab }) => {
     )
 }
 
-export const Tab = ({ title, id, onClick }) => {
+export const Tab = ({ title, id, onClick, isOpen }) => {
     return (
-        <a href={`#${id}`} onClick={onClick}>
+        <button
+            aria-expanded={isOpen}
+            aria-controls={`tab-item-${id}`}
+            onClick={onClick}
+        >
             {title}
-        </a>
+        </button>
     )
 }
