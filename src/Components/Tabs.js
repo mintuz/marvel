@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
+import Button from './Button'
 
 const TabItems = styled.ul`
     display: flex;
@@ -18,19 +19,6 @@ const TabItem = styled.li`
         padding: [2],
     })}
 
-    button {
-        display: block;
-        border: none;
-        width: 100%;
-
-        ${css({
-            padding: [4],
-            backgroundColor: 'black',
-            color: 'white',
-            fontSize: [0],
-        })}
-    }
-
     &.mv-c-tab--is-active {
         border: 1px solid;
 
@@ -42,15 +30,19 @@ const TabItem = styled.li`
             borderRightColor: 'gray',
             borderBottomColor: 'white',
         })}
+    }
+`
 
-        button {
-            background: transparent;
-            text-decoration: none;
-            ${css({
-                backgroundColor: 'white',
-                color: 'black',
-            })}
-        }
+const TabButton = styled(Button)`
+    width: 100%;
+
+    .mv-c-tab--is-active & {
+        border: none;
+        background: transparent;
+        ${css({
+            backgroundColor: 'white',
+            color: 'black',
+        })}
     }
 `
 
@@ -108,14 +100,15 @@ export const Tabs = ({ children, activeTab }) => {
     )
 }
 
-export const Tab = ({ title, id, onClick, isOpen }) => {
+export const Tab = ({ title, id, onClick, isOpen, variant = 'primary' }) => {
     return (
-        <button
+        <TabButton
+            variant={variant}
             aria-expanded={isOpen}
             aria-controls={`tab-item-${id}`}
             onClick={onClick}
         >
             {title}
-        </button>
+        </TabButton>
     )
 }
