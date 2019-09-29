@@ -1,8 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import {variant} from 'styled-system';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { variant } from 'styled-system'
 
-export default styled.button`
+const Button = styled.button`
     display: inline-flex;
     cursor: pointer;
     border: none;
@@ -11,7 +12,21 @@ export default styled.button`
     text-align: center;
     align-items: center;
     justify-content: center;
+
     ${variant({
-        scale: 'buttons',
+        scale: 'button',
     })}
-`;
+`
+
+Button.propTypes = {
+    /**
+      Variant of button to render.
+    */
+    variant: PropTypes.string,
+    /**
+      React Children.
+    */
+    children: PropTypes.node,
+}
+
+export default Button

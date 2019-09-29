@@ -1,0 +1,20 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import Theme from '../src/Components/ThemeProvider'
+import LoadingSpinner from '../src/Components/LoadingSpinner'
+import Box from '../src/Components/Box'
+
+<Meta title="3. Components|Loading Spinner" component={LoadingSpinner} />
+
+# Loading Spinner
+
+An SVG Icon that spins, scalable via parent components font size
+
+<Preview>
+    <Story name="Default">
+        <Theme>
+            <Box fontSize="64px" color="black">
+                <LoadingSpinner />
+            </Box>
+        </Theme>
+    </Story>
+</Preview>

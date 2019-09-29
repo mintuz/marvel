@@ -11,34 +11,8 @@ const primitives = {
         black: 'rgb(0, 0, 0)',
         white: 'rgb(255, 255, 255)',
         transparent: 'transparent',
-        blacks: [
-            'rgba(0,0,0,.0125)',
-            'rgba(0,0,0,.025)',
-            'rgba(0,0,0,.05)',
-            'rgba(0,0,0,.1)',
-            'rgba(0,0,0,.2)',
-            'rgba(0,0,0,.3)',
-            'rgba(0,0,0,.4)',
-            'rgba(0,0,0,.5)',
-            'rgba(0,0,0,.6)',
-            'rgba(0,0,0,.7)',
-            'rgba(0,0,0,.8)',
-            'rgba(0,0,0,.9)',
-        ],
-        whites: [
-            'rgba(255,255,255,.0125)',
-            'rgba(255,255,255,.025)',
-            'rgba(255,255,255,.05)',
-            'rgba(255,255,255,.1)',
-            'rgba(255,255,255,.2)',
-            'rgba(255,255,255,.3)',
-            'rgba(255,255,255,.4)',
-            'rgba(255,255,255,.5)',
-            'rgba(255,255,255,.6)',
-            'rgba(255,255,255,.7)',
-            'rgba(255,255,255,.8)',
-            'rgba(255,255,255,.9)',
-        ],
+        gray: 'rgb(200, 200, 200)',
+        red: 'rgb(202, 0, 0)',
     },
 }
 
@@ -82,14 +56,18 @@ export default {
             lineHeight: rem(primitives.lineHeights[3]),
         },
     },
-    buttons: {
+    button: {
         primary: {
             color: primitives.colors.white,
             backgroundColor: primitives.colors.black,
+            fontSize: rem(primitives.fontSizes[0]),
+            lineHeight: rem(primitives.lineHeights[0]),
         },
         secondary: {
             border: `1px solid ${primitives.colors.black}`,
             color: primitives.colors.black,
+            fontSize: rem(primitives.fontSizes[0]),
+            lineHeight: rem(primitives.lineHeights[0]),
         },
     },
 }

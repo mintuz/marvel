@@ -20,7 +20,7 @@ const Container = styled(Icon)`
 
 export default () => {
     return (
-        <Container>
+        <Container role="presentation">
             <svg viewBox="0 0 40 40" fill="none">
                 <path
                     fill-rule="evenodd"

@@ -1,0 +1,31 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import Theme from '../src/Components/ThemeProvider'
+import InputField from '../src/Components/Form/InputField'
+
+<Meta title="3. Components|Input Field" component={InputField} />
+
+# Input Field
+
+## Default state
+
+<Preview>
+    <Story name="Default">
+        <Theme>
+            <InputField label="My input label" placeholder="Placeholder" />
+        </Theme>
+    </Story>
+</Preview>
+
+## Error
+
+<Preview>
+    <Story name="Input field error">
+        <Theme>
+            <InputField
+                error="This is an error message passed in"
+                label="My input label"
+                placeholder="Placeholder"
+            />
+        </Theme>
+    </Story>
+</Preview>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import css from '@styled-system/css'
 
 const TabItems = styled.ul`
     display: flex;
@@ -12,33 +13,55 @@ const TabItems = styled.ul`
 const TabItem = styled.li`
     flex: 1 0 auto;
     margin-bottom: -1px;
-    padding: 8px;
+
+    ${css({
+        padding: [2],
+    })}
 
     button {
         display: block;
-        padding: 8px;
-        background-color: red;
         border: none;
         width: 100%;
+
+        ${css({
+            padding: [4],
+            backgroundColor: 'black',
+            color: 'white',
+            fontSize: [0],
+        })}
     }
 
     &.mv-c-tab--is-active {
-        border-top: 1px solid black;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
-        border-bottom: 1px solid white;
+        border: 1px solid;
+
+        ${css({
+            backgroundColor: 'white',
+            color: 'black',
+            borderTopColor: 'gray',
+            borderLeftColor: 'gray',
+            borderRightColor: 'gray',
+            borderBottomColor: 'white',
+        })}
 
         button {
             background: transparent;
             text-decoration: none;
+            ${css({
+                backgroundColor: 'white',
+                color: 'black',
+            })}
         }
     }
 `
 
 const TabContent = styled.div`
     display: none;
-    border: 1px solid black;
-    padding: 8px;
+    border: 1px solid;
+
+    ${css({
+        padding: [4],
+        borderColor: 'gray',
+    })}
 
     &.mv-c-tab--is-active {
         display: block;
