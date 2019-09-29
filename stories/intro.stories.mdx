@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs/blocks'
 
-<Meta title="Getting started" />
+<Meta title="Marvel|Getting started" />
 
 # Get started
 
@@ -12,4 +12,20 @@ Marvel UI components are written in React, using `styled-components` and `styled
 
 Add Marvel UI to your project.
 
-`yarn add @mintuz/marvel`
+`yarn add @mintuz/marvel --save`
+
+## Usage
+
+Import components you want into your UI
+
+`import { Button } from '@mintuz/marvel';`
+
+and use them like so
+
+```
+  const Example = () => (
+    <div>
+      <Button variant="primary" onClick={() => {console.log('Clicked');}}>Click me</Button>
+    </div>
+  )
+```
