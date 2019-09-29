@@ -1,14 +1,13 @@
 {
     "name": "marvel",
     "version": "1.0.0",
-    "description": "A collection of UI components built in React",
+    "description": "A collection of reusable UI components built in React",
     "main": "dist/index.js",
     "scripts": {
         "prettier": "prettier",
         "ui-automation": "cypress run",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook --docs",
-        "deploy-storybook": "storybook-to-ghpages",
         "babel": "babel src --out-dir dist",
         "build": "npm run babel"
     },
@@ -19,10 +18,10 @@
         "@styled-system/theme-get": "^5.1.2",
         "polished": "^3.4.1",
         "prop-types": "^15.7.2",
-        "react": "16.8.6",
-        "react-dom": "16.8.6",
-        "styled-components": "^4.3.2",
-        "styled-system": "^5.0.16"
+        "react": "16.10.1",
+        "react-dom": "16.10.1",
+        "styled-components": "^4.4.0",
+        "styled-system": "^5.1.2"
     },
     "devDependencies": {
         "@babel/cli": "^7.2.3",
