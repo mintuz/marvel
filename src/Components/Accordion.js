@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import css from '@styled-system/css'
 
 const AccordionList = styled.ul`
     list-style: none;
@@ -8,8 +9,11 @@ const AccordionList = styled.ul`
 `
 
 const AccordionItemContainer = styled.div`
-    border: 1px solid rgb(239, 239, 239);
+    border: 1px solid;
     margin-top: -1px;
+    ${css({
+        borderColor: 'gray',
+    })}
 `
 
 const AccordionTitle = styled.button`
@@ -17,16 +21,22 @@ const AccordionTitle = styled.button`
     width: 100%;
     text-align: left;
     border: none;
-    padding: 16px;
+    ${css({
+        padding: [4],
+    })}
 
     :not(.mv-c-accordion-item--is-open) &:hover {
-        background-color: rgb(239, 239, 239);
+        ${css({
+            borderColor: 'gray',
+        })}
     }
 `
 
 const AccordionContent = styled.div`
     display: none;
-    padding: 16px;
+    ${css({
+        padding: [4],
+    })}
 
     .mv-c-accordion-item--is-open & {
         display: block;

@@ -17,7 +17,6 @@ const LabelText = styled.span`
 `
 
 const InputField = styled.input`
-    padding: 8px;
     border: 1px solid;
     border-radius: 3px;
 
