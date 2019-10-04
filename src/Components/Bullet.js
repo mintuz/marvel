@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Box from './Box'
 
 const alignmentMap = {
@@ -25,4 +26,11 @@ export default function Bullet({ children, alignment = 'top' }) {
             </Box>
         </Box>
     )
+}
+
+Bullet.propTypes = {
+    /** First child must be an <Icon>, second child can be a React component */
+    children: PropTypes.node,
+    /** Alignment of the icon, either "top" "middle" "bottom" */
+    alignment: PropTypes.string,
 }

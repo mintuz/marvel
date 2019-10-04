@@ -23,13 +23,9 @@ const Button = styled.button`
 `
 
 Button.propTypes = {
-    /**
-      Variant of button to render.
-    */
+    /** Variant of button to render. */
     variant: PropTypes.string,
-    /**
-      React Children.
-    */
+    /** React Children. */
     children: PropTypes.node,
 }
 

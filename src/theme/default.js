@@ -2,7 +2,7 @@ import { rem } from 'polished'
 
 const primitives = {
     breakpoints: ['400px', '640px', '900px', '1008px', '1280px'],
-    space: [0, 4, 8, 12, 16],
+    space: [0, 4, 8, 12, 16, 24],
     fontSizes: [16, 20, 24, 32],
     fontFamily: "'Open Sans', sans-serif",
     lineHeights: [24, 28, 32, 40],

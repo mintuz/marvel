@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
 import css from '@styled-system/css'
@@ -17,7 +18,7 @@ const LabelText = styled.span`
 `
 
 const InputField = styled.input`
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 3px;
 
     ${css({
@@ -25,6 +26,10 @@ const InputField = styled.input`
         borderColor: 'gray',
         fontSize: [0],
     })}
+
+    .mv-c-input-field--has-icon & {
+        text-indent: 20px;
+    }
 
     .mv-c-input-field--has-error & {
         ${css({
@@ -47,26 +52,71 @@ const ErrorMessage = styled.div`
     })}
 `
 
-export default props => {
+const InputContainer = styled.div`
+    position: relative;
+`
+
+const Icon = styled.div`
+    position: absolute;
+    top: 0;
+    left: 8px;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+function InputFieldComponent({
+    error,
+    label,
+    onChange,
+    onBlur,
+    onFocus,
+    placeholder,
+    value,
+    icon,
+    type,
+    pattern,
+}) {
     const cssClassNames = classNames('mv-c-input-field', {
-        'mv-c-input-field--has-error': props.error,
-        'mv-c-input-field--has-prefix-icon': true,
-        'mv-c-input-field--has-affix-icon': true,
+        'mv-c-input-field--has-error': error,
+        'mv-c-input-field--has-icon': icon,
     })
 
     return (
         <label className={cssClassNames}>
-            <LabelText>{props.label}</LabelText>
-            <div>
+            <LabelText>{label}</LabelText>
+            <InputContainer>
+                {icon && (
+                    <Icon>{React.cloneElement(icon, { size: '1em' })}</Icon>
+                )}
                 <InputField
-                    onChange={props.onChange}
-                    onBlur={props.onBlur}
-                    onFocus={props.onFocus}
-                    placeholder={props.placeholder}
-                    value={props.value}
+                    type={type}
+                    onChange={onChange}
+                    onBlur={onBlur}
+                    onFocus={onFocus}
+                    placeholder={placeholder}
+                    value={value}
+                    pattern={pattern}
                 />
-                {props.error && <ErrorMessage>{props.error}</ErrorMessage>}
-            </div>
+                {error && <ErrorMessage>{error}</ErrorMessage>}
+            </InputContainer>
         </label>
     )
 }
+
+InputFieldComponent.propTypes = {
+    onChange: PropTypes.func,
+    onBlur: PropTypes.func,
+    onFocus: PropTypes.func,
+    value: PropTypes.string,
+    placeholder: PropTypes.string,
+    icon: PropTypes.node,
+    label: PropTypes.string,
+    error: PropTypes.string,
+    type: PropTypes.string,
+    pattern: PropTypes.string,
+}
+
+export default InputFieldComponent
