@@ -1,7 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
-import Theme from '../src/Components/ThemeProvider'
-import Bullet from '../src/Components/Bullet'
-import Icon from '../src/Components/Icon'
+import { Bullet, Icon, ThemeProvider } from '../src'
 
 <Meta title="2. Objects|Bullet" component={Bullet} />
 
@@ -19,7 +17,7 @@ By default the icon will align top to the text.
 
 <Preview>
     <Story name="Default">
-        <Theme>
+        <ThemeProvider>
             <Bullet>
                 <Icon>
                     <svg viewBox="0 0 128 128">
@@ -36,7 +34,7 @@ By default the icon will align top to the text.
                     dolorem dolores officia dolor, voluptates minima.
                 </span>
             </Bullet>
-        </Theme>
+        </ThemeProvider>
     </Story>
 </Preview>
 
@@ -44,7 +42,7 @@ Align icon so that it is center to the text.
 
 <Preview>
     <Story name="Middle">
-        <Theme>
+        <ThemeProvider>
             <Bullet alignment="middle">
                 <Icon>
                     <svg viewBox="0 0 128 128">
@@ -61,7 +59,7 @@ Align icon so that it is center to the text.
                     dolorem dolores officia dolor, voluptates minima.
                 </span>
             </Bullet>
-        </Theme>
+        </ThemeProvider>
     </Story>
 </Preview>
 
@@ -69,7 +67,7 @@ Align icon so that it is aligned bottom to the text.
 
 <Preview>
     <Story name="Bottom">
-        <Theme>
+        <ThemeProvider>
             <Bullet alignment="bottom">
                 <Icon>
                     <svg viewBox="0 0 128 128">
@@ -86,6 +84,6 @@ Align icon so that it is aligned bottom to the text.
                     dolorem dolores officia dolor, voluptates minima.
                 </span>
             </Bullet>
-        </Theme>
+        </ThemeProvider>
     </Story>
 </Preview>

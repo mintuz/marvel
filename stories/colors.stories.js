@@ -1,8 +1,6 @@
 import React from 'react'
 import Box from '../src/Components/Box'
-import { Grid, GridItem } from '../src/Components/Grid'
-import Typography from '../src/Components/Typography'
-import Theme from '../src/Components/ThemeProvider'
+import { Grid, GridItem, Typography, ThemeProvider } from '../src'
 import defaultTheme from '../src/theme/default'
 
 export default {
@@ -10,7 +8,7 @@ export default {
 }
 
 export const defaultStory = () => (
-    <Theme>
+    <ThemeProvider>
         <Grid>
             {Object.keys(defaultTheme.colors).map(color => {
                 return (
@@ -27,7 +25,7 @@ export const defaultStory = () => (
                 )
             })}
         </Grid>
-    </Theme>
+    </ThemeProvider>
 )
 
 defaultStory.story = {

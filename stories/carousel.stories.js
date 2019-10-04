@@ -1,6 +1,6 @@
 import React from 'react'
-import Carousel from '../src/Components/Carousel'
 import styled from 'styled-components'
+import { Carousel } from '../src'
 
 const FakeItem = styled.div`
     display: flex;

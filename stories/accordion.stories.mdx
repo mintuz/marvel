@@ -1,7 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import Theme from '../src/Components/ThemeProvider'
-import { Accordion, AccordionItem } from '../src/Components/Accordion'
-import Typography from '../src/Components/Typography'
+import { Accordion, AccordionItem, Typography, ThemeProvider } from '../src'
 
 <Meta title="3. Components|Accordion" component={Accordion} />
 
@@ -11,7 +9,7 @@ An accordion allows a user to toggle the display of a section of content. An Acc
 
 <Preview>
     <Story name="Default">
-        <Theme>
+        <ThemeProvider>
             <Accordion>
                 <AccordionItem
                     header={
@@ -47,6 +45,6 @@ An accordion allows a user to toggle the display of a section of content. An Acc
                     </Typography>
                 </AccordionItem>
             </Accordion>
-        </Theme>
+        </ThemeProvider>
     </Story>
 </Preview>
