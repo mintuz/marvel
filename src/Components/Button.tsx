@@ -8,6 +8,9 @@ type ButtonProps = {
     onClick?: () => void
     /** Variant of button to render. */
     variant?: string
+    type?: string
+    'aria-expanded'?: string
+    'aria-controls'?: string
 }
 
 const StyledButton = styled.button`

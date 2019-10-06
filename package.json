@@ -16,7 +16,6 @@
     "author": "Adam Bulmer <github@mintuz.com>",
     "license": "MIT",
     "dependencies": {
-        "@babel/preset-typescript": "^7.6.0",
         "@styled-system/css": "^5.0.23",
         "@styled-system/theme-get": "^5.1.2",
         "polished": "^3.4.1",
@@ -35,6 +34,7 @@
         "@babel/plugin-transform-classes": "^7.5.5",
         "@babel/preset-env": "^7.6.2",
         "@babel/preset-react": "^7.0.0",
+        "@babel/preset-typescript": "^7.6.0",
         "@cypress/webpack-preprocessor": "^4.1.0",
         "@storybook/addon-actions": "^5.2.1",
         "@storybook/addon-docs": "^5.2.1",
@@ -44,6 +44,9 @@
         "@storybook/react": "^5.2.1",
         "@storybook/storybook-deployer": "^2.8.1",
         "@testing-library/cypress": "^4.0.4",
+        "@types/styled-components": "^4.1.19",
+        "@types/styled-system": "^5.1.2",
+        "@types/styled-system__css": "^5.0.4",
         "babel-core": "^7.0.0-bridge.0",
         "babel-jest": "^24.9.0",
         "babel-loader": "^8.0.6",
@@ -51,6 +54,7 @@
         "cypress-react-unit-test": "^2.4.3",
         "prettier": "1.18.2",
         "react-docgen-typescript-loader": "^3.3.0",
-        "ts-loader": "^6.2.0"
+        "ts-loader": "^6.2.0",
+        "typescript": "^3.6.3"
     }
 }
