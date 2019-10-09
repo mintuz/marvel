@@ -1,5 +1,5 @@
 {
-    "name": "marvel",
+    "name": "@mintuz/marvel",
     "version": "0.0.1",
     "description": "A collection of reusable UI components built in React",
     "main": "dist/index.js",
