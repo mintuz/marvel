@@ -12,5 +12,4 @@ Marvel UI is a component library that aims to be fully accessible and customizab
 1. `yarn install`
 2. `yarn build`
 3. `yarn storybook`
-
 4. `yarn test`
