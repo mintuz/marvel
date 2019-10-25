@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { variant } from 'styled-system'
 import css from '@styled-system/css'
 
-type ButtonProps = {
+export type ButtonProps = {
     /** Called each time the button is clicked */
     onClick?: () => void
     /** Variant of button to render. */
@@ -13,7 +13,7 @@ type ButtonProps = {
     'aria-controls'?: string
 }
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<ButtonProps>`
     display: inline-flex;
     cursor: pointer;
     border: none;

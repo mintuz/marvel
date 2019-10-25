@@ -4,7 +4,7 @@
     "description": "A collection of reusable UI components built in React",
     "main": "dist/index.js",
     "scripts": {
-        "check-types": "tsc --project .tsconfig.json --noEmit",
+        "check-types": "tsc --project tsconfig.json --noEmit",
         "check-types:watch": "npm run check-types -- --watch",
         "prettier": "prettier",
         "ui-automation": "cypress run",
