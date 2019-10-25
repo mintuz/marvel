@@ -14,7 +14,10 @@ const Button = styled.button`
     justify-content: center;
 
     ${css({
-        padding: [4],
+        paddingLeft: [4],
+        paddingRight: [4],
+        paddingTop: [2],
+        paddingBottom: [2],
     })}
 
     ${variant({
