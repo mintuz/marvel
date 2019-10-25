@@ -1,6 +1,6 @@
 {
     "name": "@mintuz/marvel",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A collection of reusable UI components built in React",
     "main": "dist/index.js",
     "scripts": {
@@ -14,6 +14,7 @@
     "author": "Adam Bulmer <github@mintuz.com>",
     "license": "MIT",
     "dependencies": {
+        "@mintuz/react-intersect": "^1.1.0",
         "@styled-system/css": "^5.0.23",
         "@styled-system/theme-get": "^5.1.2",
         "classnames": "^2.2.6",
