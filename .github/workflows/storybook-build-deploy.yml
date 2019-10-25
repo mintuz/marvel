@@ -10,13 +10,13 @@ jobs:
             - name: Checkout
               uses: actions/checkout@master
             - name: Install
-              uses: Borales/actions-yarn@master
+              uses: Borales/actions-yarn@v2.0.1
               with:
-                  args: install
+                  cmd: install
             - name: Build
-              uses: Borales/actions-yarn@master
+              uses: Borales/actions-yarn@v2.0.1
               with:
-                  args: build-storybook
+                  cmd: build-storybook
             - name: Deploy
               uses: JamesIves/github-pages-deploy-action@master
               env:
