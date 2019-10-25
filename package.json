@@ -1,6 +1,6 @@
 {
     "name": "@mintuz/marvel",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A collection of reusable UI components built in React",
     "main": "dist/index.js",
     "scripts": {
@@ -16,6 +16,7 @@
     "dependencies": {
         "@styled-system/css": "^5.0.23",
         "@styled-system/theme-get": "^5.1.2",
+        "classnames": "^2.2.6",
         "polished": "^3.4.1",
         "prop-types": "^15.7.2",
         "react": "16.10.1",
