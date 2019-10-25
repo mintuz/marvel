@@ -42,7 +42,7 @@ export default ({
         return (
             <ImageContainer ref={ref}>
                 {inView ? (
-                    <img src={src} alt={alt}></img>
+                    <img src={src} alt={alt} />
                 ) : (
                     <Placeholder aspect={aspect}>
                         {children && (
