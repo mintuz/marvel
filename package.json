@@ -21,9 +21,7 @@
         "polished": "^3.4.1",
         "prop-types": "^15.7.2",
         "styled-icons": "^8.4.2",
-        "styled-system": "^5.1.2"
-    },
-    "peerDependencies": {
+        "styled-system": "^5.1.2",
         "react": "^16.10.1",
         "react-dom": "^16.10.1",
         "styled-components": "^4.4.0"
