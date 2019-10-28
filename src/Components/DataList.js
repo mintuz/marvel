@@ -1,0 +1,54 @@
+import React from 'react'
+import styled from 'styled-components'
+import css from '@styled-system/css'
+import Typography from './Typography'
+
+const DataListStyle = styled.dl`
+    margin: 0;
+`
+
+const DataItem = styled.div`
+    ${css({
+        paddingTop: [3],
+        paddingBottom: [3],
+    })}
+
+    & + & {
+        border-top: 1px solid;
+
+        ${css({
+            borderColor: 'gray',
+        })}
+    }
+`
+
+export const DataItemTitle = styled(Typography).attrs({
+    as: 'dt',
+})`
+    margin: 0;
+    flex-basis: 100%;
+    font-weight: bold;
+`
+
+export const DataItemDescriptions = styled.div`
+    display: flex;
+    justify-content: space-between;
+
+    ${css({
+        marginTop: [2],
+    })}
+`
+
+export const DataItemDescription = styled.dd`
+    margin: 0;
+`
+
+export const DataList = ({ children }) => {
+    return (
+        <DataListStyle>
+            {React.Children.map(children, child => {
+                return <DataItem>{child}</DataItem>
+            })}
+        </DataListStyle>
+    )
+}

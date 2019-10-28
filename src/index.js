@@ -8,6 +8,12 @@ export { default as InputField } from './Components/Form/InputField'
 export { Accordion, AccordionItem } from './Components/Accordion'
 export { default as Box } from './Components/Box'
 export { default as Bullet } from './Components/Bullet'
+export {
+    DataList,
+    DataItemTitle,
+    DataItemDescription,
+    DataItemDescriptions,
+} from './Components/DataList'
 export { default as Button } from './Components/Button'
 export { Grid, GridItem, GridWrap } from './Components/Grid'
 export { default as HorizontalList } from './Components/HorizontalList'
