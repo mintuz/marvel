@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
+import { KeyboardArrowDown } from 'styled-icons/material'
 
 const AccordionList = styled.ul`
     list-style: none;
@@ -17,18 +18,48 @@ const AccordionItemContainer = styled.div`
 `
 
 const AccordionTitle = styled.button`
+    position: relative;
     display: block;
     width: 100%;
     text-align: left;
     border: none;
+
+    &:before {
+        position: absolute;
+        bottom: -1px;
+        height: 1px;
+        content: ' ';
+
+        ${css({
+            left: [4],
+            right: [4],
+            backgroundColor: 'gray',
+        })}
+    }
+
     ${css({
         padding: [4],
+        borderColor: 'gray',
     })}
 
     :not(.mv-c-accordion-item--is-open) &:hover {
         ${css({
             borderColor: 'gray',
         })}
+    }
+`
+
+const AccordionTitleContentWrap = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
+const AccordionTitleIcon = styled.div`
+    width: 32px;
+    height: 32px;
+
+    .mv-c-accordion-item--is-open & {
+        transform: rotate(180deg);
     }
 `
 
@@ -53,7 +84,12 @@ export const AccordionItem = ({ header, children, onClick, isOpen, id }) => {
                 aria-controls={`accordion-item--${id}`}
                 onClick={onClick}
             >
-                {header}
+                <AccordionTitleContentWrap>
+                    <div>{header}</div>
+                    <AccordionTitleIcon>
+                        <KeyboardArrowDown />
+                    </AccordionTitleIcon>
+                </AccordionTitleContentWrap>
             </AccordionTitle>
             <AccordionContent
                 aria-hidden={!isOpen}
