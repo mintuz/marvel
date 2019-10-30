@@ -18,9 +18,8 @@ jobs:
               with:
                   cmd: build-storybook
             - name: Deploy
-              uses: JamesIves/github-pages-deploy-action@master
+              uses: peaceiris/actions-gh-pages@v2.5.0
               env:
-                  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-                  BASE_BRANCH: master
-                  BRANCH: gh-pages
-                  FOLDER: storybook-static
+                  PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                  PUBLISH_BRANCH: gh-pages
+                  PUBLISH_DIR: ./storybook-static
