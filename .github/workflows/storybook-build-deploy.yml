@@ -17,6 +17,9 @@ jobs:
               uses: Borales/actions-yarn@v2.0.1
               with:
                   cmd: build-storybook
+            - name: Display Workspace
+              run: ls -la
+              shell: bash
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v2.5.0
               env:
