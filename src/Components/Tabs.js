@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
-import Button, { ButtonProps } from './Button'
+import Button from './Button'
 
 const TabItems = styled.ul`
     display: flex;
@@ -33,7 +33,7 @@ const TabItem = styled.li`
     }
 `
 
-const TabButton = styled(Button)<ButtonProps>`
+const TabButton = styled(Button)`
     width: 100%;
 
     .mv-c-tab--is-active & {

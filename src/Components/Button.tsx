@@ -3,10 +3,8 @@ import styled from 'styled-components'
 import { variant } from 'styled-system'
 import css from '@styled-system/css'
 
-export type ButtonProps = {
-    /** Called each time the button is clicked */
+type ButtonProps = {
     onClick?: () => void
-    /** Variant of button to render. */
     variant?: string
     type?: string
     'aria-expanded'?: string
