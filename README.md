@@ -1,6 +1,6 @@
 # Marvel UI
 
-![Version](https://img.shields.io/npm/v/@mintuz/marvel)
+[![Version](https://img.shields.io/npm/v/@mintuz/marvel)](https://www.npmjs.com/package/@mintuz/marvel)
 ![Bundle Size](https://img.shields.io/bundlephobia/minzip/@mintuz/marvel)
 ![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/@mintuz/marvel)
 

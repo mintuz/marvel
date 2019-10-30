@@ -44,16 +44,16 @@ export default {
             lineHeight: rem(primitives.lineHeights[0]),
         },
         displayOne: {
-            fontSize: rem(primitives.fontSizes[1]),
-            lineHeight: rem(primitives.lineHeights[1]),
+            fontSize: rem(primitives.fontSizes[3]),
+            lineHeight: rem(primitives.lineHeights[3]),
         },
         displayTwo: {
             fontSize: rem(primitives.fontSizes[2]),
             lineHeight: rem(primitives.lineHeights[2]),
         },
         displayThree: {
-            fontSize: rem(primitives.fontSizes[3]),
-            lineHeight: rem(primitives.lineHeights[3]),
+            fontSize: rem(primitives.fontSizes[1]),
+            lineHeight: rem(primitives.lineHeights[1]),
         },
     },
     button: {
