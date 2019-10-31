@@ -11,7 +11,7 @@ const primitives = {
         black: 'rgb(0, 0, 0)',
         white: 'rgb(255, 255, 255)',
         transparent: 'transparent',
-        gray: 'rgb(200, 200, 200)',
+        grey: 'rgb(200, 200, 200)',
         red: 'rgb(202, 0, 0)',
     },
 }

@@ -23,7 +23,7 @@ const InputField = styled.input`
 
     ${css({
         padding: [2],
-        borderColor: 'gray',
+        borderColor: 'grey',
         fontSize: [0],
     })}
 

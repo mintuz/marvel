@@ -41,7 +41,7 @@ const LabelText = styled.span`
 
         ${css({
             backgroundColor: 'white',
-            borderColor: 'gray',
+            borderColor: 'grey',
         })}
     }
 

@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
-import { Box } from '../src'
+import { Box, ThemeProvider } from '../src'
 
 <Meta title="2. Objects|Box" component={Box} />
 
@@ -18,7 +18,7 @@ It adopts several properties defined in [styled-system](https://styled-system.co
 <Preview>
     <Story name="Default">
         <ThemeProvider>
-            <Box bg="black" color="white" p={4}>
+            <Box bg="grey" p={4}>
                 Just an example of what box can do.
             </Box>
         </ThemeProvider>

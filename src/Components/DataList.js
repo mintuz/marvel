@@ -17,7 +17,7 @@ const DataItem = styled.div`
         border-top: 1px solid;
 
         ${css({
-            borderColor: 'gray',
+            borderColor: 'grey',
         })}
     }
 `

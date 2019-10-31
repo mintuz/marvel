@@ -25,9 +25,9 @@ const TabItem = styled.li`
         ${css({
             backgroundColor: 'white',
             color: 'black',
-            borderTopColor: 'gray',
-            borderLeftColor: 'gray',
-            borderRightColor: 'gray',
+            borderTopColor: 'grey',
+            borderLeftColor: 'grey',
+            borderRightColor: 'grey',
             borderBottomColor: 'white',
         })}
     }
@@ -52,7 +52,7 @@ const TabContent = styled.div`
 
     ${css({
         padding: [4],
-        borderColor: 'gray',
+        borderColor: 'grey',
     })}
 
     &.mv-c-tab--is-active {

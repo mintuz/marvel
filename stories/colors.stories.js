@@ -13,12 +13,17 @@ export const defaultStory = () => (
             {Object.keys(defaultTheme.colors).map(color => {
                 return (
                     <GridItem mb={4} width={[1 / 1, 1 / 2, 1 / 4]}>
-                        <Typography as="h2" mt={0} mb={1} variant="displayOne">
+                        <Typography
+                            as="h2"
+                            mt={0}
+                            mb={1}
+                            variant="displayThree"
+                        >
                             {color}
                         </Typography>
                         <Box
                             height="50px"
-                            border={`1px solid ${defaultTheme.colors.gray}`}
+                            border={`1px solid ${defaultTheme.colors.grey}`}
                             bg={color}
                         ></Box>
                     </GridItem>

@@ -17,7 +17,7 @@ const AccordionItemContainer = styled.div`
     border: 1px solid;
     margin-top: -1px;
     ${css({
-        borderColor: 'gray',
+        borderColor: 'grey',
     })}
 `
 
@@ -37,18 +37,18 @@ const AccordionTitle = styled.button`
         ${css({
             left: [4],
             right: [4],
-            backgroundColor: 'gray',
+            backgroundColor: 'grey',
         })}
     }
 
     ${css({
         padding: [4],
-        borderColor: 'gray',
+        borderColor: 'grey',
     })}
 
     :not(.mv-c-accordion-item--is-open) &:hover {
         ${css({
-            borderColor: 'gray',
+            borderColor: 'grey',
         })}
     }
 `
