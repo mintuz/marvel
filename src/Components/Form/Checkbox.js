@@ -26,10 +26,12 @@ const LabelText = styled.span`
     &:before,
     &:after {
         position: absolute;
-        top: 0;
+        top: 50%;
         left: 0;
-        height: 1em;
-        width: 1em;
+        height: 16px;
+        width: 16px;
+        margin-top: -8px;
+        line-height: 1rem;
         border-radius: 3px;
     }
 
