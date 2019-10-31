@@ -18,26 +18,6 @@ const primitives = {
 
 export default {
     ...primitives,
-    grid: {
-        default: {
-            marginLeft: -8,
-            marginRight: -8,
-        },
-        none: {
-            marginLeft: 0,
-            marginRight: 0,
-        },
-    },
-    gridItem: {
-        default: {
-            paddingLeft: 8,
-            paddingRight: 8,
-        },
-        none: {
-            paddingLeft: 0,
-            paddingRight: 0,
-        },
-    },
     textStyle: {
         caption: {
             fontSize: rem(primitives.fontSizes[0]),

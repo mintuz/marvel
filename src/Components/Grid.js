@@ -1,48 +1,36 @@
-import styled from "styled-components";
-import { layout, space, variant } from "styled-system";
-
-const gridVariant = variant({
-  key: "grid",
-  prop: "gutter"
-});
-
-const gridItemVariant = variant({
-  key: "gridItem",
-  prop: "gutter"
-});
+import styled from 'styled-components'
+import { layout, space } from 'styled-system'
 
 export const GridWrap = styled.div`
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-  box-sizing: border-box;
-`;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+`
 
 export const GridItem = styled.div`
-  ${layout}
-  ${space}
-  flex: 0 0 auto;
-`;
+    ${layout}
+    ${space}
+    flex: 0 0 auto;
+`
 
 export const Grid = styled.div`
-  display: flex;
-  flex: 0 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  ${gridVariant}
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    marginleft: -8px;
+    marginright: -8px;
 
-  &,
-  > * {
-    box-sizing: border-box;
-  }
+    &,
+    > * {
+        box-sizing: border-box;
+    }
 
-  > * {
-    ${gridItemVariant}
-  }
-`;
-
-Grid.defaultProps = {
-  gutter: "default",
-};
+    > * {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+`
