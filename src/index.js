@@ -6,6 +6,7 @@ export { default as FormGroup } from './Components/Form/FormGroup'
 export { default as InputField } from './Components/Form/InputField'
 
 export { Accordion, AccordionItem } from './Components/Accordion'
+export { default as Badge } from './Components/Badge'
 export { default as Box } from './Components/Box'
 export { default as Bullet } from './Components/Bullet'
 export {

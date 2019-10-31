@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { space, color } from 'styled-system'
 import css from '@styled-system/css'
 import { KeyboardArrowDown } from 'styled-icons/material'
 
@@ -7,6 +8,9 @@ const AccordionList = styled.ul`
     list-style: none;
     padding: 0;
     margin: 0;
+
+    ${space}
+    ${color}
 `
 
 const AccordionItemContainer = styled.div`
@@ -101,10 +105,10 @@ export const AccordionItem = ({ header, children, onClick, isOpen, id }) => {
     )
 }
 
-export const Accordion = ({ children }) => {
+export const Accordion = ({ children, ...rest }) => {
     const [openAccordionItemId, setOpenAccordionItem] = useState(0)
     return (
-        <AccordionList>
+        <AccordionList {...rest}>
             {React.Children.map(children, (child, currentItemId) => {
                 return (
                     <li>

@@ -1,0 +1,26 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import { Box } from '../src'
+
+<Meta title="2. Objects|Box" component={Box} />
+
+# Box
+
+Box is a generic element within Marvel that allows you to create components that inherit styling from a theme.
+
+It adopts several properties defined in [styled-system](https://styled-system.com/table/)
+
+## Props
+
+<Props of={Box} />
+
+## Examples
+
+<Preview>
+    <Story name="Default">
+        <ThemeProvider>
+            <Box bg="black" color="white" p={4}>
+                Just an example of what box can do.
+            </Box>
+        </ThemeProvider>
+    </Story>
+</Preview>
