@@ -67,18 +67,7 @@ const Icon = styled.div`
     justify-content: center;
 `
 
-function InputFieldComponent({
-    error,
-    label,
-    onChange,
-    onBlur,
-    onFocus,
-    placeholder,
-    value,
-    icon,
-    type,
-    pattern,
-}) {
+function InputFieldComponent({ error, label, icon, ...rest }) {
     const cssClassNames = classNames('mv-c-input-field', {
         'mv-c-input-field--has-error': error,
         'mv-c-input-field--has-icon': icon,
@@ -91,15 +80,7 @@ function InputFieldComponent({
                 {icon && (
                     <Icon>{React.cloneElement(icon, { size: '1em' })}</Icon>
                 )}
-                <InputField
-                    type={type}
-                    onChange={onChange}
-                    onBlur={onBlur}
-                    onFocus={onFocus}
-                    placeholder={placeholder}
-                    value={value}
-                    pattern={pattern}
-                />
+                <InputField {...rest} />
                 {error && <ErrorMessage>{error}</ErrorMessage>}
             </InputContainer>
         </label>
