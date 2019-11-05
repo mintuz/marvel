@@ -73,7 +73,10 @@ const ResetStyle = createGlobalStyle`
     font: inherit;
   }
 
-  input,
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  textarea,
   button {
     -webkit-appearance: none;
     -moz-appearance: none;

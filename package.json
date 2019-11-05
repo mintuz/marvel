@@ -1,6 +1,6 @@
 {
     "name": "@mintuz/marvel",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "description": "A collection of reusable UI components built in React",
     "main": "dist/index.js",
     "scripts": {
