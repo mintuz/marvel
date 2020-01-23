@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { variant } from 'styled-system'
 import css from '@styled-system/css'
 
-type ButtonProps = {
+export type ButtonProps = {
     onClick?: () => void
     variant?: string
     type?: string

@@ -1,14 +1,17 @@
 {
     "compilerOptions": {
-        "target": "esnext",
-        "moduleResolution": "node",
-        "allowJs": true,
-        "noEmit": true,
-        "strict": true,
+        "target": "es5",
+        "lib": ["dom", "es7"],
+        "module": "commonjs",
         "jsx": "react",
-        "isolatedModules": true,
+        "allowJs": true,
+        "strict": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "skipLibCheck": true,
         "esModuleInterop": true,
-        "types": ["react"]
+        "forceConsistentCasingInFileNames": true,
+        "declaration": true
     },
     "include": ["src"]
 }
