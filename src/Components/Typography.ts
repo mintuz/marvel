@@ -6,9 +6,22 @@ import {
     flexbox,
     layout,
     color,
+    SpaceProps,
+    TypographyProps as SystemTypographyProps,
+    ColorProps,
+    LayoutProps,
+    FlexboxProps,
 } from 'styled-system'
 
-const Typography = styled.p`
+export type TypographyProps = SpaceProps &
+    SystemTypographyProps &
+    ColorProps &
+    LayoutProps &
+    FlexboxProps & {
+        variant?: string
+    }
+
+const Typography = styled.p<TypographyProps>`
     ${space}
     ${typography}
     ${color}

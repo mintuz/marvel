@@ -16,7 +16,13 @@ import {
     PositionProps,
 } from 'styled-system'
 
-export type BoxProps = SpaceProps & TypographyProps & FlexboxProps & LayoutProps & ColorProps & BorderProps & PositionProps
+export type BoxProps = SpaceProps &
+    TypographyProps &
+    FlexboxProps &
+    LayoutProps &
+    ColorProps &
+    BorderProps &
+    PositionProps
 
 export default styled.div<BoxProps>`
     ${layout}

@@ -7,7 +7,7 @@ export type ButtonProps = {
     onClick?: () => void
     variant?: string
     type?: string
-    'aria-expanded'?: string
+    'aria-expanded'?: boolean
     'aria-controls'?: string
 }
 

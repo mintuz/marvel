@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, FC, ReactElement } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
 
@@ -22,10 +22,10 @@ const AccordionTitle = styled.button`
     text-align: left;
     border: none;
     ${css({
-        padding: [4],
-    })}
-
-    :not(.mv-c-accordion-item--is-open) &:hover {
+            padding: [4],
+        })}
+        :not(.mv-c-accordion-item--is-open)
+        &:hover {
         ${css({
             borderColor: 'gray',
         })}
@@ -43,7 +43,20 @@ const AccordionContent = styled.div`
     }
 `
 
-export const AccordionItem = ({ header, children, onClick, isOpen, id }) => {
+export type AccordionItemProps = {
+    header: ReactElement
+    onClick: () => void
+    isOpen: boolean
+    id: string
+}
+
+export const AccordionItem: FC<AccordionItemProps> = ({
+    header,
+    children,
+    onClick,
+    isOpen,
+    id,
+}) => {
     return (
         <AccordionItemContainer
             className={isOpen ? 'mv-c-accordion-item--is-open' : ''}
@@ -65,14 +78,14 @@ export const AccordionItem = ({ header, children, onClick, isOpen, id }) => {
     )
 }
 
-export const Accordion = ({ children }) => {
+export const Accordion: FC = ({ children }) => {
     const [openAccordionItemId, setOpenAccordionItem] = useState(0)
     return (
         <AccordionList>
             {React.Children.map(children, (child, currentItemId) => {
                 return (
                     <li>
-                        {React.cloneElement(child, {
+                        {React.cloneElement(child as React.ReactElement<any>, {
                             onClick() {
                                 setOpenAccordionItem(currentItemId)
                             },

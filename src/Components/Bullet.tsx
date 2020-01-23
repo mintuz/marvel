@@ -1,14 +1,14 @@
 import React, { FC } from 'react'
 import Box from './Box'
 
-type AlignmentProps = 'flex-start' | 'center' | 'flex-end'
+export type AlignmentProps = 'flex-start' | 'center' | 'flex-end'
 
 export type BulletProps = {
     /** Alignment of the icon, either "top" "middle" "bottom" */
     alignment: AlignmentProps
 }
 
-const alignmentMap: {[key:string]: AlignmentProps} = {
+const alignmentMap: { [key: string]: AlignmentProps } = {
     top: 'flex-start',
     middle: 'center',
     bottom: 'flex-end',

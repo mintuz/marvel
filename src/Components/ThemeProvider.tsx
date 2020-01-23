@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import defaultTheme from '../theme/default'
 import { themeGet } from '@styled-system/theme-get'
@@ -10,7 +10,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-export default function Theme({ children, theme = defaultTheme }) {
+export type ThemeProps = {
+    theme: { [key: string]: any }
+}
+
+const Theme: FC<ThemeProps> = ({ children, theme = defaultTheme }) => {
     return (
         <ThemeProvider theme={theme}>
             <React.Fragment>
@@ -20,3 +24,5 @@ export default function Theme({ children, theme = defaultTheme }) {
         </ThemeProvider>
     )
 }
+
+export default Theme
