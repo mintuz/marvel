@@ -14,7 +14,7 @@ const alignmentMap: { [key: string]: AlignmentProps } = {
     bottom: 'flex-end',
 }
 
-export const Bullet: FC<BulletProps> = ({ children, alignment = 'top' }) => {
+const Bullet: FC<BulletProps> = ({ children, alignment = 'top' }) => {
     const [Icon, Content] = React.Children.toArray(children)
 
     return (
@@ -33,3 +33,5 @@ export const Bullet: FC<BulletProps> = ({ children, alignment = 'top' }) => {
         </Box>
     )
 }
+
+export default Bullet

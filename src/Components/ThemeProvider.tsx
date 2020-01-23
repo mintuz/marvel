@@ -1,7 +1,9 @@
 import React, { FC } from 'react'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import defaultTheme from '../theme/default'
 import { themeGet } from '@styled-system/theme-get'
+
+// @ts-ignore
+import defaultTheme from '../theme/default'
 
 const GlobalStyle = createGlobalStyle`
   body,
