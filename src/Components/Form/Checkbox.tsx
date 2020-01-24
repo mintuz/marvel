@@ -92,7 +92,7 @@ export type CheckboxProps = {
     disabled: boolean
     value: string
     checked: boolean
-    onChange: () => void
+    onChange: (e: React.SyntheticEvent) => void
     label: string
 }
 
@@ -105,7 +105,7 @@ const Checkbox: FC<CheckboxProps> = ({
     label,
 }) => {
     const [state, setState] = useState(checked)
-    const handleChange = e => {
+    const handleChange = (e: React.SyntheticEvent) => {
         setState(!state)
         onChange(e)
     }

@@ -61,7 +61,7 @@ export type StepperComponentProps = {
     incrementBy: number
 }
 
-const StepperComponent: FC<StepperComponentProps> = (({
+const StepperComponent: FC<StepperComponentProps> = ({
     value = 0,
     label,
     incrementBy = 1,
@@ -77,6 +77,8 @@ const StepperComponent: FC<StepperComponentProps> = (({
                         setValue(internalValue - incrementBy)
                     }}
                 >
+                    {/*
+                    // @ts-ignore */}
                     <Remove size="1em" />
                 </ButtonMinus>
                 <ButtonPlus
@@ -85,6 +87,8 @@ const StepperComponent: FC<StepperComponentProps> = (({
                         setValue(internalValue + incrementBy)
                     }}
                 >
+                    {/*
+                    // @ts-ignore */}
                     <Add size="1em" />
                 </ButtonPlus>
                 <Value>{internalValue}</Value>
@@ -94,4 +98,4 @@ const StepperComponent: FC<StepperComponentProps> = (({
     )
 }
 
-export default StepperComponent;
+export default StepperComponent
