@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState, FC } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
 
@@ -88,14 +87,23 @@ const LabelText = styled.span`
     }
 `
 
-export default function Checkbox({
+export type CheckboxProps = {
+    id: string
+    disabled: boolean
+    value: string
+    checked: boolean
+    onChange: () => void
+    label: string
+}
+
+const Checkbox: FC<CheckboxProps> = ({
     id,
     disabled = false,
     value,
     checked = false,
     onChange,
     label,
-}) {
+}) => {
     const [state, setState] = useState(checked)
     const handleChange = e => {
         setState(!state)
@@ -121,11 +129,4 @@ export default function Checkbox({
     )
 }
 
-Checkbox.propTypes = {
-    id: PropTypes.string,
-    disabled: PropTypes.bool,
-    value: PropTypes.string,
-    checked: PropTypes.bool,
-    onChange: PropTypes.func,
-    label: PropTypes.string,
-}
+export default Checkbox

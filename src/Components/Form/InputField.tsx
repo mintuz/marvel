@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
 import css from '@styled-system/css'
@@ -67,7 +66,20 @@ const Icon = styled.div`
     justify-content: center;
 `
 
-function InputFieldComponent({
+export type InputFieldComponentProps = {
+    onChange: () => void
+    onBlur: () => void
+    onFocus: () => void
+    value: string
+    placeholder: string
+    icon: React.ReactElement
+    label: string
+    error: string
+    type: string
+    pattern: string
+}
+
+const InputFieldComponent: FC<InputFieldComponentProps> = ({
     error,
     label,
     onChange,
@@ -78,7 +90,7 @@ function InputFieldComponent({
     icon,
     type,
     pattern,
-}) {
+}) => {
     const cssClassNames = classNames('mv-c-input-field', {
         'mv-c-input-field--has-error': error,
         'mv-c-input-field--has-icon': icon,
@@ -104,19 +116,6 @@ function InputFieldComponent({
             </InputContainer>
         </label>
     )
-}
-
-InputFieldComponent.propTypes = {
-    onChange: PropTypes.func,
-    onBlur: PropTypes.func,
-    onFocus: PropTypes.func,
-    value: PropTypes.string,
-    placeholder: PropTypes.string,
-    icon: PropTypes.node,
-    label: PropTypes.string,
-    error: PropTypes.string,
-    type: PropTypes.string,
-    pattern: PropTypes.string,
 }
 
 export default InputFieldComponent
