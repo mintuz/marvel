@@ -1,0 +1,23 @@
+[//]: # "High-level overview of the work done"
+
+## Work done
+[//]: # "Detailed list of the work done, including rationale behind the decisions made"
+*
+
+## Checklist
+
+[//]: # "Applicable to all work done"
+### Testing
+- [ ] Automated tests pass (Linting, Unit, E2E)
+- [ ] Code has sufficient test coverage (Unit, E2E)
+- [ ] Storybook updated and renders correctly
+
+### UX
+- [ ] [Accessibility] - Work is AA compliant
+- [ ] [Devices/Breakpoints] - Work has been tested on multiple devices & media breakpoints
+
+#### Screenshot [Before]
+[//]: # "Tip: Use <details>/<summary>/<img> tags to hide a screenshot in a collapsible tab"
+
+#### Screenshot [After]
+[//]: # "Tip: Use <details>/<summary>/<img> tags to hide a screenshot in a collapsible tab"

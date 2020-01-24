@@ -22,7 +22,7 @@ const InputField = styled.input`
 
     ${css({
         padding: [2],
-        borderColor: 'gray',
+        borderColor: 'grey',
         fontSize: [0],
     })}
 
@@ -82,14 +82,8 @@ export type InputFieldComponentProps = {
 const InputFieldComponent: FC<InputFieldComponentProps> = ({
     error,
     label,
-    onChange,
-    onBlur,
-    onFocus,
-    placeholder,
-    value,
     icon,
-    type,
-    pattern,
+    ...rest
 }) => {
     const cssClassNames = classNames('mv-c-input-field', {
         'mv-c-input-field--has-error': error,
@@ -103,15 +97,7 @@ const InputFieldComponent: FC<InputFieldComponentProps> = ({
                 {icon && (
                     <Icon>{React.cloneElement(icon, { size: '1em' })}</Icon>
                 )}
-                <InputField
-                    type={type}
-                    onChange={onChange}
-                    onBlur={onBlur}
-                    onFocus={onFocus}
-                    placeholder={placeholder}
-                    value={value}
-                    pattern={pattern}
-                />
+                <InputField {...rest} />
                 {error && <ErrorMessage>{error}</ErrorMessage>}
             </InputContainer>
         </label>

@@ -19,8 +19,11 @@ const StepperControls = styled.div`
 `
 
 const Button = styled.button`
-    width: 24px;
-    height: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
     border: none;
     border-radius: 3px;
 
@@ -32,12 +35,10 @@ const Button = styled.button`
 
 const ButtonMinus = styled(Button)`
     order: 0;
-    display: inline-block;
 `
 
 const ButtonPlus = styled(Button)`
     order: 2;
-    display: inline-block;
 `
 
 const Value = styled.div`
@@ -48,8 +49,8 @@ const Value = styled.div`
     border: none;
 
     ${css({
-        paddingLeft: [4],
-        paddingRight: [4],
+        paddingLeft: [2],
+        paddingRight: [2],
     })}
 `
 

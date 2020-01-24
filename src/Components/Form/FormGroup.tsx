@@ -19,10 +19,14 @@ const GroupItem = styled.div`
         display: inline-block;
     }
 
-    .inline & + & {
+    .inline & {
         ${css({
-            marginLeft: [4],
+            marginRight: [4],
         })}
+
+        &:last-of-type {
+            margin-right: 0;
+        }
     }
 `
 

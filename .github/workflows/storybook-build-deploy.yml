@@ -10,17 +10,19 @@ jobs:
             - name: Checkout
               uses: actions/checkout@master
             - name: Install
-              uses: Borales/actions-yarn@master
+              uses: Borales/actions-yarn@v2.0.1
               with:
-                  args: install
+                  cmd: install
             - name: Build
-              uses: Borales/actions-yarn@master
+              uses: Borales/actions-yarn@v2.0.1
               with:
-                  args: build-storybook
+                  cmd: build-storybook
+            - name: Display Workspace
+              run: ls -la
+              shell: bash
             - name: Deploy
-              uses: JamesIves/github-pages-deploy-action@master
+              uses: peaceiris/actions-gh-pages@v2.5.0
               env:
-                  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-                  BASE_BRANCH: master
-                  BRANCH: gh-pages
-                  FOLDER: storybook-static
+                  PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                  PUBLISH_BRANCH: gh-pages
+                  PUBLISH_DIR: ./storybook-static

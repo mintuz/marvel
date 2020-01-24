@@ -3,6 +3,20 @@ import styled from 'styled-components'
 import css from '@styled-system/css'
 import Button from './Button'
 
+export type TabProps = {
+    title: string
+    id: string
+    onClick: () => void
+    isOpen: boolean
+    variant: string
+    children: React.ReactElement<TabProps>[]
+}
+
+export type TabsProps = {
+    activeTab: string
+    children: React.ReactElement<TabProps>[]
+}
+
 const TabItems = styled.ul`
     display: flex;
     list-style: none;
@@ -25,9 +39,9 @@ const TabItem = styled.li`
         ${css({
             backgroundColor: 'white',
             color: 'black',
-            borderTopColor: 'gray',
-            borderLeftColor: 'gray',
-            borderRightColor: 'gray',
+            borderTopColor: 'grey',
+            borderLeftColor: 'grey',
+            borderRightColor: 'grey',
             borderBottomColor: 'white',
         })}
     }
@@ -52,7 +66,7 @@ const TabContent = styled.div`
 
     ${css({
         padding: [4],
-        borderColor: 'gray',
+        borderColor: 'grey',
     })}
 
     &.mv-c-tab--is-active {
@@ -60,64 +74,41 @@ const TabContent = styled.div`
     }
 `
 
-export type TabProps = {
-    title: string
-    id: string
-    onClick: () => void
-    isOpen: boolean
-    variant: string
-    children: React.ReactElement<TabProps>[]
-}
-
-export type TabsProps = {
-    activeTab: string
-    children: React.ReactElement<TabProps>[]
-}
-
 export const Tabs: FC<TabsProps> = ({ children, activeTab }) => {
     const [active, setActive] = useState(activeTab)
 
     return (
         <React.Fragment>
             <TabItems>
-                {React.Children.map(
-                    children,
-                    (child: React.ReactElement<TabProps>) => {
-                        const isOpen = active === child.props.id
-                        return (
-                            <TabItem
-                                className={isOpen ? 'mv-c-tab--is-active' : ''}
-                            >
-                                {React.cloneElement(
-                                    child as React.ReactElement<any>,
-                                    {
-                                        isOpen,
-                                        onClick() {
-                                            setActive(child.props.id)
-                                        },
-                                    }
-                                )}
-                            </TabItem>
-                        )
-                    }
-                )}
+                {React.Children.map(children, child => {
+                    const isOpen = active === child.props.id
+                    return (
+                        <TabItem
+                            className={isOpen ? 'mv-c-tab--is-active' : ''}
+                        >
+                            {React.cloneElement(child, {
+                                isOpen,
+                                onClick() {
+                                    setActive(child.props.id)
+                                },
+                            })}
+                        </TabItem>
+                    )
+                })}
             </TabItems>
             <div>
-                {React.Children.map(
-                    children,
-                    (child: React.ReactElement<TabProps>) => {
-                        const isOpen = active === child.props.id
-                        return (
-                            <TabContent
-                                aria-hidden={!isOpen}
-                                id={`tab-item-${child.props.id}`}
-                                className={isOpen ? 'mv-c-tab--is-active' : ''}
-                            >
-                                {child.props.children}
-                            </TabContent>
-                        )
-                    }
-                )}
+                {React.Children.map(children, child => {
+                    const isOpen = active === child.props.id
+                    return (
+                        <TabContent
+                            aria-hidden={!isOpen}
+                            id={`tab-item-${child.props.id}`}
+                            className={isOpen ? 'mv-c-tab--is-active' : ''}
+                        >
+                            {child.props.children}
+                        </TabContent>
+                    )
+                })}
             </div>
         </React.Fragment>
     )
