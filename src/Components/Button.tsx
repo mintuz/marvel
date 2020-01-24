@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { variant } from 'styled-system'
+import { layout, LayoutProps } from 'styled-system'
 import css from '@styled-system/css'
 
 export type ButtonProps = {
@@ -9,9 +10,9 @@ export type ButtonProps = {
     type?: string
     'aria-expanded'?: boolean
     'aria-controls'?: string
-}
+} & LayoutProps
 
-const StyledButton = styled.button<ButtonProps>`
+export default styled.button<ButtonProps>`
     display: inline-flex;
     cursor: pointer;
     border: none;
@@ -21,24 +22,13 @@ const StyledButton = styled.button<ButtonProps>`
     justify-content: center;
 
     ${css({
-        padding: [4],
+        paddingLeft: [4],
+        paddingRight: [4],
+        paddingTop: [2],
+        paddingBottom: [2],
     })}
-
     ${variant({
         scale: 'button',
     })}
+    ${layout}
 `
-
-const Button: FC<ButtonProps> = ({
-    children,
-    variant = 'primary',
-    onClick = () => {},
-}) => {
-    return (
-        <StyledButton variant={variant} onClick={onClick}>
-            {children}
-        </StyledButton>
-    )
-}
-
-export default Button

@@ -28,14 +28,14 @@ const PlaceholderContent = styled.div`
     left: 0;
 `
 
-export type Image = {
+export type ImageProps = {
     src: string
     alt: string
     loading: string
     aspect: string
 }
 
-const Image: FC = ({
+const Image: FC<ImageProps> = ({
     src,
     alt = '',
     loading = 'auto',
