@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, FC, ReactElement } from 'react'
 import styled from 'styled-components'
 import { space, color } from 'styled-system'
 import css from '@styled-system/css'
@@ -42,11 +42,11 @@ const AccordionTitle = styled.button`
     }
 
     ${css({
-        padding: [4],
-        borderColor: 'grey',
-    })}
-
-    :not(.mv-c-accordion-item--is-open) &:hover {
+            padding: [4],
+            borderColor: 'grey',
+        })}
+        :not(.mv-c-accordion-item--is-open)
+        &:hover {
         ${css({
             borderColor: 'grey',
         })}
@@ -78,7 +78,20 @@ const AccordionContent = styled.div`
     }
 `
 
-export const AccordionItem = ({ header, children, onClick, isOpen, id }) => {
+export type AccordionItemProps = {
+    header: ReactElement
+    onClick: () => void
+    isOpen: boolean
+    id: string
+}
+
+export const AccordionItem: FC<AccordionItemProps> = ({
+    header,
+    children,
+    onClick,
+    isOpen,
+    id,
+}) => {
     return (
         <AccordionItemContainer
             className={isOpen ? 'mv-c-accordion-item--is-open' : ''}
@@ -91,6 +104,8 @@ export const AccordionItem = ({ header, children, onClick, isOpen, id }) => {
                 <AccordionTitleContentWrap>
                     <div>{header}</div>
                     <AccordionTitleIcon>
+                        {/*
+                        // @ts-ignore */}
                         <KeyboardArrowDown />
                     </AccordionTitleIcon>
                 </AccordionTitleContentWrap>
@@ -105,14 +120,14 @@ export const AccordionItem = ({ header, children, onClick, isOpen, id }) => {
     )
 }
 
-export const Accordion = ({ children, ...rest }) => {
+export const Accordion: FC = ({ children, ...rest }) => {
     const [openAccordionItemId, setOpenAccordionItem] = useState(0)
     return (
         <AccordionList {...rest}>
             {React.Children.map(children, (child, currentItemId) => {
                 return (
                     <li>
-                        {React.cloneElement(child, {
+                        {React.cloneElement(child as React.ReactElement<any>, {
                             onClick() {
                                 setOpenAccordionItem(currentItemId)
                             },

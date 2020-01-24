@@ -1,14 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { FC } from 'react'
 import Box from './Box'
 
-const alignmentMap = {
+export type AlignmentProps = 'flex-start' | 'center' | 'flex-end'
+
+export type BulletProps = {
+    /** Alignment of the icon, either "top" "middle" "bottom" */
+    alignment: AlignmentProps
+}
+
+const alignmentMap: { [key: string]: AlignmentProps } = {
     top: 'flex-start',
     middle: 'center',
     bottom: 'flex-end',
 }
 
-export default function Bullet({ children, alignment = 'top', ...rest }) {
+const Bullet: FC<BulletProps> = ({ children, alignment = 'top' }) => {
     const [Icon, Content] = React.Children.toArray(children)
 
     return (
@@ -17,7 +23,6 @@ export default function Bullet({ children, alignment = 'top', ...rest }) {
             display="inline-flex"
             alignItems={alignmentMap[alignment]}
             fontSize="inherit"
-            {...rest}
         >
             <Box data-testid="mv-bullet-icon" fontSize="1em">
                 {Icon}
@@ -29,9 +34,4 @@ export default function Bullet({ children, alignment = 'top', ...rest }) {
     )
 }
 
-Bullet.propTypes = {
-    /** First child must be an <Icon>, second child can be a React component */
-    children: PropTypes.node,
-    /** Alignment of the icon, either "top" "middle" "bottom" */
-    alignment: PropTypes.string,
-}
+export default Bullet

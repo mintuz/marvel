@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
 
@@ -31,7 +30,7 @@ const GroupItem = styled.div`
     }
 `
 
-export default function FormGroup({ children, inline = false }) {
+const FormGroup: FC<{ inline: boolean }> = ({ children, inline = false }) => {
     return (
         <Group className={inline ? 'inline' : 'block'}>
             {React.Children.map(children, (child, id) => {
@@ -41,7 +40,4 @@ export default function FormGroup({ children, inline = false }) {
     )
 }
 
-FormGroup.propTypes = {
-    inline: PropTypes.bool,
-    children: PropTypes.node,
-}
+export default FormGroup

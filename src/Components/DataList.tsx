@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
 import Typography from './Typography'
@@ -43,7 +43,7 @@ export const DataItemDescription = styled.dd`
     margin: 0;
 `
 
-export const DataList = ({ children }) => {
+export const DataList: FC = ({ children }) => {
     return (
         <DataListStyle>
             {React.Children.map(children, child => {

@@ -1,10 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { FC } from 'react'
 import styled from 'styled-components'
-import { variant, layout } from 'styled-system'
+import { variant } from 'styled-system'
+import { layout, LayoutProps } from 'styled-system'
 import css from '@styled-system/css'
 
-const Button = styled.button`
+export type ButtonProps = {
+    onClick?: () => void
+    variant?: string
+    type?: string
+    'aria-expanded'?: boolean
+    'aria-controls'?: string
+} & LayoutProps
+
+export default styled.button<ButtonProps>`
     display: inline-flex;
     cursor: pointer;
     border: none;
@@ -19,19 +27,8 @@ const Button = styled.button`
         paddingTop: [2],
         paddingBottom: [2],
     })}
-
     ${variant({
         scale: 'button',
     })}
-
     ${layout}
 `
-
-Button.propTypes = {
-    /** Variant of button to render. */
-    variant: PropTypes.string,
-    /** React Children. */
-    children: PropTypes.node,
-}
-
-export default Button

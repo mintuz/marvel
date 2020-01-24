@@ -1,7 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, FC } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
 import Button from './Button'
+
+export type TabProps = {
+    title: string
+    id: string
+    onClick: () => void
+    isOpen: boolean
+    variant: string
+    children: React.ReactElement<TabProps>[]
+}
+
+export type TabsProps = {
+    activeTab: string
+    children: React.ReactElement<TabProps>[]
+}
 
 const TabItems = styled.ul`
     display: flex;
@@ -60,7 +74,7 @@ const TabContent = styled.div`
     }
 `
 
-export const Tabs = ({ children, activeTab }) => {
+export const Tabs: FC<TabsProps> = ({ children, activeTab }) => {
     const [active, setActive] = useState(activeTab)
 
     return (
@@ -100,7 +114,13 @@ export const Tabs = ({ children, activeTab }) => {
     )
 }
 
-export const Tab = ({ title, id, onClick, isOpen, variant = 'primary' }) => {
+export const Tab: FC<TabProps> = ({
+    title,
+    id,
+    onClick,
+    isOpen,
+    variant = 'primary',
+}) => {
     return (
         <TabButton
             variant={variant}

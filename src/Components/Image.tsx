@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
+// @ts-ignore
 import { useIntersect } from '@mintuz/react-intersect'
 
 const ImageContainer = styled.div`
@@ -8,14 +9,14 @@ const ImageContainer = styled.div`
     }
 `
 
-const Placeholder = styled.div`
+const Placeholder = styled.div<{ aspect: string }>`
     position: relative;
     display: block;
     overflow: hidden;
     height: 0;
     padding-bottom: ${props => {
         const parts = props.aspect.split(':')
-        return `${(parts[1] / parts[0]) * 100}%`
+        return `${(parseInt(parts[1]) / parseInt(parts[0])) * 100}%`
     }};
 `
 
@@ -27,7 +28,14 @@ const PlaceholderContent = styled.div`
     left: 0;
 `
 
-export default ({
+export type ImageProps = {
+    src: string
+    alt: string
+    loading: string
+    aspect: string
+}
+
+const Image: FC<ImageProps> = ({
     src,
     alt = '',
     loading = 'auto',
@@ -56,3 +64,5 @@ export default ({
 
     return <img src={src} alt={alt}></img>
 }
+
+export default Image

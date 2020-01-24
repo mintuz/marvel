@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import { layout, space } from 'styled-system'
+import { layout, space, LayoutProps, SpaceProps } from 'styled-system'
+
+export type GridItemProps = LayoutProps & SpaceProps
 
 export const GridWrap = styled.div`
     max-width: 1280px;
@@ -10,7 +12,7 @@ export const GridWrap = styled.div`
     box-sizing: border-box;
 `
 
-export const GridItem = styled.div`
+export const GridItem = styled.div<GridItemProps>`
     ${layout}
     ${space}
     flex: 0 0 auto;

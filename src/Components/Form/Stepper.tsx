@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState, FC } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
 import { Add, Remove } from 'styled-icons/material'
@@ -57,11 +56,17 @@ const Value = styled.div`
 
 const LabelText = styled.label``
 
-export default function StepperComponent({
+export type StepperComponentProps = {
+    value: number
+    label: string
+    incrementBy: number
+}
+
+const StepperComponent: FC<StepperComponentProps> = ({
     value = 0,
     label,
     incrementBy = 1,
-}) {
+}) => {
     const [internalValue, setValue] = useState(value)
     return (
         <Stepper>
@@ -73,6 +78,8 @@ export default function StepperComponent({
                         setValue(internalValue - incrementBy)
                     }}
                 >
+                    {/*
+                    // @ts-ignore */}
                     <Remove size="1em" />
                 </ButtonMinus>
                 <ButtonPlus
@@ -81,6 +88,8 @@ export default function StepperComponent({
                         setValue(internalValue + incrementBy)
                     }}
                 >
+                    {/*
+                    // @ts-ignore */}
                     <Add size="1em" />
                 </ButtonPlus>
                 <Value>{internalValue}</Value>
@@ -90,8 +99,4 @@ export default function StepperComponent({
     )
 }
 
-StepperComponent.propTypes = {
-    value: PropTypes.number,
-    incrementBy: PropTypes.number,
-    label: PropTypes.string,
-}
+export default StepperComponent
