@@ -46,6 +46,14 @@ const Image: FC<ImageProps> = ({
         triggerOnce: true,
     })
 
+    const supportNative =
+        typeof window !== 'undefined' && 'loading' in HTMLImageElement.prototype
+
+    if (supportNative) {
+        // @ts-ignore
+        return <img src={src} alt={alt} loading={loading}></img>
+    }
+
     if (loading === 'lazy') {
         return (
             <ImageContainer ref={ref}>
