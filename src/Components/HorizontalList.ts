@@ -10,7 +10,7 @@ import {
 
 export type HorizontalListProps = SpaceProps & FlexboxProps & LayoutProps
 
-export default styled.ul<HorizontalListProps>`
+const HorizontalList = styled.ul<HorizontalListProps>`
     list-style: none;
     margin: 0;
     padding: 0;
@@ -25,3 +25,5 @@ export default styled.ul<HorizontalListProps>`
         zoom: 1;
     }
 `
+
+export default HorizontalList

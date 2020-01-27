@@ -12,7 +12,7 @@ export type ButtonProps = {
     'aria-controls'?: string
 } & LayoutProps
 
-export default styled.button<ButtonProps>`
+const Button = styled.button<ButtonProps>`
     display: inline-flex;
     cursor: pointer;
     border: none;
@@ -32,3 +32,5 @@ export default styled.button<ButtonProps>`
     })}
     ${layout}
 `
+
+export default Button

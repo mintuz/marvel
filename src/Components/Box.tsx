@@ -24,7 +24,7 @@ export type BoxProps = SpaceProps &
     BorderProps &
     PositionProps
 
-export default styled.div<BoxProps>`
+const Box = styled.div<BoxProps>`
     ${layout}
     ${flexbox}
     ${position}
@@ -33,3 +33,5 @@ export default styled.div<BoxProps>`
     ${color}
     ${border}
 `
+
+export default Box

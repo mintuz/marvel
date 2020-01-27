@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { variant } from 'styled-system'
 
-export default styled.span<{ variant: string }>`
+const Badge = styled.span<{ variant: string }>`
     display: inline-block;
     padding: 4px 8px 4px 8px;
     text-transform: uppercase;
@@ -11,3 +11,5 @@ export default styled.span<{ variant: string }>`
         scale: 'badge',
     })}
 `
+
+export default Badge
