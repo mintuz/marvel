@@ -1,9 +1,11 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
 import { ThemeProvider, Typography } from '../src'
 
 <Meta title="1. Foundations|Typography" component={Typography} />
 
 # Typography
+
+## Example
 
 <Preview>
     <Story name="Default">
@@ -25,3 +27,7 @@ import { ThemeProvider, Typography } from '../src'
         </ThemeProvider>
     </Story>
 </Preview>
+
+## Props
+
+<Props of={Typography} />

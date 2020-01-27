@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
 import { ThemeProvider, Typography, Tabs, Tab } from '../src'
 
 <Meta title="3. Components|Tabs" component={Tabs} />
@@ -8,6 +8,8 @@ import { ThemeProvider, Typography, Tabs, Tab } from '../src'
 Tabs keeps related content in a single container that is shown and hidden through navigation.
 
 Note, only one instance of a tab component should exist on a page.
+
+## Example
 
 <Preview>
     <Story name="Default">
@@ -80,3 +82,11 @@ Note, only one instance of a tab component should exist on a page.
         </ThemeProvider>
     </Story>
 </Preview>
+
+## Tabs props
+
+<Props of={Tabs} />
+
+## Tab props
+
+<Props of={Tab} />

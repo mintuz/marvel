@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Preview , Props} from '@storybook/addon-docs/blocks'
 import { Accordion, AccordionItem, Typography, ThemeProvider } from '../src'
 
 <Meta title="3. Components|Accordion" component={Accordion} />
@@ -6,6 +6,10 @@ import { Accordion, AccordionItem, Typography, ThemeProvider } from '../src'
 # Accordion
 
 An accordion allows a user to toggle the display of a section of content. An Accordion should only be used when 2 or more sections of content are to be displayed within the accordion
+
+## Props
+
+<Props of={Accordion} />
 
 <Preview>
     <Story name="Default">

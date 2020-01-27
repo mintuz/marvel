@@ -57,8 +57,11 @@ const Value = styled.div`
 const LabelText = styled.label``
 
 export type StepperComponentProps = {
+    /* default value for the stepper */
     value: number
+    /* Display label */
     label: string
+    /* increment by a number */
     incrementBy: number
 }
 

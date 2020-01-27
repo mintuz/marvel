@@ -1,6 +1,6 @@
 module.exports = ({ config }) => {
     config.module.rules.push({
-        test: /\.(ts|tsx|js|jsx)$/,
+        test: /\.(ts|tsx)$/,
         use: [
             {
                 loader: require.resolve('babel-loader'),
