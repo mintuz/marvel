@@ -1,7 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
 import { Phone } from 'styled-icons/material'
-import Theme from '../src/Components/ThemeProvider'
-import InputField from '../src/Components/Form/InputField'
+import { ThemeProvider, InputField, Box } from '../src'
 
 <Meta title="4. Form|Input Field" component={InputField} />
 
@@ -17,9 +16,13 @@ import InputField from '../src/Components/Form/InputField'
 
 <Preview>
     <Story name="Default">
-        <Theme>
-            <InputField label="My input label" placeholder="Placeholder" />
-        </Theme>
+        <ThemeProvider>
+            <InputField
+                type="text"
+                label="My input label"
+                placeholder="Placeholder"
+            />
+        </ThemeProvider>
     </Story>
 </Preview>
 
@@ -29,13 +32,14 @@ When you want to inform a user that their is an error within the field, you can 
 
 <Preview>
     <Story name="Input field error">
-        <Theme>
+        <ThemeProvider>
             <InputField
+                type="text"
                 error="This is an error message passed in"
                 label="My input label"
                 placeholder="Placeholder"
             />
-        </Theme>
+        </ThemeProvider>
     </Story>
 </Preview>
 
@@ -45,12 +49,28 @@ Input fields can be prefixed with an icon
 
 <Preview>
     <Story name="Input field icon">
-        <Theme>
+        <ThemeProvider>
             <InputField
                 icon={<Phone />}
                 label="My input label"
                 placeholder="Placeholder"
             />
-        </Theme>
+        </ThemeProvider>
+    </Story>
+</Preview>
+
+### Override CSS Properties
+
+<Preview>
+    <Story name="Override Width">
+        <ThemeProvider>
+            <InputField
+                width="50px"
+                color="red"
+                type="text"
+                label="KG"
+                placeholder=""
+            />
+        </ThemeProvider>
     </Story>
 </Preview>

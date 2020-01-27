@@ -23,8 +23,8 @@ export const Grid = styled.div`
     flex: 0 1 auto;
     flex-direction: row;
     flex-wrap: wrap;
-    marginleft: -8px;
-    marginright: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
 
     &,
     > * {

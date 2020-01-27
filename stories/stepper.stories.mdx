@@ -1,7 +1,7 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
 import { Phone } from 'styled-icons/material'
-import Theme from '../src/Components/ThemeProvider'
-import Stepper from '../src/Components/Form/Stepper'
+
+import { ThemeProvider, Stepper } from '../src'
 
 <Meta title="4. Form|Stepper" component={Stepper} />
 
@@ -17,8 +17,8 @@ Allow a user to increase or decrease a value by an amount
 
 <Preview>
     <Story name="Default">
-        <Theme>
+        <ThemeProvider>
             <Stepper incrementBy={10} label={'Number of burgers'} value={20} />
-        </Theme>
+        </ThemeProvider>
     </Story>
 </Preview>

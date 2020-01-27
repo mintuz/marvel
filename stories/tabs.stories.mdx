@@ -1,7 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import Theme from '../src/Components/ThemeProvider'
-import { Tabs, Tab } from '../src/Components/Tabs'
-import Typography from '../src/Components/Typography'
+import { ThemeProvider, Typography, Tabs, Tab } from '../src'
 
 <Meta title="3. Components|Tabs" component={Tabs} />
 
@@ -13,7 +11,7 @@ Note, only one instance of a tab component should exist on a page.
 
 <Preview>
     <Story name="Default">
-        <Theme>
+        <ThemeProvider>
             <Tabs activeTab="item2">
                 <Tab title="Item 1" id="item1">
                     <Typography variant="displayTwo" mt={0} as="h2">
@@ -79,6 +77,6 @@ Note, only one instance of a tab component should exist on a page.
                     </p>
                 </Tab>
             </Tabs>
-        </Theme>
+        </ThemeProvider>
     </Story>
 </Preview>

@@ -2,11 +2,16 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
 import css from '@styled-system/css'
+import Box from '../Box'
+
+const Label = styled.label`
+    display: inline-block;
+`
 
 const LabelText = styled.span`
     display: block;
     ${css({
-        marginBottom: [2],
+        marginBottom: [1],
     })}
 
     .mv-c-input-field--has-error & {
@@ -16,7 +21,7 @@ const LabelText = styled.span`
     }
 `
 
-const InputField = styled.input`
+const InputField = styled(Box)`
     border: 2px solid;
     border-radius: 3px;
 
@@ -46,7 +51,7 @@ const InputField = styled.input`
 
 const ErrorMessage = styled.div`
     ${css({
-        marginTop: [2],
+        marginTop: [1],
         color: 'red',
     })}
 `
@@ -91,16 +96,16 @@ const InputFieldComponent: FC<InputFieldComponentProps> = ({
     })
 
     return (
-        <label className={cssClassNames}>
+        <Label className={cssClassNames}>
             <LabelText>{label}</LabelText>
             <InputContainer>
                 {icon && (
                     <Icon>{React.cloneElement(icon, { size: '1em' })}</Icon>
                 )}
-                <InputField {...rest} />
+                <InputField as="input" {...rest} />
                 {error && <ErrorMessage>{error}</ErrorMessage>}
             </InputContainer>
-        </label>
+        </Label>
     )
 }
 

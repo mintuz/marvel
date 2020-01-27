@@ -1,6 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import Theme from '../src/Components/ThemeProvider'
-import Typography from '../src/Components/Typography'
+import { ThemeProvider, Typography } from '../src'
 
 <Meta title="1. Foundations|Typography" component={Typography} />
 
@@ -8,7 +7,7 @@ import Typography from '../src/Components/Typography'
 
 <Preview>
     <Story name="Default">
-        <Theme>
+        <ThemeProvider>
             <div>
                 <Typography as="h1" mb={[0]} mt={[0]} variant="displayOne">
                     Display One
@@ -23,6 +22,6 @@ import Typography from '../src/Components/Typography'
                     Body
                 </Typography>
             </div>
-        </Theme>
+        </ThemeProvider>
     </Story>
 </Preview>
