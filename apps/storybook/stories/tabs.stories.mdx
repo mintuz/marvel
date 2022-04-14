@@ -1,0 +1,83 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import Theme from '../src/Components/ThemeProvider'
+import { Tabs, Tab, Theme, Typography } from '@mintuz/marvel'
+
+<Meta title="3. Components|Tabs" component={Tabs} />
+
+# Tabs
+
+Tabs keeps related content in a single container that is shown and hidden through navigation.
+
+Note, only one instance of a tab component should exist on a page.
+
+<Preview>
+    <Story name="Default">
+        <Theme>
+            <Tabs activeTab="item2">
+                <Tab title="Item 1" id="item1">
+                    <Typography variant="displayTwo" mt={0} as="h2">
+                        Item 1 html
+                    </Typography>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sint culpa cupiditate sed repellendus accusantium saepe
+                        numquam dolores fugiat. Similique nesciunt placeat odit
+                        possimus natus quo eos assumenda porro ex reprehenderit
+                        sed aliquid nostrum vero, at ut deserunt quas distinctio
+                        obcaecati itaque quia nulla. Eius sequi amet veritatis
+                        ipsa aliquam quibusdam architecto perspiciatis dolorem
+                        molestiae est, aspernatur laboriosam. Commodi numquam
+                        incidunt, necessitatibus sint, neque quos rem aperiam
+                        enim, ab ipsa tempore saepe. Explicabo quam vero, veniam
+                        dicta aspernatur, excepturi ullam repellendus
+                        voluptatibus unde quibusdam perspiciatis minus. Ex nisi
+                        quia nemo tenetur repudiandae quasi, vero dignissimos
+                        aut aperiam temporibus, natus eos quis.
+                    </p>
+                </Tab>
+                <Tab title="Item 2" id="item2">
+                    <Typography variant="displayTwo" mt={0} as="h2">
+                        Item 2 html
+                    </Typography>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sint culpa cupiditate sed repellendus accusantium saepe
+                        numquam dolores fugiat. Similique nesciunt placeat odit
+                        possimus natus quo eos assumenda porro ex reprehenderit
+                        sed aliquid nostrum vero, at ut deserunt quas distinctio
+                        obcaecati itaque quia nulla. Eius sequi amet veritatis
+                        ipsa aliquam quibusdam architecto perspiciatis dolorem
+                        molestiae est, aspernatur laboriosam. Commodi numquam
+                        incidunt, necessitatibus sint, neque quos rem aperiam
+                        enim, ab ipsa tempore saepe. Explicabo quam vero, veniam
+                        dicta aspernatur, excepturi ullam repellendus
+                        voluptatibus unde quibusdam perspiciatis minus. Ex nisi
+                        quia nemo tenetur repudiandae quasi, vero dignissimos
+                        aut aperiam temporibus, natus eos quis.
+                    </p>
+                </Tab>
+                <Tab title="Item 3" id="item3">
+                    <Typography variant="displayTwo" mt={0} as="h2">
+                        Item 3 html
+                    </Typography>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sint culpa cupiditate sed repellendus accusantium saepe
+                        numquam dolores fugiat. Similique nesciunt placeat odit
+                        possimus natus quo eos assumenda porro ex reprehenderit
+                        sed aliquid nostrum vero, at ut deserunt quas distinctio
+                        obcaecati itaque quia nulla. Eius sequi amet veritatis
+                        ipsa aliquam quibusdam architecto perspiciatis dolorem
+                        molestiae est, aspernatur laboriosam. Commodi numquam
+                        incidunt, necessitatibus sint, neque quos rem aperiam
+                        enim, ab ipsa tempore saepe. Explicabo quam vero, veniam
+                        dicta aspernatur, excepturi ullam repellendus
+                        voluptatibus unde quibusdam perspiciatis minus. Ex nisi
+                        quia nemo tenetur repudiandae quasi, vero dignissimos
+                        aut aperiam temporibus, natus eos quis.
+                    </p>
+                </Tab>
+            </Tabs>
+        </Theme>
+    </Story>
+</Preview>

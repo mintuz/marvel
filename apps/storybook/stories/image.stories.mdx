@@ -1,0 +1,44 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import { ThemeProvider, Image } from '@mintuz/marvel'
+
+<Meta title="3. Components|Image" component={Image} />
+
+# Image
+
+Image with lazy loading capablities
+
+## Props
+
+<Props of={Image} />
+
+## Examples
+
+Simple image with reserved space
+
+<Preview>
+    <Story name="Default">
+        <ThemeProvider>
+            <Image
+                src="https://github.com/mintuz.png"
+                alt="My alt text"
+                loading="lazy"
+            />
+        </ThemeProvider>
+    </Story>
+</Preview>
+
+Image with placeholder content
+
+<Preview>
+    <Story name="With placeholder content">
+        <ThemeProvider>
+            <Image
+                src="https://github.com/mintuz.png"
+                alt="My alt text"
+                loading="lazy"
+            >
+                <p>Placeholder text, this can be any kind of element</p>
+            </Image>
+        </ThemeProvider>
+    </Story>
+</Preview>

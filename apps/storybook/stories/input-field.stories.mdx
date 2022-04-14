@@ -1,0 +1,55 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import { Phone } from 'styled-icons/material'
+import { Theme, InputField } from '@mintuz/marvel'
+
+<Meta title="4. Form|Input Field" component={InputField} />
+
+# Input Field
+
+## Props
+
+<Props of={InputField} />
+
+## Examples
+
+### Default state
+
+<Preview>
+    <Story name="Default">
+        <Theme>
+            <InputField label="My input label" placeholder="Placeholder" />
+        </Theme>
+    </Story>
+</Preview>
+
+### Error
+
+When you want to inform a user that their is an error within the field, you can do so by passing a prop `error` to the component, this prop can accept a React component or plain text and will be displayed to the user.
+
+<Preview>
+    <Story name="Input field error">
+        <Theme>
+            <InputField
+                error="This is an error message passed in"
+                label="My input label"
+                placeholder="Placeholder"
+            />
+        </Theme>
+    </Story>
+</Preview>
+
+### With an icon
+
+Input fields can be prefixed with an icon
+
+<Preview>
+    <Story name="Input field icon">
+        <Theme>
+            <InputField
+                icon={<Phone />}
+                label="My input label"
+                placeholder="Placeholder"
+            />
+        </Theme>
+    </Story>
+</Preview>
