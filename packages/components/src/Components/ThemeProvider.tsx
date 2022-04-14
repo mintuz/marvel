@@ -109,6 +109,7 @@ export type ThemeProps = {
 
 const Theme: FC<ThemeProps> = ({ children, theme = defaultTheme }) => {
     return (
+        // @ts-ignore
         <ThemeProvider theme={theme}>
             <React.Fragment>
                 <ResetStyle />

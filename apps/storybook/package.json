@@ -5,7 +5,7 @@
     "dependencies": {
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
-        "@mintuz/marvel-components": "^1.0.0",
+        "@mintuz/marvel": "^1.0.0",
         "@styled-system/css": "^5.1.5",
         "@styled-system/theme-get": "^5.1.2",
         "styled-icons": "^9.2.0",

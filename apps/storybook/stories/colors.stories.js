@@ -6,7 +6,7 @@ import {
     ThemeProvider,
     Theme,
     Box,
-} from '@mintuz/marvel-components'
+} from '@mintuz/marvel'
 
 export default {
     title: 'Foundations/Colours',

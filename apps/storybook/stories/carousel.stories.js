@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Carousel } from '@mintuz/marvel-components'
+import { Carousel } from '@mintuz/marvel'
 
 const FakeItem = styled.div`
     display: flex;
