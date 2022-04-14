@@ -1,70 +1,23 @@
 {
-    "name": "@mintuz/marvel",
-    "version": "0.0.17",
-    "description": "A collection of reusable UI components built in React",
-    "main": "dist/index.js",
+    "name": "@mintuz/marvel-root",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
     "scripts": {
-        "check-types": "tsc --project tsconfig.json --noEmit",
-        "check-types:watch": "yarn check-types -- --watch",
-        "prettier": "prettier",
-        "ui-automation": "cypress run",
-        "dev": "start-storybook -p 6006",
-        "build-storybook": "build-storybook --docs",
-        "babel": "babel src --extensions \".ts,.tsx,.js,.jsx\" --out-dir dist",
-        "build:types": "tsc -p ./tsconfig.json --emitDeclarationOnly",
-        "build": "yarn babel && yarn build:types"
-    },
-    "author": "Adam Bulmer <github@mintuz.com>",
-    "license": "MIT",
-    "peerDependencies": {
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
-        "styled-components": "^5.0.0"
-    },
-    "dependencies": {
-        "@mintuz/react-intersect": "^1.1.0",
-        "@styled-system/css": "^5.1.4",
-        "@styled-system/theme-get": "^5.1.2",
-        "classnames": "^2.2.6",
-        "polished": "^3.4.1",
-        "prop-types": "^15.7.2",
-        "styled-icons": "^9.2.0",
-        "styled-system": "^5.1.4"
+        "build": "turbo run build",
+        "dev": "turbo run dev --parallel",
+        "lint": "turbo run lint",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\""
     },
     "devDependencies": {
-        "react": "16.12.0",
-        "react-dom": "16.12.0",
-        "styled-components": "^5.0.0",
-        "@babel/cli": "^7.8.3",
-        "@babel/core": "^7.8.3",
-        "@babel/node": "^7.8.3",
-        "@babel/plugin-syntax-object-rest-spread": "^7.8.3",
-        "@babel/plugin-transform-classes": "^7.8.3",
-        "@babel/preset-env": "^7.8.3",
-        "@babel/preset-react": "^7.8.3",
-        "@babel/preset-typescript": "^7.8.3",
-        "@cypress/webpack-preprocessor": "^4.1.1",
-        "@storybook/addon-actions": "^5.3.9",
-        "@storybook/addon-docs": "^5.3.9",
-        "@storybook/addon-links": "^5.3.9",
-        "@storybook/addons": "^5.3.9",
-        "@storybook/preset-typescript": "^1.2.0",
-        "@storybook/react": "^5.3.9",
-        "@storybook/storybook-deployer": "^2.8.1",
-        "@testing-library/cypress": "^4.0.4",
-        "@types/classnames": "^2.2.9",
-        "@types/styled-components": "^4.4.2",
-        "@types/styled-system": "^5.1.4",
-        "@types/styled-system__css": "^5.0.4",
-        "@types/styled-system__theme-get": "^5.0.0",
-        "babel-core": "^7.0.0-bridge.0",
-        "babel-jest": "^24.9.0",
-        "babel-loader": "^8.0.6",
-        "cypress": "^3.8.2",
-        "cypress-react-unit-test": "^2.4.3",
-        "prettier": "1.19.1",
-        "react-docgen-typescript-loader": "^3.6.0",
-        "ts-loader": "^6.2.0",
-        "typescript": "^3.7.5"
-    }
+        "prettier": "^2.5.1",
+        "turbo": "latest"
+    },
+    "engines": {
+        "npm": ">=7.0.0",
+        "node": ">=14.0.0"
+    },
+    "packageManager": "yarn@1.22.15"
 }
