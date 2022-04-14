@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Carousel } from '@mintuz/marvel'
+import { Carousel } from '@mintuz/marvel-components'
 
 const FakeItem = styled.div`
     display: flex;
@@ -21,7 +21,7 @@ const Button = styled.button`
 `
 
 export default {
-    title: '3. Components|Carousel',
+    title: 'Components/Carousel',
 }
 
 export const defaultStory = () => (

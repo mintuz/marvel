@@ -39,7 +39,7 @@
         "@babel/preset-react": "^7.16.7",
         "@babel/preset-typescript": "^7.16.7",
         "@cypress/webpack-preprocessor": "^4.1.1",
-        "@mintuz/marvel-tsconfig": "*",
+        "@mintuz/marvel-tsconfig": "^1.0.0",
         "@testing-library/cypress": "^4.0.4",
         "@types/classnames": "^2.3.1",
         "@types/styled-components": "^5.1.25",

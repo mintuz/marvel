@@ -6,10 +6,10 @@ import {
     ThemeProvider,
     Theme,
     Box,
-} from '@mintuz/marvel'
+} from '@mintuz/marvel-components'
 
 export default {
-    title: '1. Foundations|Colours',
+    title: 'Foundations/Colours',
 }
 
 export const defaultStory = () => (
