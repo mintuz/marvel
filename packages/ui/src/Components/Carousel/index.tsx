@@ -24,7 +24,7 @@ const CarouselItem = styled.div`
 `
 
 export type CarouselProps = {
-    button: (direction: string) => React.ReactElement
+    button?: (direction: string) => React.ReactElement
     activeItem: number
 }
 
@@ -60,7 +60,7 @@ const Carousel: FC<CarouselProps> = props => {
     }
 
     function renderButton(direction: string) {
-        return React.Children.map(props.button(direction), button => {
+        return React.Children.map(props.button!(direction), button => {
             return React.cloneElement(button, {
                 onClick() {
                     handleOnClick(direction)

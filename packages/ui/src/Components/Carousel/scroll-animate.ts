@@ -5,6 +5,7 @@ function getRequestAnimationFrameFallback(callback: () => void) {
 function getRequestAnimationFrame() {
     return (
         window.requestAnimationFrame ||
+        // @ts-ignore
         window.webkitRequestAnimationFrame ||
         getRequestAnimationFrameFallback
     )
