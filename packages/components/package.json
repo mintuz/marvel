@@ -18,7 +18,6 @@
         "styled-components": "^5.0.0"
     },
     "dependencies": {
-        "@mintuz/react-intersect": "^1.1.0",
         "@styled-system/css": "^5.1.5",
         "@styled-system/theme-get": "^5.1.2",
         "classnames": "^2.3.1",
