@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Box } from './Box'
+import { Box } from '../layout/Box'
 
 export type AlignmentProps = 'flex-start' | 'center' | 'flex-end'
 

@@ -6,7 +6,8 @@ import {
 import { themeGet } from '@styled-system/theme-get'
 
 // @ts-ignore
-import { theme as defaultTheme } from '../theme/default'
+import { Theme } from './interface'
+import { theme as defaultTheme } from './default'
 
 const ResetStyle = createGlobalStyle`
   /* Box sizing rules */
@@ -107,7 +108,7 @@ const FontFamilyStyle = createGlobalStyle`
 `
 
 export type ThemeProviderProps = {
-    theme: { [key: string]: any }
+    theme: Theme
 }
 
 export const ThemeProvider: FC<ThemeProviderProps> = ({

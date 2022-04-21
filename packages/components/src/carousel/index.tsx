@@ -2,6 +2,8 @@ import React, { useRef, useEffect, FC } from 'react'
 import styled from 'styled-components'
 import { useCarousel } from './useCarousel'
 
+export { useCarousel } from './useCarousel'
+
 const CarouselContainer = styled.div`
     position: relative;
     overflow: hidden;

@@ -1,4 +1,5 @@
 import { rem } from 'polished'
+import { Theme } from './interface'
 
 const primitives = {
     breakpoints: ['400px', '640px', '900px', '1008px', '1280px'],
@@ -8,6 +9,7 @@ const primitives = {
     lineHeights: [24, 28, 32, 40],
     fontWeights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
     colors: {
+        accent: 'rgb(0, 0, 0)',
         black: 'rgb(0, 0, 0)',
         white: 'rgb(255, 255, 255)',
         transparent: 'transparent',
@@ -16,9 +18,9 @@ const primitives = {
     },
 }
 
-export const theme = {
+export const theme: Theme = {
     ...primitives,
-    textStyle: {
+    typography: {
         caption: {
             fontSize: rem(primitives.fontSizes[0]),
             lineHeight: rem(primitives.lineHeights[0]),
@@ -39,19 +41,24 @@ export const theme = {
             fontSize: rem(primitives.fontSizes[2]),
             lineHeight: rem(primitives.lineHeights[2]),
         },
+        displayFour: {
+            fontSize: rem(primitives.fontSizes[2]),
+            lineHeight: rem(primitives.lineHeights[2]),
+        },
+        displayFive: {
+            fontSize: rem(primitives.fontSizes[2]),
+            lineHeight: rem(primitives.lineHeights[2]),
+        },
     },
     button: {
         primary: {
             color: primitives.colors.white,
             backgroundColor: primitives.colors.black,
-            fontSize: rem(primitives.fontSizes[1]),
-            lineHeight: rem(primitives.lineHeights[1]),
         },
         secondary: {
             border: `1px solid ${primitives.colors.black}`,
+            backgroundColor: primitives.colors.transparent,
             color: primitives.colors.black,
-            fontSize: rem(primitives.fontSizes[1]),
-            lineHeight: rem(primitives.lineHeights[1]),
         },
     },
     badge: {

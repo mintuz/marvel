@@ -1,15 +1,11 @@
-import React, { FC } from 'react'
 import styled from 'styled-components'
 import { variant } from 'styled-system'
 import { layout, LayoutProps } from 'styled-system'
 import css from '@styled-system/css'
+import { ButtonHTMLAttributes } from 'react'
 
-export type ButtonProps = {
-    onClick?: () => void
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     variant?: string
-    type?: string
-    'aria-expanded'?: boolean
-    'aria-controls'?: string
 } & LayoutProps
 
 export const Button = styled.button<ButtonProps>`
