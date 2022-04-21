@@ -1,10 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import {
-    Accordion,
-    AccordionItem,
-    Typography,
-    ThemeProvider,
-} from '@mintuz/marvel'
+import { Accordion, AccordionItem, Text, ThemeProvider } from '@mintuz/marvel'
 
 <Meta title="Components/Accordion" component={Accordion} />
 
@@ -19,35 +14,35 @@ An accordion allows a user to toggle the display of a section of content. An Acc
                 <AccordionItem
                     header={
                         <React.Fragment>
-                            <Typography mt={0} mb={0} as="h2">
+                            <Text mt={0} mb={0} as="h2">
                                 Item 1
-                            </Typography>
-                            <Typography as="p" mt={0} mb={0}>
+                            </Text>
+                            <Text as="p" mt={0} mb={0}>
                                 Some description text underneith
-                            </Typography>
+                            </Text>
                         </React.Fragment>
                     }
                 >
-                    <Typography as="p" mt={0} mb={0}>
+                    <Text as="p" mt={0} mb={0}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Optio nemo odit temporibus illo quo eos ipsum atque!
                         Distinctio, vel tempora placeat quasi voluptatibus
                         aperiam ad adipisci iste deserunt illo voluptas.
-                    </Typography>
+                    </Text>
                 </AccordionItem>
                 <AccordionItem
                     header={
-                        <Typography mt={0} mb={0} as="h2">
+                        <Text mt={0} mb={0} as="h2">
                             Item 2
-                        </Typography>
+                        </Text>
                     }
                 >
-                    <Typography as="p" mb={0}>
+                    <Text as="p" mb={0}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Optio nemo odit temporibus illo quo eos ipsum atque!
                         Distinctio, vel tempora placeat quasi voluptatibus
                         aperiam ad adipisci iste deserunt illo voluptas.
-                    </Typography>
+                    </Text>
                 </AccordionItem>
             </Accordion>
         </ThemeProvider>

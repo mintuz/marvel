@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { Box, Theme, HorizontalList } from '@mintuz/marvel'
+import { Box, ThemeProvider, HorizontalList } from '@mintuz/marvel'
 
 <Meta title="Objects/Horizontal List" component={HorizontalList} />
 
@@ -9,7 +9,7 @@ A list of items that span horizontally.
 
 <Preview>
     <Story name="Default">
-        <Theme>
+        <ThemeProvider>
             <HorizontalList>
                 <Box as="li" mr={1}>
                     Item 1
@@ -21,6 +21,6 @@ A list of items that span horizontally.
                     Item 3
                 </Box>
             </HorizontalList>
-        </Theme>
+        </ThemeProvider>
     </Story>
 </Preview>

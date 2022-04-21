@@ -1,12 +1,5 @@
 import React from 'react'
-import {
-    Grid,
-    GridItem,
-    Typography,
-    ThemeProvider,
-    Theme,
-    Box,
-} from '@mintuz/marvel'
+import { Grid, GridItem, Text, ThemeProvider, theme, Box } from '@mintuz/marvel'
 
 export default {
     title: 'Foundations/Colours',
@@ -15,17 +8,12 @@ export default {
 export const defaultStory = () => (
     <ThemeProvider>
         <Grid>
-            {Object.keys(Theme.colors).map((color) => {
+            {Object.keys(theme.colors).map((color) => {
                 return (
                     <GridItem mb={4} width={[1 / 1, 1 / 2, 1 / 4]}>
-                        <Typography
-                            as="h2"
-                            mt={0}
-                            mb={1}
-                            variant="displayThree"
-                        >
+                        <Text as="h2" mt={0} mb={1} variant="displayThree">
                             {color}
-                        </Typography>
+                        </Text>
                         <Box
                             height="50px"
                             border={`1px solid ${Theme.colors.grey}`}

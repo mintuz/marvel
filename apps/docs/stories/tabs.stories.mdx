@@ -1,6 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import Theme from '../src/Components/ThemeProvider'
-import { Tabs, Tab, Theme, Typography } from '@mintuz/marvel'
+import { Tabs, Tab, ThemeProvider, Text } from '@mintuz/marvel'
 
 <Meta title="Components/Tabs" component={Tabs} />
 
@@ -12,12 +11,12 @@ Note, only one instance of a tab component should exist on a page.
 
 <Preview>
     <Story name="Default">
-        <Theme>
+        <ThemeProvider>
             <Tabs activeTab="item2">
                 <Tab title="Item 1" id="item1">
-                    <Typography variant="displayTwo" mt={0} as="h2">
+                    <Text variant="displayTwo" mt={0} as="h2">
                         Item 1 html
-                    </Typography>
+                    </Text>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Sint culpa cupiditate sed repellendus accusantium saepe
@@ -36,9 +35,9 @@ Note, only one instance of a tab component should exist on a page.
                     </p>
                 </Tab>
                 <Tab title="Item 2" id="item2">
-                    <Typography variant="displayTwo" mt={0} as="h2">
+                    <Text variant="displayTwo" mt={0} as="h2">
                         Item 2 html
-                    </Typography>
+                    </Text>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Sint culpa cupiditate sed repellendus accusantium saepe
@@ -57,9 +56,9 @@ Note, only one instance of a tab component should exist on a page.
                     </p>
                 </Tab>
                 <Tab title="Item 3" id="item3">
-                    <Typography variant="displayTwo" mt={0} as="h2">
+                    <Text variant="displayTwo" mt={0} as="h2">
                         Item 3 html
-                    </Typography>
+                    </Text>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Sint culpa cupiditate sed repellendus accusantium saepe
@@ -78,6 +77,6 @@ Note, only one instance of a tab component should exist on a page.
                     </p>
                 </Tab>
             </Tabs>
-        </Theme>
+        </ThemeProvider>
     </Story>
 </Preview>

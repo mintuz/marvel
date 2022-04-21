@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { Box, Theme, LoadingSpinner } from '@mintuz/marvel'
+import { Box, ThemeProvider, LoadingSpinner } from '@mintuz/marvel'
 
 <Meta title="Components/Loading Spinner" component={LoadingSpinner} />
 
@@ -9,10 +9,10 @@ An SVG Icon that spins, scalable via parent components font size
 
 <Preview>
     <Story name="Default">
-        <Theme>
+        <ThemeProvider>
             <Box fontSize="64px" color="black">
                 <LoadingSpinner />
             </Box>
-        </Theme>
+        </ThemeProvider>
     </Story>
 </Preview>
