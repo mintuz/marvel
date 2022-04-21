@@ -16,7 +16,7 @@ const LabelText = styled.span`
     }
 `
 
-const InputField = styled.input`
+const StyledInputField = styled.input`
     border: 2px solid;
     border-radius: 3px;
 
@@ -66,7 +66,7 @@ const Icon = styled.div`
     justify-content: center;
 `
 
-export type InputFieldComponentProps = {
+export type InputFieldProps = {
     onChange: () => void
     onBlur: () => void
     onFocus: () => void
@@ -79,7 +79,7 @@ export type InputFieldComponentProps = {
     pattern: string
 }
 
-const InputFieldComponent: FC<InputFieldComponentProps> = ({
+export const InputField: FC<InputFieldProps> = ({
     error,
     label,
     icon,
@@ -97,11 +97,9 @@ const InputFieldComponent: FC<InputFieldComponentProps> = ({
                 {icon && (
                     <Icon>{React.cloneElement(icon, { size: '1em' })}</Icon>
                 )}
-                <InputField {...rest} />
+                <StyledInputField {...rest} />
                 {error && <ErrorMessage>{error}</ErrorMessage>}
             </InputContainer>
         </label>
     )
 }
-
-export default InputFieldComponent

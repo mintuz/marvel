@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import css from '@styled-system/css'
 import { Add, Remove } from 'styled-icons/material'
 
-const Stepper = styled.div`
+const StyledStepper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,20 +56,20 @@ const Value = styled.div`
 
 const LabelText = styled.label``
 
-export type StepperComponentProps = {
+export type StepperProps = {
     value: number
     label: string
     incrementBy: number
 }
 
-const StepperComponent: FC<StepperComponentProps> = ({
+export const Stepper: FC<StepperProps> = ({
     value = 0,
     label,
     incrementBy = 1,
 }) => {
     const [internalValue, setValue] = useState(value)
     return (
-        <Stepper>
+        <StyledStepper>
             <LabelText> {label}</LabelText>
             <StepperControls>
                 <ButtonMinus
@@ -95,8 +95,6 @@ const StepperComponent: FC<StepperComponentProps> = ({
                 <Value>{internalValue}</Value>
                 <input type="hidden" value={internalValue} />
             </StepperControls>
-        </Stepper>
+        </StyledStepper>
     )
 }
-
-export default StepperComponent

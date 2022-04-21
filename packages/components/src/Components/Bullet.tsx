@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import Box from './Box'
+import { Box } from './Box'
 
 export type AlignmentProps = 'flex-start' | 'center' | 'flex-end'
 
@@ -14,7 +14,7 @@ const alignmentMap: { [key: string]: AlignmentProps } = {
     bottom: 'flex-end',
 }
 
-const Bullet: FC<BulletProps> = ({ children, alignment = 'top' }) => {
+export const Bullet: FC<BulletProps> = ({ children, alignment = 'top' }) => {
     const [Icon, Content] = React.Children.toArray(children)
 
     return (
@@ -33,5 +33,3 @@ const Bullet: FC<BulletProps> = ({ children, alignment = 'top' }) => {
         </Box>
     )
 }
-
-export default Bullet

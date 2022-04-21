@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
-import Typography from './Typography'
+import { Text } from './Text'
 
 const DataListStyle = styled.dl`
     margin: 0;
@@ -22,7 +22,7 @@ const DataItem = styled.div`
     }
 `
 
-export const DataItemTitle = styled(Typography).attrs({
+export const DataItemTitle = styled(Text).attrs({
     as: 'dt',
 })`
     margin: 0;

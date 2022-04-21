@@ -1,5 +1,5 @@
 import { useEffect, useState, RefObject } from 'react'
-import scroll from './scroll-animate'
+import { scrollTo as scroll } from './scroll-animate'
 
 const ITEM_SELECTOR = '.ab-c-carousel__item'
 const ITEMS_CONTAINER_SELECTOR = '.ab-c-carousel__items'
@@ -20,7 +20,7 @@ export type UseCarouselProps = {
     carousel: RefObject<HTMLDivElement>
 }
 
-const useCarousel = ({
+export const useCarousel = ({
     carousel,
     numberOfChildren,
 }: UseCarouselProps): UseCarouselReturnValue => {
@@ -124,5 +124,3 @@ const useCarousel = ({
 
     return [getCurrentIndex, scrollToIndex, getXPosition, getMaxScroll]
 }
-
-export default useCarousel

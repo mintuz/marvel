@@ -5,7 +5,7 @@ import { layout } from 'styled-system'
     1. Allow SVG to scale via font-size
     2. Allow SVG to scale according to it's container width and height.
 */
-export default styled.span`
+export const Icon = styled.span`
     display: inline-block;
     width: 1em; /* [1] */
     height: 1em; /* [1] */

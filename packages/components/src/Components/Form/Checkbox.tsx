@@ -98,7 +98,7 @@ export type CheckboxProps = {
     label: string
 }
 
-const Checkbox: FC<CheckboxProps> = ({
+export const Checkbox: FC<CheckboxProps> = ({
     id,
     disabled = false,
     value,
@@ -130,5 +130,3 @@ const Checkbox: FC<CheckboxProps> = ({
         </div>
     )
 }
-
-export default Checkbox

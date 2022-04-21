@@ -16,7 +16,7 @@ const primitives = {
     },
 }
 
-export default {
+export const theme = {
     ...primitives,
     textStyle: {
         caption: {

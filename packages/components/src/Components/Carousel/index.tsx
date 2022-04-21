@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, FC } from 'react'
 import styled from 'styled-components'
-import useCarousel from './useCarousel'
+import { useCarousel } from './useCarousel'
 
 const CarouselContainer = styled.div`
     position: relative;
@@ -28,7 +28,7 @@ export type CarouselProps = {
     activeItem: number
 }
 
-const Carousel: FC<CarouselProps> = props => {
+export const Carousel: FC<CarouselProps> = props => {
     const carousel = useRef<HTMLDivElement>(null)
     const numberOfChildren = React.Children.count(props.children)
 
@@ -106,5 +106,3 @@ const Carousel: FC<CarouselProps> = props => {
         </CarouselContainer>
     )
 }
-
-export default Carousel

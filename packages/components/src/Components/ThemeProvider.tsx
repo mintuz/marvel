@@ -1,9 +1,12 @@
 import React, { FC } from 'react'
-import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import {
+    ThemeProvider as StyledThemeProvider,
+    createGlobalStyle,
+} from 'styled-components'
 import { themeGet } from '@styled-system/theme-get'
 
 // @ts-ignore
-import defaultTheme from '../theme/default'
+import { theme as defaultTheme } from '../theme/default'
 
 const ResetStyle = createGlobalStyle`
   /* Box sizing rules */
@@ -103,21 +106,22 @@ const FontFamilyStyle = createGlobalStyle`
   }
 `
 
-export type ThemeProps = {
+export type ThemeProviderProps = {
     theme: { [key: string]: any }
 }
 
-const Theme: FC<ThemeProps> = ({ children, theme = defaultTheme }) => {
+export const ThemeProvider: FC<ThemeProviderProps> = ({
+    children,
+    theme = defaultTheme,
+}) => {
     return (
         // @ts-ignore
-        <ThemeProvider theme={theme}>
+        <StyledThemeProvider theme={theme}>
             <React.Fragment>
                 <ResetStyle />
                 <FontFamilyStyle />
                 {children}
             </React.Fragment>
-        </ThemeProvider>
+        </StyledThemeProvider>
     )
 }
-
-export default Theme

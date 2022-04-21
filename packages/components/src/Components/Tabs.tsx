@@ -1,7 +1,7 @@
 import React, { useState, FC } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
-import Button from './Button'
+import { Button } from './Button'
 
 export type TabProps = {
     title: string

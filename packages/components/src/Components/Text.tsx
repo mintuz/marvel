@@ -13,7 +13,7 @@ import {
     FlexboxProps,
 } from 'styled-system'
 
-export type TypographyProps = SpaceProps &
+export type TextProps = SpaceProps &
     SystemTypographyProps &
     ColorProps &
     LayoutProps &
@@ -21,7 +21,7 @@ export type TypographyProps = SpaceProps &
         variant?: string
     }
 
-const Typography = styled.p<TypographyProps>`
+export const Text = styled.p<TextProps>`
     ${space}
     ${typography}
     ${color}
@@ -32,8 +32,6 @@ const Typography = styled.p<TypographyProps>`
     })}
 `
 
-export default Typography
-
-Typography.defaultProps = {
+Text.defaultProps = {
     variant: 'body',
 }

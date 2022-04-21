@@ -35,7 +35,7 @@ export type ImageProps = {
     aspect: string
 }
 
-const Image: FC<ImageProps> = ({
+export const Image: FC<ImageProps> = ({
     src,
     alt = '',
     loading = 'auto',
@@ -72,5 +72,3 @@ const Image: FC<ImageProps> = ({
 
     return <img src={src} alt={alt}></img>
 }
-
-export default Image

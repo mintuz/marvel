@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styled, { keyframes } from 'styled-components'
-import Icon from './Icon'
+import { Icon } from './Icon'
 
 const rotate = keyframes`
   from {
@@ -18,7 +18,7 @@ const Container = styled(Icon)`
     }
 `
 
-export default () => {
+export const LoadingSpinner: FC = () => {
     return (
         <Container role="presentation">
             <svg viewBox="0 0 40 40" fill="none">

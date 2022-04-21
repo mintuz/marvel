@@ -32,7 +32,7 @@ function newPosition(easedT: number, from: number, to: number) {
     return Math.ceil(easedT * (to - from) + from)
 }
 
-function scrollTo(elem: HTMLElement, to: number, duration: number) {
+export function scrollTo(elem: HTMLElement, to: number, duration: number) {
     const requestAnimationShim = getRequestAnimationFrame()
 
     const start = Date.now()
@@ -53,5 +53,3 @@ function scrollTo(elem: HTMLElement, to: number, duration: number) {
 
     requestAnimationShim(scroll)
 }
-
-export default scrollTo
