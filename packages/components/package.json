@@ -5,8 +5,8 @@
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
     "scripts": {
-        "check-types": "tsc --project tsconfig.json --noEmit",
-        "check-types:watch": "yarn check-types -- --watch",
+        "check:types": "tsc --project tsconfig.json --noEmit",
+        "check:types:watch": "yarn check-types -- --watch",
         "prettier": "prettier",
         "build": "rollup -c"
     },

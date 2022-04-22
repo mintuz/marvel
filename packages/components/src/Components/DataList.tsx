@@ -43,7 +43,9 @@ export const DataItemDescription = styled.dd`
     margin: 0;
 `
 
-export const DataList: FC = ({ children }) => {
+export const DataList: FC<{ children: React.ReactElement }> = ({
+    children,
+}) => {
     return (
         <DataListStyle>
             {React.Children.map(children, child => {

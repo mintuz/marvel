@@ -109,6 +109,7 @@ const FontFamilyStyle = createGlobalStyle`
 
 export type ThemeProviderProps = {
     theme: Theme
+    children: React.ReactElement
 }
 
 export const ThemeProvider: FC<ThemeProviderProps> = ({

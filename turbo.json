@@ -4,6 +4,11 @@
             "dependsOn": ["^build"],
             "outputs": ["dist/**", ".next/**", "storybook-static/**"]
         },
+        "check:types": {
+            "dependsOn": ["^check:types"],
+            "outputs": [],
+            "cache": false
+        },
         "lint": {
             "outputs": []
         },

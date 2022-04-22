@@ -28,6 +28,7 @@ const CarouselItem = styled.div`
 export type CarouselProps = {
     button?: (direction: string) => React.ReactElement
     activeItem: number
+    children: React.ReactElement
 }
 
 export const Carousel: FC<CarouselProps> = props => {
