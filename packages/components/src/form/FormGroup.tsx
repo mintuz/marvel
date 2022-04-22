@@ -29,10 +29,10 @@ const GroupItem = styled.div`
     }
 `
 
-export const FormGroup: FC<{ inline: boolean }> = ({
-    children,
-    inline = false,
-}) => {
+export const FormGroup: FC<{
+    inline: boolean
+    children: React.ReactElement
+}> = ({ children, inline = false }) => {
     return (
         <Group className={inline ? 'inline' : 'block'}>
             {React.Children.map(children, (child, id) => {

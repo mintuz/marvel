@@ -62,11 +62,13 @@ export type AccordionProps = {
     type?: 'single' | 'multiple'
     collapsible?: boolean
     disabled?: boolean
+    children: React.ReactElement
 }
 
 export type AccordionItemProps = {
     id: string
     header: ReactElement
+    children: React.ReactElement
 }
 
 export const Accordion: FC<AccordionProps> = ({
