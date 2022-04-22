@@ -58,7 +58,7 @@ export const theme: Theme = {
         secondary: {
             fontSize: rem(primitives.fontSizes[0]),
             lineHeight: rem(primitives.fontSizes[1]),
-            border: `1px solid ${primitives.colors.black}`,
+            border: `2px solid ${primitives.colors.black}`,
             color: primitives.colors.black,
         },
     },

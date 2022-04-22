@@ -19,5 +19,5 @@ export default {
             sourcemap: true,
         },
     ],
-    plugins: [peerDepsExternal(), nodeResolve(), commonjs(), typescript()],
+    plugins: [peerDepsExternal(), typescript(), nodeResolve(), commonjs()],
 }
