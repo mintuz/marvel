@@ -22,9 +22,12 @@ export const Button = styled.button<ButtonProps>`
         paddingRight: [4],
         paddingTop: [2],
         paddingBottom: [2],
+        borderRadius: [1],
     })}
+
     ${variant({
         scale: 'button',
     })}
+
     ${layout}
 `

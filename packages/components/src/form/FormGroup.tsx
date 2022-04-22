@@ -23,7 +23,6 @@ const GroupItem = styled.div`
         ${css({
             marginRight: [4],
         })}
-
         &:last-of-type {
             margin-right: 0;
         }

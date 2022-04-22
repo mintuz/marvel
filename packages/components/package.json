@@ -18,12 +18,13 @@
         "styled-components": "^5.0.0"
     },
     "dependencies": {
+        "@radix-ui/react-accordion": "^0.1.6",
         "@styled-system/css": "^5.1.5",
         "@styled-system/theme-get": "^5.1.2",
         "classnames": "^2.3.1",
-        "polished": "^3.4.1",
+        "polished": "^4.2.2",
         "prop-types": "^15.8.1",
-        "styled-icons": "^9.2.0",
+        "styled-icons": "^10.45.0",
         "styled-system": "^5.1.5"
     },
     "devDependencies": {
@@ -37,13 +38,13 @@
         "@types/styled-system__css": "^5.0.16",
         "@types/styled-system__theme-get": "^5.0.2",
         "prettier": "1.19.1",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
         "rollup": "^2.70.2",
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "styled-components": "^5.3.5",
         "ts-loader": "^9.2.8",
-        "turbo": "1.2.4",
+        "turbo": "1.2.5",
         "typescript": "^4.6.3"
     }
 }

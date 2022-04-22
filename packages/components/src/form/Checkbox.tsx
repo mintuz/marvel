@@ -1,11 +1,12 @@
 import React, { FC, InputHTMLAttributes } from 'react'
 import styled from 'styled-components'
+import css from '@styled-system/css'
 import { colorValue } from '../theme'
 
 const Label = styled.label`
     display: flex;
     align-items: center;
-    gap: 8px;
+    ${css({ gap: [2] })}
 `
 
 const Input = styled.input`

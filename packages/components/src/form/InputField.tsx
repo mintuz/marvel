@@ -18,11 +18,10 @@ const LabelText = styled.span`
 
 const StyledInputField = styled.input`
     border: 2px solid;
-    border-radius: 3px;
-
     ${css({
         padding: [2],
-        borderColor: 'grey',
+        borderRadius: [1],
+        borderColor: 'defaultBorderColor',
         fontSize: [0],
     })}
 

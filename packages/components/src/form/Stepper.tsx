@@ -12,7 +12,6 @@ const StyledStepper = styled.div`
 const StepperControls = styled.div`
     display: flex;
     align-items: center;
-
     ${css({
         marginLeft: [4],
     })}
@@ -25,11 +24,10 @@ const Button = styled.button`
     width: 32px;
     height: 32px;
     border: none;
-    border-radius: 3px;
-
     ${css({
         backgroundColor: 'black',
         color: 'white',
+        borderRadius: [1],
     })}
 `
 

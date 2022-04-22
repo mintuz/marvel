@@ -3,6 +3,10 @@ type Colors = {
     black: string
     white: string
     transparent: string
+    defaultBorderColor: string
+    accordionBorderColor: string
+    accordionContentBackgroundColor: string
+    accordionButtonBackgroundColor: string
     [key: string]: string
 }
 
@@ -16,19 +20,14 @@ type Primitives = {
     colors: Colors
 }
 
-type TextStyle = {
-    fontSize: string
-    lineHeight: string
-}
-
 type TextStyles = {
-    caption: TextStyle
-    body: TextStyle
-    displayOne: TextStyle
-    displayTwo: TextStyle
-    displayThree: TextStyle
-    displayFour: TextStyle
-    displayFive: TextStyle
+    caption: string
+    body: string
+    displayOne: string
+    displayTwo: string
+    displayThree: string
+    displayFour: string
+    displayFive: string
 }
 
 type ButtonStyle = {

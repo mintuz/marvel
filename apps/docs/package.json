@@ -3,12 +3,13 @@
     "version": "1.0.0",
     "private": true,
     "dependencies": {
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0",
         "@mintuz/marvel": "^1.0.0",
         "@styled-system/css": "^5.1.5",
         "@styled-system/theme-get": "^5.1.2",
-        "styled-icons": "^9.2.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "styled-components": "^5.0.0",
+        "styled-icons": "^10.45.0",
         "styled-system": "^5.1.5"
     },
     "scripts": {

@@ -11,18 +11,7 @@ An accordion allows a user to toggle the display of a section of content. An Acc
     <Story name="Default">
         <ThemeProvider>
             <Accordion>
-                <AccordionItem
-                    header={
-                        <React.Fragment>
-                            <Text mt={0} mb={0} as="h2">
-                                Item 1
-                            </Text>
-                            <Text as="p" mt={0} mb={0}>
-                                Some description text underneith
-                            </Text>
-                        </React.Fragment>
-                    }
-                >
+                <AccordionItem id="item-1" header={<div>Item One</div>}>
                     <Text as="p" mt={0} mb={0}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Optio nemo odit temporibus illo quo eos ipsum atque!
@@ -30,13 +19,7 @@ An accordion allows a user to toggle the display of a section of content. An Acc
                         aperiam ad adipisci iste deserunt illo voluptas.
                     </Text>
                 </AccordionItem>
-                <AccordionItem
-                    header={
-                        <Text mt={0} mb={0} as="h2">
-                            Item 2
-                        </Text>
-                    }
-                >
+                <AccordionItem id="item-2" header={<div>Item One</div>}>
                     <Text as="p" mb={0}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Optio nemo odit temporibus illo quo eos ipsum atque!

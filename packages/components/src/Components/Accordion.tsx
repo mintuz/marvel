@@ -1,142 +1,111 @@
-import React, { useState, FC, ReactElement } from 'react'
+import React, { FC, ReactElement } from 'react'
 import styled from 'styled-components'
-import { space, color } from 'styled-system'
 import css from '@styled-system/css'
+import * as RadixAccordion from '@radix-ui/react-accordion'
 import { KeyboardArrowDown } from 'styled-icons/material'
+import { colorValue } from '../theme'
+import { Icon } from './Icon'
 
-const AccordionList = styled.ul`
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    ${space}
-    ${color}
+const StyledAccordion = styled(RadixAccordion.Root)`
+    width: 100%;
+    border: 2px solid ${colorValue('accordionBorderColor')};
+    ${css({ borderRadius: [1] })}
 `
 
-const AccordionItemContainer = styled.div`
-    border: 1px solid;
-    margin-top: -1px;
+const StyledAccordionItem = styled(RadixAccordion.AccordionItem)`
+    width: 100%;
+    border-bottom: 2px solid ${colorValue('accordionBorderColor')};
+    & + & {
+        border: none;
+    }
+`
+
+const StyledAccordionHeader = styled(RadixAccordion.AccordionHeader)``
+
+const StyledAccordionButton = styled(RadixAccordion.AccordionTrigger)`
+    width: 100%;
+    background-color: ${colorValue('accordionButtonBackgroundColor')};
+    border: none;
     ${css({
-        borderColor: 'grey',
+        fontSize: [1],
+        paddingTop: [2],
+        paddingBottom: [2],
+        paddingLeft: [4],
+        paddingRight: [4],
     })}
 `
 
-const AccordionTitle = styled.button`
-    position: relative;
-    display: block;
-    width: 100%;
-    text-align: left;
-    border: none;
-
-    &:before {
-        position: absolute;
-        bottom: -1px;
-        height: 1px;
-        content: ' ';
-
-        ${css({
-            left: [4],
-            right: [4],
-            backgroundColor: 'grey',
-        })}
-    }
-
-    ${css({
-            padding: [4],
-            borderColor: 'grey',
-        })}
-        :not(.mv-c-accordion-item--is-open)
-        &:hover {
-        ${css({
-            borderColor: 'grey',
-        })}
-    }
-`
-
-const AccordionTitleContentWrap = styled.div`
+const StyledAccordionButtonContent = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    ${css({ gap: [4] })}
 `
 
-const AccordionTitleIcon = styled.div`
-    width: 32px;
-    height: 32px;
+const StyledAccordionButtonIconContainer = styled.div`
+    ${css({ fontSize: [3] })}
+`
 
-    .mv-c-accordion-item--is-open & {
+const StyledAccordionChevron = styled(KeyboardArrowDown)`
+    transition: transform 100ms;
+    [data-state='open'] & {
         transform: rotate(180deg);
     }
 `
 
-const AccordionContent = styled.div`
-    display: none;
-    ${css({
-        padding: [4],
-    })}
-
-    .mv-c-accordion-item--is-open & {
-        display: block;
-    }
+const StyledAccordionContent = styled(RadixAccordion.Content)`
+    ${css({ padding: [4] })}
+    background-color: ${colorValue('accordionContentBackgroundColor')};
 `
 
-export type AccordionItemProps = {
-    header: ReactElement
-    onClick: () => void
-    isOpen: boolean
-    id: string
+export type AccordionProps = {
+    type?: 'single' | 'multiple'
+    collapsible?: boolean
+    disabled?: boolean
 }
 
-export const AccordionItem: FC<AccordionItemProps> = ({
-    header,
+export type AccordionItemProps = {
+    id: string
+    header: ReactElement
+}
+
+export const Accordion: FC<AccordionProps> = ({
     children,
-    onClick,
-    isOpen,
-    id,
+    type = 'single',
+    collapsible = false,
+    disabled = false,
 }) => {
     return (
-        <AccordionItemContainer
-            className={isOpen ? 'mv-c-accordion-item--is-open' : ''}
+        <StyledAccordion
+            type={type}
+            collapsible={collapsible}
+            disabled={disabled}
         >
-            <AccordionTitle
-                aria-expanded={isOpen}
-                aria-controls={`accordion-item--${id}`}
-                onClick={onClick}
-            >
-                <AccordionTitleContentWrap>
-                    <div>{header}</div>
-                    <AccordionTitleIcon>
-                        {/*
-                        // @ts-ignore */}
-                        <KeyboardArrowDown />
-                    </AccordionTitleIcon>
-                </AccordionTitleContentWrap>
-            </AccordionTitle>
-            <AccordionContent
-                aria-hidden={!isOpen}
-                id={`accordion-item--${id}`}
-            >
-                {children}
-            </AccordionContent>
-        </AccordionItemContainer>
+            {children}
+        </StyledAccordion>
     )
 }
 
-export const Accordion: FC = ({ children, ...rest }) => {
-    const [openAccordionItemId, setOpenAccordionItem] = useState(0)
+export const AccordionItem: FC<AccordionItemProps> = ({
+    children,
+    id,
+    header,
+}) => {
     return (
-        <AccordionList {...rest}>
-            {React.Children.map(children, (child, currentItemId) => {
-                return (
-                    <li>
-                        {React.cloneElement(child as React.ReactElement<any>, {
-                            onClick() {
-                                setOpenAccordionItem(currentItemId)
-                            },
-                            id: currentItemId,
-                            isOpen: currentItemId === openAccordionItemId,
-                        })}
-                    </li>
-                )
-            })}
-        </AccordionList>
+        <StyledAccordionItem value={id}>
+            <StyledAccordionHeader>
+                <StyledAccordionButton>
+                    <StyledAccordionButtonContent>
+                        {header}
+                        <StyledAccordionButtonIconContainer>
+                            <Icon>
+                                <StyledAccordionChevron aria-hidden />
+                            </Icon>
+                        </StyledAccordionButtonIconContainer>
+                    </StyledAccordionButtonContent>
+                </StyledAccordionButton>
+            </StyledAccordionHeader>
+            <StyledAccordionContent>{children}</StyledAccordionContent>
+        </StyledAccordionItem>
     )
 }
