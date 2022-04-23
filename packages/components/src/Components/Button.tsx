@@ -4,7 +4,7 @@ import { layout, LayoutProps } from 'styled-system'
 import css from '@styled-system/css'
 import { ButtonHTMLAttributes } from 'react'
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     variant?: string
 } & LayoutProps
 

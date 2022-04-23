@@ -13,7 +13,7 @@ import {
     FlexboxProps,
 } from 'styled-system'
 
-export type TextProps = SpaceProps &
+type TextProps = SpaceProps &
     SystemTypographyProps &
     ColorProps &
     LayoutProps &

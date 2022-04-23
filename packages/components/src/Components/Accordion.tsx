@@ -58,14 +58,14 @@ const StyledAccordionContent = styled(RadixAccordion.Content)`
     background-color: ${colorValue('accordionContentBackgroundColor')};
 `
 
-export type AccordionProps = {
+type AccordionProps = {
     type?: 'single' | 'multiple'
     collapsible?: boolean
     disabled?: boolean
     children: React.ReactElement
 }
 
-export type AccordionItemProps = {
+type AccordionItemProps = {
     id: string
     header: ReactElement
     children: React.ReactElement

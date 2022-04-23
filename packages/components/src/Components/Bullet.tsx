@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 import { Box } from '../layout/Box'
 
-export type AlignmentProps = 'flex-start' | 'center' | 'flex-end'
+type AlignmentProps = 'flex-start' | 'center' | 'flex-end'
 
-export type BulletProps = {
+type BulletProps = {
     /** Alignment of the icon, either "top" "middle" "bottom" */
     alignment: AlignmentProps
     children: React.ReactElement

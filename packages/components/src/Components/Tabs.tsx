@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import css from '@styled-system/css'
 import { Button } from './Button'
 
-export type TabProps = {
+type TabProps = {
     title: string
     id: string
     onClick: () => void
@@ -12,7 +12,7 @@ export type TabProps = {
     children: React.ReactElement<TabProps>[]
 }
 
-export type TabsProps = {
+type TabsProps = {
     activeTab: string
     children: React.ReactElement<TabProps>[]
 }

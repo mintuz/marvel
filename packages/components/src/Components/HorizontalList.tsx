@@ -8,7 +8,7 @@ import {
     LayoutProps,
 } from 'styled-system'
 
-export type HorizontalListProps = SpaceProps & FlexboxProps & LayoutProps
+type HorizontalListProps = SpaceProps & FlexboxProps & LayoutProps
 
 export const HorizontalList = styled.ul<HorizontalListProps>`
     list-style: none;

@@ -1,7 +1,7 @@
 import React, { FC, ImgHTMLAttributes } from 'react'
 import styled from 'styled-components'
 
-export type ImageProps = ImgHTMLAttributes<HTMLImageElement> & {
+type ImageProps = ImgHTMLAttributes<HTMLImageElement> & {
     aspectRatio: string
 }
 
