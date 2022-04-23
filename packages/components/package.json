@@ -25,7 +25,6 @@
         "@mintuz/marvel-theme": "^1.0.0",
         "@radix-ui/react-accordion": "^0.1.6",
         "classnames": "^2.3.1",
-        "prop-types": "^15.8.1",
         "styled-icons": "^10.45.0",
         "styled-system": "^5.1.5"
     },

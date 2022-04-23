@@ -3,8 +3,7 @@ import {
     ThemeProvider as StyledThemeProvider,
     createGlobalStyle,
 } from 'styled-components'
-import { themeGet } from '@styled-system/theme-get'
-
+import { themeGet } from './system'
 import { Theme } from './interface'
 import { defaultTheme } from './defaultTheme'
 
