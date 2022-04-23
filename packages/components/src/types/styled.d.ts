@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import 'styled-components'
 
 declare module 'styled-components' {

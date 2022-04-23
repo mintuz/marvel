@@ -5,6 +5,7 @@ function getRequestAnimationFrameFallback(callback: () => void) {
 function getRequestAnimationFrame() {
     return (
         window.requestAnimationFrame ||
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         window.webkitRequestAnimationFrame ||
         getRequestAnimationFrameFallback
@@ -20,7 +21,7 @@ function getRequestAnimationFrame() {
 const easing = {
     // decelerating to zero velocity
     easeOutCubic(t: number) {
-        return Math.pow(t - 1, 3) + 1
+        return (t - 1) ** 3 + 1
     },
 }
 
@@ -44,6 +45,7 @@ export function scrollTo(elem: HTMLElement, to: number, duration: number) {
         const easedT = easing.easeOutCubic(time)
         const calculatedPosition = newPosition(easedT, from, to)
 
+        // eslint-disable-next-line no-param-reassign
         elem.scrollLeft = calculatedPosition
 
         if (time < 1) {

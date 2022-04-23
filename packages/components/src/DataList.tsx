@@ -45,12 +45,10 @@ export const DataItemDescription = styled.dd`
 
 export const DataList: FC<{ children: React.ReactElement }> = ({
     children,
-}) => {
-    return (
-        <DataListStyle>
-            {React.Children.map(children, child => {
-                return <DataItem>{child}</DataItem>
-            })}
-        </DataListStyle>
-    )
-}
+}) => (
+    <DataListStyle>
+        {React.Children.map(children, (child) => (
+            <DataItem>{child}</DataItem>
+        ))}
+    </DataListStyle>
+)

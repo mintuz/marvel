@@ -76,38 +76,30 @@ export const Accordion: FC<AccordionProps> = ({
     type = 'single',
     collapsible = false,
     disabled = false,
-}) => {
-    return (
-        <StyledAccordion
-            type={type}
-            collapsible={collapsible}
-            disabled={disabled}
-        >
-            {children}
-        </StyledAccordion>
-    )
-}
+}) => (
+    <StyledAccordion type={type} collapsible={collapsible} disabled={disabled}>
+        {children}
+    </StyledAccordion>
+)
 
 export const AccordionItem: FC<AccordionItemProps> = ({
     children,
     id,
     header,
-}) => {
-    return (
-        <StyledAccordionItem value={id}>
-            <StyledAccordionHeader>
-                <StyledAccordionButton>
-                    <StyledAccordionButtonContent>
-                        {header}
-                        <StyledAccordionButtonIconContainer>
-                            <Icon>
-                                <StyledAccordionChevron aria-hidden />
-                            </Icon>
-                        </StyledAccordionButtonIconContainer>
-                    </StyledAccordionButtonContent>
-                </StyledAccordionButton>
-            </StyledAccordionHeader>
-            <StyledAccordionContent>{children}</StyledAccordionContent>
-        </StyledAccordionItem>
-    )
-}
+}) => (
+    <StyledAccordionItem value={id}>
+        <StyledAccordionHeader>
+            <StyledAccordionButton>
+                <StyledAccordionButtonContent>
+                    {header}
+                    <StyledAccordionButtonIconContainer>
+                        <Icon>
+                            <StyledAccordionChevron aria-hidden />
+                        </Icon>
+                    </StyledAccordionButtonIconContainer>
+                </StyledAccordionButtonContent>
+            </StyledAccordionButton>
+        </StyledAccordionHeader>
+        <StyledAccordionContent>{children}</StyledAccordionContent>
+    </StyledAccordionItem>
+)

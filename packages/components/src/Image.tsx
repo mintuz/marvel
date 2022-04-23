@@ -15,6 +15,4 @@ const StyledImage = styled.img<ImageProps>`
 export const Image: FC<ImageProps> = ({
     aspectRatio = '16:9',
     ...imageProps
-}) => {
-    return <StyledImage {...imageProps} aspectRatio={aspectRatio} />
-}
+}) => <StyledImage {...imageProps} aspectRatio={aspectRatio} />

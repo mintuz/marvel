@@ -45,5 +45,6 @@ type Settings = { typography: TextStyles; button: Buttons }
 
 export type Theme = Primitives &
     Settings & {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         [key: string]: any
     }

@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { variant } from 'styled-system'
-import { layout, LayoutProps } from 'styled-system'
+import { variant, layout, LayoutProps } from 'styled-system'
 import css from '@styled-system/css'
 import { ButtonHTMLAttributes } from 'react'
 

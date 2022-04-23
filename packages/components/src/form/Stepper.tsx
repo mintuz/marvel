@@ -76,8 +76,6 @@ export const Stepper: FC<StepperProps> = ({
                         setValue(internalValue - incrementBy)
                     }}
                 >
-                    {/*
-                    // @ts-ignore */}
                     <Remove size="1em" />
                 </ButtonMinus>
                 <ButtonPlus
@@ -86,8 +84,6 @@ export const Stepper: FC<StepperProps> = ({
                         setValue(internalValue + incrementBy)
                     }}
                 >
-                    {/*
-                    // @ts-ignore */}
                     <Add size="1em" />
                 </ButtonPlus>
                 <Value>{internalValue}</Value>

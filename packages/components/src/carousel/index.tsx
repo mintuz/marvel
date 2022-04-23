@@ -31,9 +31,13 @@ export type CarouselProps = {
     children: React.ReactElement
 }
 
-export const Carousel: FC<CarouselProps> = props => {
+export const Carousel: FC<CarouselProps> = ({
+    children,
+    activeItem,
+    button,
+}) => {
     const carousel = useRef<HTMLDivElement>(null)
-    const numberOfChildren = React.Children.count(props.children)
+    const numberOfChildren = React.Children.count(children)
 
     const [getCurrentIndex, scrollToIndex] = useCarousel({
         carousel,
@@ -43,7 +47,7 @@ export const Carousel: FC<CarouselProps> = props => {
     function handleOnClick(direction: string) {
         let index = getCurrentIndex()
         if (direction === 'previous') {
-            index = index - 1
+            index -= 1
 
             if (index < 0) {
                 index = 0
@@ -53,7 +57,7 @@ export const Carousel: FC<CarouselProps> = props => {
         }
 
         if (direction === 'next') {
-            index = index + 1
+            index += 1
             if (index > numberOfChildren - 1) {
                 index = numberOfChildren - 1
             }
@@ -63,30 +67,31 @@ export const Carousel: FC<CarouselProps> = props => {
     }
 
     function renderButton(direction: string) {
-        return React.Children.map(props.button!(direction), button => {
-            return React.cloneElement(button, {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        return React.Children.map(button!(direction), (btn) =>
+            React.cloneElement(btn, {
                 onClick() {
                     handleOnClick(direction)
                 },
             })
-        })
+        )
     }
 
     useEffect(() => {
-        if (props.activeItem) {
-            scrollToIndex(props.activeItem - 1)
+        if (activeItem) {
+            scrollToIndex(activeItem - 1)
         }
-    }, [props.activeItem])
+    }, [activeItem, scrollToIndex])
 
     return (
         <CarouselContainer ref={carousel}>
-            {props.button && renderButton('previous')}
-            {props.button && renderButton('next')}
+            {button && renderButton('previous')}
+            {button && renderButton('next')}
             <CarouselItems
                 className="ab-c-carousel__items"
                 data-testid="carousel-items"
             >
-                {React.Children.map(props.children, (child, index) => {
+                {React.Children.map(children, (child, index) => {
                     const isActiveElement = index === getCurrentIndex()
                     return (
                         <CarouselItem

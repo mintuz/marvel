@@ -32,12 +32,11 @@ const GroupItem = styled.div`
 export const FormGroup: FC<{
     inline: boolean
     children: React.ReactElement
-}> = ({ children, inline = false }) => {
-    return (
-        <Group className={inline ? 'inline' : 'block'}>
-            {React.Children.map(children, (child, id) => {
-                return <GroupItem key={`group-${id}`}>{child}</GroupItem>
-            })}
-        </Group>
-    )
-}
+}> = ({ children, inline = false }) => (
+    <Group className={inline ? 'inline' : 'block'}>
+        {React.Children.map(children, (child, id) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <GroupItem key={`group-${id}`}>{child}</GroupItem>
+        ))}
+    </Group>
+)

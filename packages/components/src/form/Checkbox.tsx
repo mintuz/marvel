@@ -19,11 +19,9 @@ export type CheckboxProps = InputHTMLAttributes<HTMLInputElement> & {
     label: string
 }
 
-export const Checkbox: FC<CheckboxProps> = ({ label, ...rest }) => {
-    return (
-        <Label>
-            <Input type="checkbox" {...rest} />
-            <LabelText>{label}</LabelText>
-        </Label>
-    )
-}
+export const Checkbox: FC<CheckboxProps> = ({ label, ...rest }) => (
+    <Label>
+        <Input type="checkbox" {...rest} />
+        <LabelText>{label}</LabelText>
+    </Label>
+)

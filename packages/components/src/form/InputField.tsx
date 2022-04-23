@@ -76,12 +76,14 @@ export type InputFieldProps = {
     error: string
     type: string
     pattern: string
+    id: string
 }
 
 export const InputField: FC<InputFieldProps> = ({
     error,
     label,
     icon,
+    id,
     ...rest
 }) => {
     const cssClassNames = classNames('mv-c-input-field', {
@@ -90,13 +92,13 @@ export const InputField: FC<InputFieldProps> = ({
     })
 
     return (
-        <label className={cssClassNames}>
+        <label htmlFor={id} className={cssClassNames}>
             <LabelText>{label}</LabelText>
             <InputContainer>
                 {icon && (
                     <Icon>{React.cloneElement(icon, { size: '1em' })}</Icon>
                 )}
-                <StyledInputField {...rest} />
+                <StyledInputField id={id} {...rest} />
                 {error && <ErrorMessage>{error}</ErrorMessage>}
             </InputContainer>
         </label>

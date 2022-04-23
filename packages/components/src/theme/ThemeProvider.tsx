@@ -5,7 +5,6 @@ import {
 } from 'styled-components'
 import { themeGet } from '@styled-system/theme-get'
 
-// @ts-ignore
 import { Theme } from './interface'
 import { theme as defaultTheme } from './default'
 
@@ -115,15 +114,16 @@ export type ThemeProviderProps = {
 export const ThemeProvider: FC<ThemeProviderProps> = ({
     children,
     theme = defaultTheme,
-}) => {
-    return (
+}) => (
+    <StyledThemeProvider
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        <StyledThemeProvider theme={theme}>
-            <React.Fragment>
-                <ResetStyle />
-                <FontFamilyStyle />
-                {children}
-            </React.Fragment>
-        </StyledThemeProvider>
-    )
-}
+        theme={theme}
+    >
+        <>
+            <ResetStyle />
+            <FontFamilyStyle />
+            {children}
+        </>
+    </StyledThemeProvider>
+)

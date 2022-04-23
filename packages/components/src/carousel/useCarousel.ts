@@ -4,15 +4,15 @@ import { scrollTo as scroll } from './scroll-animate'
 const ITEM_SELECTOR = '.ab-c-carousel__item'
 const ITEMS_CONTAINER_SELECTOR = '.ab-c-carousel__items'
 
-type getCurrentIndex = () => number
-type getXPosition = () => number
-type getMaxScroll = () => number
-type scrollToIndex = (index: number) => void
+type getCurrentIndexFunc = () => number
+type getXPositionFunc = () => number
+type getMaxScrollFunc = () => number
+type scrollToIndexFunc = (index: number) => void
 type UseCarouselReturnValue = [
-    getCurrentIndex,
-    scrollToIndex,
-    getXPosition,
-    getMaxScroll
+    getCurrentIndexFunc,
+    scrollToIndexFunc,
+    getXPositionFunc,
+    getMaxScrollFunc
 ]
 
 export type UseCarouselProps = {
@@ -61,6 +61,7 @@ export const useCarousel = ({
         let currentItem
         let currentItemSelected
 
+        // eslint-disable-next-line no-plusplus
         for (let i = 0; i < numberOfChildren; i++) {
             currentItem = getItemElementAtIndex(i)
 
@@ -110,7 +111,7 @@ export const useCarousel = ({
                 ITEMS_CONTAINER_SELECTOR
             )
 
-            carouselElement?.addEventListener('scroll', e => {
+            carouselElement?.addEventListener('scroll', (e) => {
                 const scrollEvent = e as Event & {
                     target: { scrollLeft: number }
                 }

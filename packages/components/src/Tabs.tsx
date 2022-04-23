@@ -1,4 +1,4 @@
-import React, { useState, FC } from 'react'
+import React, { useState, FC, ReactElement } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
 import { Button } from './Button'
@@ -9,12 +9,12 @@ type TabProps = {
     onClick: () => void
     isOpen: boolean
     variant: string
-    children: React.ReactElement<TabProps>[]
+    children: ReactElement<TabProps>[]
 }
 
 type TabsProps = {
     activeTab: string
-    children: React.ReactElement<TabProps>[]
+    children: ReactElement<TabProps>[]
 }
 
 const TabItems = styled.ul`
@@ -27,14 +27,14 @@ const TabItems = styled.ul`
 
 const TabItem = styled.li`
     flex: 1 0 auto;
-    margin-bottom: -1px;
+    margin-bottom: -2px;
 
     ${css({
         padding: [2],
     })}
 
     &.mv-c-tab--is-active {
-        border: 1px solid;
+        border: 2px solid;
 
         ${css({
             backgroundColor: 'white',
@@ -62,7 +62,7 @@ const TabButton = styled(Button)`
 
 const TabContent = styled.div`
     display: none;
-    border: 1px solid;
+    border: 2px solid;
 
     ${css({
         padding: [4],
@@ -78,9 +78,9 @@ export const Tabs: FC<TabsProps> = ({ children, activeTab }) => {
     const [active, setActive] = useState(activeTab)
 
     return (
-        <React.Fragment>
+        <>
             <TabItems>
-                {React.Children.map(children, child => {
+                {React.Children.map(children, (child) => {
                     const isOpen = active === child.props.id
                     return (
                         <TabItem
@@ -97,7 +97,7 @@ export const Tabs: FC<TabsProps> = ({ children, activeTab }) => {
                 })}
             </TabItems>
             <div>
-                {React.Children.map(children, child => {
+                {React.Children.map(children, (child) => {
                     const isOpen = active === child.props.id
                     return (
                         <TabContent
@@ -110,7 +110,7 @@ export const Tabs: FC<TabsProps> = ({ children, activeTab }) => {
                     )
                 })}
             </div>
-        </React.Fragment>
+        </>
     )
 }
 
@@ -120,15 +120,13 @@ export const Tab: FC<TabProps> = ({
     onClick,
     isOpen,
     variant = 'primary',
-}) => {
-    return (
-        <TabButton
-            variant={variant}
-            aria-expanded={isOpen}
-            aria-controls={`tab-item-${id}`}
-            onClick={onClick}
-        >
-            {title}
-        </TabButton>
-    )
-}
+}) => (
+    <TabButton
+        variant={variant}
+        aria-expanded={isOpen}
+        aria-controls={`tab-item-${id}`}
+        onClick={onClick}
+    >
+        {title}
+    </TabButton>
+)
