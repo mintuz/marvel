@@ -8,7 +8,8 @@
         "check:types": "tsc --project tsconfig.json --noEmit",
         "check:types:watch": "yarn check-types -- --watch",
         "prettier": "prettier",
-        "build": "rollup -c"
+        "build": "rollup -c",
+        "build:watch": "rollup -c -w"
     },
     "author": "Adam Bulmer <github@mintuz.com>",
     "license": "MIT",
@@ -41,7 +42,6 @@
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
         "rollup": "^2.70.2",
-        "rollup-plugin-peer-deps-external": "^2.2.4",
         "styled-components": "^5.3.5",
         "ts-loader": "^9.2.8",
         "turbo": "1.2.5",

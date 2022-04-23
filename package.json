@@ -8,6 +8,7 @@
     ],
     "scripts": {
         "build": "turbo run build",
+        "build:watch": "turbo run build:watch",
         "dev": "turbo run dev --parallel",
         "check:types": "turbo run check:types --parallel",
         "lint": "turbo run lint",
