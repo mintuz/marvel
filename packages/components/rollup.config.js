@@ -1,5 +1,4 @@
 import commonjs from '@rollup/plugin-commonjs'
-import path from 'path'
 import typescript from '@rollup/plugin-typescript'
 import { nodeResolve as resolve } from '@rollup/plugin-node-resolve'
 
