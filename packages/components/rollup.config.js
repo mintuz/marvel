@@ -1,6 +1,6 @@
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
-import { resolve } from '@rollup/plugin-node-resolve'
+import { nodeResolve as resolve } from '@rollup/plugin-node-resolve'
 
 const packageJson = require('./package.json')
 
