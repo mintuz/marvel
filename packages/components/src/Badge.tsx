@@ -1,6 +1,6 @@
-import css from '@styled-system/css'
 import styled from 'styled-components'
 import { variant } from 'styled-system'
+import { css } from '@mintuz/marvel-theme'
 
 export const Badge = styled.span<{ variant: string }>`
     display: inline-block;

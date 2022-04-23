@@ -1,9 +1,8 @@
 import React, { FC, ReactElement } from 'react'
 import styled from 'styled-components'
-import css from '@styled-system/css'
 import * as RadixAccordion from '@radix-ui/react-accordion'
 import { KeyboardArrowDown } from 'styled-icons/material'
-import { colorValue } from './theme'
+import { colorValue, css } from '@mintuz/marvel-theme'
 import { Icon } from './Icon'
 
 const StyledAccordion = styled(RadixAccordion.Root)`

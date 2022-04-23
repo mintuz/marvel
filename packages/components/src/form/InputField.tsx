@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import css from '@styled-system/css'
+import { css } from '@mintuz/marvel-theme'
 
 const LabelText = styled.span`
     display: block;

@@ -1,4 +1,5 @@
 export * from './ThemeProvider'
 export * from './helpers'
-export * from './default'
+export * from './defaultTheme'
 export * from './interface'
+export * from './system'

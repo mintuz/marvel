@@ -6,7 +6,7 @@ import {
 import { themeGet } from '@styled-system/theme-get'
 
 import { Theme } from './interface'
-import { theme as defaultTheme } from './default'
+import { defaultTheme } from './defaultTheme'
 
 const ResetStyle = createGlobalStyle`
   /* Box sizing rules */

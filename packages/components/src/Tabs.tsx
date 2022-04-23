@@ -1,6 +1,6 @@
 import React, { useState, FC, ReactElement } from 'react'
 import styled from 'styled-components'
-import css from '@styled-system/css'
+import { css } from '@mintuz/marvel-theme'
 import { Button } from './Button'
 
 type TabProps = {

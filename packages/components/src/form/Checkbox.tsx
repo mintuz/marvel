@@ -1,7 +1,6 @@
 import React, { FC, InputHTMLAttributes } from 'react'
 import styled from 'styled-components'
-import css from '@styled-system/css'
-import { colorValue } from '../theme'
+import { colorValue, css } from '@mintuz/marvel-theme'
 
 const Label = styled.label`
     display: flex;

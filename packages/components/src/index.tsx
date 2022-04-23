@@ -1,3 +1,10 @@
+export {
+    ThemeProvider,
+    defaultTheme,
+    css,
+    themeGet,
+} from '@mintuz/marvel-theme'
+
 export { Box } from './layout/Box'
 export { Grid, GridItem, GridWrap } from './layout/Grid'
 
@@ -23,6 +30,3 @@ export { Image } from './Image'
 export { LoadingSpinner } from './LoadingSpinner'
 export { Tabs, Tab } from './Tabs'
 export { Text } from './Text'
-
-export { ThemeProvider } from './theme/ThemeProvider'
-export { theme } from './theme/default'

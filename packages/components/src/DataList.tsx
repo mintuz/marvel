@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import css from '@styled-system/css'
+import { css } from '@mintuz/marvel-theme'
 import { Text } from './Text'
 
 const DataListStyle = styled.dl`

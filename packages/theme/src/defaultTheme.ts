@@ -18,7 +18,7 @@ const primitives = {
     },
 }
 
-export const theme: Theme = {
+export const defaultTheme: Theme = {
     ...primitives,
     colors: {
         ...primitives.colors,

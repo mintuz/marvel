@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { variant, layout, LayoutProps } from 'styled-system'
-import css from '@styled-system/css'
+import { css } from '@mintuz/marvel-theme'
 import { ButtonHTMLAttributes } from 'react'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {

@@ -1,6 +1,6 @@
 import React, { useState, FC } from 'react'
 import styled from 'styled-components'
-import css from '@styled-system/css'
+import { css } from '@mintuz/marvel-theme'
 import { Add, Remove } from 'styled-icons/material'
 
 const StyledStepper = styled.div`
