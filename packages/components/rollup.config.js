@@ -1,11 +1,12 @@
 import commonjs from '@rollup/plugin-commonjs'
+import path from 'path'
 import typescript from '@rollup/plugin-typescript'
 import { nodeResolve as resolve } from '@rollup/plugin-node-resolve'
 
-const packageJson = require('./package.json')
+const packageJson = require(path.join(__dirname, './package.json'))
 
 export default {
-    input: './src/index.ts',
+    input: path.join(__dirname, './src/index.ts'),
     output: [
         {
             file: packageJson.main,
