@@ -3,10 +3,10 @@ import path from 'path'
 import typescript from '@rollup/plugin-typescript'
 import { nodeResolve as resolve } from '@rollup/plugin-node-resolve'
 
-const packageJson = require(path.join(__dirname, './package.json'))
+const packageJson = require('./package.json')
 
 export default {
-    input: path.join(__dirname, './src/index.tsx'),
+    input: './src/index.tsx',
     output: [
         {
             file: packageJson.main,
