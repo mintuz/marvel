@@ -6,7 +6,7 @@ import { nodeResolve as resolve } from '@rollup/plugin-node-resolve'
 const packageJson = require(path.join(__dirname, './package.json'))
 
 export default {
-    input: path.join(__dirname, './src/index.ts'),
+    input: path.join(__dirname, './src/index.tsx'),
     output: [
         {
             file: packageJson.main,
