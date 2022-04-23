@@ -1,6 +1,6 @@
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
-import { nodeResolve } from '@rollup/plugin-node-resolve'
+import { resolve } from '@rollup/plugin-node-resolve'
 
 const packageJson = require('./package.json')
 
@@ -16,6 +16,12 @@ export default {
             format: 'esm',
         },
     ],
-    plugins: [typescript(), nodeResolve(), commonjs()],
+    plugins: [
+        typescript(),
+        resolve({
+            extensions: ['.ts', '.tsx'],
+        }),
+        commonjs(),
+    ],
     external: ['react', 'styled-components'],
 }
