@@ -4,17 +4,15 @@
     "private": true,
     "dependencies": {
         "@mintuz/marvel": "*",
-        "@styled-system/css": "^5.1.5",
-        "@styled-system/theme-get": "^5.1.2",
+        "@mintuz/marvel-carousel": "*",
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
         "styled-components": "^5.0.0",
-        "styled-icons": "^10.45.0",
-        "styled-system": "^5.1.5"
+        "styled-icons": "^10.45.0"
     },
     "scripts": {
         "dev": "start-storybook -p 6006 -s public",
-        "build": "build-storybook -s public"
+        "build": "build-storybook --docs -s public"
     },
     "devDependencies": {
         "@storybook/addon-actions": "^6.4.18",

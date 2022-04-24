@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
-import { ThemeProvider, Button } from '@mintuz/marvel'
+import { Button } from '@mintuz/marvel'
 
 <Meta title="Components/Button" component={Button} />
 
@@ -17,9 +17,7 @@ Primary action within a context.
 
 <Preview>
     <Story name="Primary">
-        <ThemeProvider>
-            <Button variant="primary">Primary Button</Button>
-        </ThemeProvider>
+        <Button variant="primary">Primary Button</Button>
     </Story>
 </Preview>
 
@@ -27,9 +25,7 @@ Secondary action within a context.
 
 <Preview>
     <Story name="Secondary">
-        <ThemeProvider>
-            <Button variant="secondary">Secondary Button</Button>
-        </ThemeProvider>
+        <Button variant="secondary">Secondary Button</Button>
     </Story>
 </Preview>
 
@@ -37,10 +33,8 @@ Full width button
 
 <Preview>
     <Story name="Full Width">
-        <ThemeProvider>
-            <Button width={[1 / 1]} variant="secondary">
-                Full width button
-            </Button>
-        </ThemeProvider>
+        <Button width={[1 / 1]} variant="secondary">
+            Full width button
+        </Button>
     </Story>
 </Preview>

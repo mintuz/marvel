@@ -1,0 +1,82 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import { Box, Image } from '@mintuz/marvel'
+import { Carousel } from '@mintuz/marvel-carousel'
+
+<Meta title="Components/Carousel" component={Carousel} />
+
+# Carousel
+
+## Usage
+
+Import the carousel component into your project.
+
+`import { Carousel } from '@mintuz/marvel-carousel';`
+
+## Props
+
+<Props of={Carousel} />
+
+## Example
+
+<Preview>
+    <Story name="Default">
+        <ThemeProvider>
+            <Carousel
+                button={(direction) => (
+                    <Box as="button" data-testid={`button-${direction}`}>
+                        {direction}
+                    </Box>
+                )}
+            >
+                <Box mr={[2]}>
+                    <Image
+                        src="https://picsum.photos/seed/1/200"
+                        aspect="1 / 1"
+                    />
+                </Box>
+                <Box mr={[2]}>
+                    <Image
+                        src="https://picsum.photos/seed/2/200"
+                        aspect="1 / 1"
+                    />
+                </Box>
+                <Box mr={[2]}>
+                    <Image
+                        src="https://picsum.photos/seed/3/200"
+                        aspect="1 / 1"
+                    />
+                </Box>
+                <Box mr={[2]}>
+                    <Image
+                        src="https://picsum.photos/seed/4/200"
+                        aspect="1 / 1"
+                    />
+                </Box>
+                <Box mr={[2]}>
+                    <Image
+                        src="https://picsum.photos/seed/5/200"
+                        aspect="1 / 1"
+                    />
+                </Box>
+                <Box mr={[2]}>
+                    <Image
+                        src="https://picsum.photos/seed/6/200"
+                        aspect="1 / 1"
+                    />
+                </Box>
+                <Box mr={[2]}>
+                    <Image
+                        src="https://picsum.photos/seed/7/200"
+                        aspect="1 / 1"
+                    />
+                </Box>
+                <Box mr={[2]}>
+                    <Image
+                        src="https://picsum.photos/seed/8/200"
+                        aspect="1 / 1"
+                    />
+                </Box>
+            </Carousel>
+        </ThemeProvider>
+    </Story>
+</Preview>

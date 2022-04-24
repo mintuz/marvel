@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { Accordion, AccordionItem, Text, ThemeProvider } from '@mintuz/marvel'
+import { Accordion, AccordionItem, Text } from '@mintuz/marvel'
 
 <Meta title="Components/Accordion" component={Accordion} />
 
@@ -9,25 +9,23 @@ An accordion allows a user to toggle the display of a section of content. An Acc
 
 <Preview>
     <Story name="Default">
-        <ThemeProvider>
-            <Accordion>
-                <AccordionItem id="item-1" header={<div>Item One</div>}>
-                    <Text as="p" mt={0} mb={0}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Optio nemo odit temporibus illo quo eos ipsum atque!
-                        Distinctio, vel tempora placeat quasi voluptatibus
-                        aperiam ad adipisci iste deserunt illo voluptas.
-                    </Text>
-                </AccordionItem>
-                <AccordionItem id="item-2" header={<div>Item One</div>}>
-                    <Text as="p" mb={0}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Optio nemo odit temporibus illo quo eos ipsum atque!
-                        Distinctio, vel tempora placeat quasi voluptatibus
-                        aperiam ad adipisci iste deserunt illo voluptas.
-                    </Text>
-                </AccordionItem>
-            </Accordion>
-        </ThemeProvider>
+        <Accordion>
+            <AccordionItem id="item-1" header={<div>Item One</div>}>
+                <Text as="p" mt={0} mb={0}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Optio nemo odit temporibus illo quo eos ipsum atque!
+                    Distinctio, vel tempora placeat quasi voluptatibus aperiam
+                    ad adipisci iste deserunt illo voluptas.
+                </Text>
+            </AccordionItem>
+            <AccordionItem id="item-2" header={<div>Item One</div>}>
+                <Text as="p" mb={0}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Optio nemo odit temporibus illo quo eos ipsum atque!
+                    Distinctio, vel tempora placeat quasi voluptatibus aperiam
+                    ad adipisci iste deserunt illo voluptas.
+                </Text>
+            </AccordionItem>
+        </Accordion>
     </Story>
 </Preview>

@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
-import { ThemeProvider, Checkbox } from '@mintuz/marvel'
+import { Checkbox } from '@mintuz/marvel'
 
 <Meta title="4. Form/Checkbox" component={Checkbox} />
 
@@ -15,9 +15,7 @@ import { ThemeProvider, Checkbox } from '@mintuz/marvel'
 
 <Preview>
     <Story name="Default">
-        <ThemeProvider>
-            <Checkbox label={'Checkbox Label'} />
-        </ThemeProvider>
+        <Checkbox label={'Checkbox Label'} />
     </Story>
 </Preview>
 
@@ -25,9 +23,7 @@ import { ThemeProvider, Checkbox } from '@mintuz/marvel'
 
 <Preview>
     <Story name="Disabled">
-        <ThemeProvider>
-            <Checkbox disabled label={'Checkbox Label'} />
-        </ThemeProvider>
+        <Checkbox disabled label={'Checkbox Label'} />
     </Story>
 </Preview>
 
@@ -35,8 +31,6 @@ import { ThemeProvider, Checkbox } from '@mintuz/marvel'
 
 <Preview>
     <Story name="Checked">
-        <ThemeProvider>
-            <Checkbox checked label={'Checkbox Label'} />
-        </ThemeProvider>
+        <Checkbox checked label={'Checkbox Label'} />
     </Story>
 </Preview>

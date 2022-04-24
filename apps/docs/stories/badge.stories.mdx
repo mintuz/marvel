@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
-import { Badge, ThemeProvider } from '@mintuz/marvel'
+import { Badge } from '@mintuz/marvel'
 
 <Meta title="Components/Badge" component={Badge} />
 
@@ -15,8 +15,6 @@ The Badge component is used to bring attention something to a user.
 
 <Preview>
     <Story name="Default">
-        <ThemeProvider>
-            <Badge variant="primary">My badge</Badge>
-        </ThemeProvider>
+        <Badge variant="primary">My badge</Badge>
     </Story>
 </Preview>

@@ -4,7 +4,6 @@ import {
     DataItemTitle,
     DataItemDescription,
     DataItemDescriptions,
-    ThemeProvider,
 } from '@mintuz/marvel'
 
 <Meta title="Components/DataList" component={DataList} />
@@ -17,16 +16,13 @@ Renders a description list element with some simple styling.
 
 <Preview>
     <Story name="Default">
-        <ThemeProvider>
-            <DataList>
-                <DataItemTitle>Firefox</DataItemTitle>
-                <DataItemDescription>
-                    A free, open source, cross-platform, graphical web browser
-                    developed by the Mozilla Corporation and hundreds of
-                    volunteers.
-                </DataItemDescription>
-            </DataList>
-        </ThemeProvider>
+        <DataList>
+            <DataItemTitle>Firefox</DataItemTitle>
+            <DataItemDescription>
+                A free, open source, cross-platform, graphical web browser
+                developed by the Mozilla Corporation and hundreds of volunteers.
+            </DataItemDescription>
+        </DataList>
     </Story>
 </Preview>
 
@@ -34,14 +30,12 @@ Group related descriptions together for a given item.
 
 <Preview>
     <Story name="Grouped">
-        <ThemeProvider>
-            <DataList>
-                <DataItemTitle>Firefox</DataItemTitle>
-                <DataItemDescriptions>
-                    <DataItemDescription>A browser</DataItemDescription>
-                    <DataItemDescription>A red fox</DataItemDescription>
-                </DataItemDescriptions>
-            </DataList>
-        </ThemeProvider>
+        <DataList>
+            <DataItemTitle>Firefox</DataItemTitle>
+            <DataItemDescriptions>
+                <DataItemDescription>A browser</DataItemDescription>
+                <DataItemDescription>A red fox</DataItemDescription>
+            </DataItemDescriptions>
+        </DataList>
     </Story>
 </Preview>

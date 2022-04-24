@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
-import { Box, ThemeProvider } from '@mintuz/marvel'
+import { Box } from '@mintuz/marvel'
 
 <Meta title="Objects/Box" component={Box} />
 
@@ -17,10 +17,8 @@ It adopts several properties defined in [styled-system](https://styled-system.co
 
 <Preview>
     <Story name="Default">
-        <ThemeProvider>
-            <Box bg="grey" p={4}>
-                Just an example of what box can do.
-            </Box>
-        </ThemeProvider>
+        <Box bg="grey" p={4}>
+            Just an example of what box can do.
+        </Box>
     </Story>
 </Preview>

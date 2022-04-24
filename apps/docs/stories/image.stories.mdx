@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
-import { ThemeProvider, Image } from '@mintuz/marvel'
+import { Image } from '@mintuz/marvel'
 
 <Meta title="Components/Image" component={Image} />
 
@@ -17,13 +17,11 @@ Simple image with reserved space
 
 <Preview>
     <Story name="Default">
-        <ThemeProvider>
-            <Image
-                src="https://github.com/mintuz.png"
-                alt="My alt text"
-                loading="lazy"
-                aspect="1 / 1"
-            />
-        </ThemeProvider>
+        <Image
+            src="https://github.com/mintuz.png"
+            alt="My alt text"
+            loading="lazy"
+            aspect="1 / 1"
+        />
     </Story>
 </Preview>

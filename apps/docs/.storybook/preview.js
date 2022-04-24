@@ -1,3 +1,13 @@
+import { ThemeProvider } from '@mintuz/marvel'
+
+export const decorators = [
+    (Story) => (
+        <ThemeProvider>
+            <Story />
+        </ThemeProvider>
+    ),
+]
+
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {

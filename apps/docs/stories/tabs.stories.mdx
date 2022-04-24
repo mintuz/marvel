@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { Tabs, Tab, ThemeProvider, Text } from '@mintuz/marvel'
+import { Tabs, Tab, Text } from '@mintuz/marvel'
 
 <Meta title="Components/Tabs" component={Tabs} />
 
@@ -11,72 +11,70 @@ Note, only one instance of a tab component should exist on a page.
 
 <Preview>
     <Story name="Default">
-        <ThemeProvider>
-            <Tabs activeTab="item2">
-                <Tab title="Item 1" id="item1">
-                    <Text variant="displayTwo" mt={0} as="h2">
-                        Item 1 html
-                    </Text>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sint culpa cupiditate sed repellendus accusantium saepe
-                        numquam dolores fugiat. Similique nesciunt placeat odit
-                        possimus natus quo eos assumenda porro ex reprehenderit
-                        sed aliquid nostrum vero, at ut deserunt quas distinctio
-                        obcaecati itaque quia nulla. Eius sequi amet veritatis
-                        ipsa aliquam quibusdam architecto perspiciatis dolorem
-                        molestiae est, aspernatur laboriosam. Commodi numquam
-                        incidunt, necessitatibus sint, neque quos rem aperiam
-                        enim, ab ipsa tempore saepe. Explicabo quam vero, veniam
-                        dicta aspernatur, excepturi ullam repellendus
-                        voluptatibus unde quibusdam perspiciatis minus. Ex nisi
-                        quia nemo tenetur repudiandae quasi, vero dignissimos
-                        aut aperiam temporibus, natus eos quis.
-                    </p>
-                </Tab>
-                <Tab title="Item 2" id="item2">
-                    <Text variant="displayTwo" mt={0} as="h2">
-                        Item 2 html
-                    </Text>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sint culpa cupiditate sed repellendus accusantium saepe
-                        numquam dolores fugiat. Similique nesciunt placeat odit
-                        possimus natus quo eos assumenda porro ex reprehenderit
-                        sed aliquid nostrum vero, at ut deserunt quas distinctio
-                        obcaecati itaque quia nulla. Eius sequi amet veritatis
-                        ipsa aliquam quibusdam architecto perspiciatis dolorem
-                        molestiae est, aspernatur laboriosam. Commodi numquam
-                        incidunt, necessitatibus sint, neque quos rem aperiam
-                        enim, ab ipsa tempore saepe. Explicabo quam vero, veniam
-                        dicta aspernatur, excepturi ullam repellendus
-                        voluptatibus unde quibusdam perspiciatis minus. Ex nisi
-                        quia nemo tenetur repudiandae quasi, vero dignissimos
-                        aut aperiam temporibus, natus eos quis.
-                    </p>
-                </Tab>
-                <Tab title="Item 3" id="item3">
-                    <Text variant="displayTwo" mt={0} as="h2">
-                        Item 3 html
-                    </Text>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sint culpa cupiditate sed repellendus accusantium saepe
-                        numquam dolores fugiat. Similique nesciunt placeat odit
-                        possimus natus quo eos assumenda porro ex reprehenderit
-                        sed aliquid nostrum vero, at ut deserunt quas distinctio
-                        obcaecati itaque quia nulla. Eius sequi amet veritatis
-                        ipsa aliquam quibusdam architecto perspiciatis dolorem
-                        molestiae est, aspernatur laboriosam. Commodi numquam
-                        incidunt, necessitatibus sint, neque quos rem aperiam
-                        enim, ab ipsa tempore saepe. Explicabo quam vero, veniam
-                        dicta aspernatur, excepturi ullam repellendus
-                        voluptatibus unde quibusdam perspiciatis minus. Ex nisi
-                        quia nemo tenetur repudiandae quasi, vero dignissimos
-                        aut aperiam temporibus, natus eos quis.
-                    </p>
-                </Tab>
-            </Tabs>
-        </ThemeProvider>
+        <Tabs activeTab="item2">
+            <Tab title="Item 1" id="item1">
+                <Text variant="displayTwo" mt={0} as="h2">
+                    Item 1 html
+                </Text>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sint culpa cupiditate sed repellendus accusantium saepe
+                    numquam dolores fugiat. Similique nesciunt placeat odit
+                    possimus natus quo eos assumenda porro ex reprehenderit sed
+                    aliquid nostrum vero, at ut deserunt quas distinctio
+                    obcaecati itaque quia nulla. Eius sequi amet veritatis ipsa
+                    aliquam quibusdam architecto perspiciatis dolorem molestiae
+                    est, aspernatur laboriosam. Commodi numquam incidunt,
+                    necessitatibus sint, neque quos rem aperiam enim, ab ipsa
+                    tempore saepe. Explicabo quam vero, veniam dicta aspernatur,
+                    excepturi ullam repellendus voluptatibus unde quibusdam
+                    perspiciatis minus. Ex nisi quia nemo tenetur repudiandae
+                    quasi, vero dignissimos aut aperiam temporibus, natus eos
+                    quis.
+                </p>
+            </Tab>
+            <Tab title="Item 2" id="item2">
+                <Text variant="displayTwo" mt={0} as="h2">
+                    Item 2 html
+                </Text>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sint culpa cupiditate sed repellendus accusantium saepe
+                    numquam dolores fugiat. Similique nesciunt placeat odit
+                    possimus natus quo eos assumenda porro ex reprehenderit sed
+                    aliquid nostrum vero, at ut deserunt quas distinctio
+                    obcaecati itaque quia nulla. Eius sequi amet veritatis ipsa
+                    aliquam quibusdam architecto perspiciatis dolorem molestiae
+                    est, aspernatur laboriosam. Commodi numquam incidunt,
+                    necessitatibus sint, neque quos rem aperiam enim, ab ipsa
+                    tempore saepe. Explicabo quam vero, veniam dicta aspernatur,
+                    excepturi ullam repellendus voluptatibus unde quibusdam
+                    perspiciatis minus. Ex nisi quia nemo tenetur repudiandae
+                    quasi, vero dignissimos aut aperiam temporibus, natus eos
+                    quis.
+                </p>
+            </Tab>
+            <Tab title="Item 3" id="item3">
+                <Text variant="displayTwo" mt={0} as="h2">
+                    Item 3 html
+                </Text>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sint culpa cupiditate sed repellendus accusantium saepe
+                    numquam dolores fugiat. Similique nesciunt placeat odit
+                    possimus natus quo eos assumenda porro ex reprehenderit sed
+                    aliquid nostrum vero, at ut deserunt quas distinctio
+                    obcaecati itaque quia nulla. Eius sequi amet veritatis ipsa
+                    aliquam quibusdam architecto perspiciatis dolorem molestiae
+                    est, aspernatur laboriosam. Commodi numquam incidunt,
+                    necessitatibus sint, neque quos rem aperiam enim, ab ipsa
+                    tempore saepe. Explicabo quam vero, veniam dicta aspernatur,
+                    excepturi ullam repellendus voluptatibus unde quibusdam
+                    perspiciatis minus. Ex nisi quia nemo tenetur repudiandae
+                    quasi, vero dignissimos aut aperiam temporibus, natus eos
+                    quis.
+                </p>
+            </Tab>
+        </Tabs>
     </Story>
 </Preview>

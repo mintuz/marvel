@@ -8,7 +8,6 @@ export {
 export { Box } from './layout/Box'
 export { Grid, GridItem, GridWrap } from './layout/Grid'
 
-export { Carousel, useCarousel } from './carousel'
 export { Checkbox } from './form/Checkbox'
 export { Stepper } from './form/Stepper'
 export { FormGroup } from './form/FormGroup'
