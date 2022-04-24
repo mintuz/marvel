@@ -1,0 +1,23 @@
+{
+    "pipeline": {
+        "build": {
+            "dependsOn": ["^build"],
+            "outputs": ["dist/**", ".next/**", "storybook-static/**"]
+        },
+        "build:watch": {
+            "dependsOn": ["^build:watch"],
+            "outputs": ["dist/**", ".next/**"]
+        },
+        "check:types": {
+            "dependsOn": ["^check:types"],
+            "outputs": [],
+            "cache": false
+        },
+        "lint": {
+            "outputs": []
+        },
+        "dev": {
+            "cache": false
+        }
+    }
+}

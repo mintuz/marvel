@@ -1,0 +1,31 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Accordion, AccordionItem, Text } from '@mintuz/marvel'
+
+<Meta title="Components/Accordion" component={Accordion} />
+
+# Accordion
+
+An accordion allows a user to toggle the display of a section of content. An Accordion should only be used when 2 or more sections of content are to be displayed within the accordion
+
+<Preview>
+    <Story name="Default">
+        <Accordion>
+            <AccordionItem id="item-1" header={<div>Item One</div>}>
+                <Text as="p" mt={0} mb={0}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Optio nemo odit temporibus illo quo eos ipsum atque!
+                    Distinctio, vel tempora placeat quasi voluptatibus aperiam
+                    ad adipisci iste deserunt illo voluptas.
+                </Text>
+            </AccordionItem>
+            <AccordionItem id="item-2" header={<div>Item One</div>}>
+                <Text as="p" mb={0}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Optio nemo odit temporibus illo quo eos ipsum atque!
+                    Distinctio, vel tempora placeat quasi voluptatibus aperiam
+                    ad adipisci iste deserunt illo voluptas.
+                </Text>
+            </AccordionItem>
+        </Accordion>
+    </Story>
+</Preview>

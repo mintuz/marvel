@@ -1,0 +1,24 @@
+{
+    "name": "@mintuz/marvel-docs",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "@mintuz/marvel": "*",
+        "@mintuz/marvel-carousel": "*",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "styled-components": "^5.0.0",
+        "styled-icons": "^10.45.0"
+    },
+    "scripts": {
+        "dev": "start-storybook -p 6006 -s public",
+        "build": "build-storybook --docs -s public"
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^6.4.18",
+        "@storybook/addon-docs": "^6.4.22",
+        "@storybook/addon-essentials": "^6.4.18",
+        "@storybook/addon-links": "^6.4.18",
+        "@storybook/react": "^6.4.18"
+    }
+}

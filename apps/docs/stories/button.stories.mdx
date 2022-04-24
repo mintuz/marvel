@@ -1,0 +1,40 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import { Button } from '@mintuz/marvel'
+
+<Meta title="Components/Button" component={Button} />
+
+# Button
+
+Clickable element to trigger an action on the **current** page.
+
+## Props
+
+<Props of={Button} />
+
+## Examples
+
+Primary action within a context.
+
+<Preview>
+    <Story name="Primary">
+        <Button variant="primary">Primary Button</Button>
+    </Story>
+</Preview>
+
+Secondary action within a context.
+
+<Preview>
+    <Story name="Secondary">
+        <Button variant="secondary">Secondary Button</Button>
+    </Story>
+</Preview>
+
+Full width button
+
+<Preview>
+    <Story name="Full Width">
+        <Button width={[1 / 1]} variant="secondary">
+            Full width button
+        </Button>
+    </Story>
+</Preview>

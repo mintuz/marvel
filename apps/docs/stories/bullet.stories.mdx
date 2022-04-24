@@ -1,0 +1,83 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import { Bullet, Icon } from '@mintuz/marvel'
+
+<Meta title="Objects/Bullet" component={Bullet} />
+
+# Bullet
+
+The bullet is used to align an SVG icon with some text, similar to how a bulletpoint has the icon and the text
+
+By default the icon will align top to the text.
+
+## Props
+
+<Props of={Bullet} />
+
+## Examples
+
+<Preview>
+    <Story name="Default">
+        <Bullet>
+            <Icon>
+                <svg viewBox="0 0 128 128">
+                    <path
+                        d="M52 102a8 8 0 01-5.7-2.3l-28-28a8 8 0 0111.4-11.4L52 82.7l46.3-46.4a8 8 0 0111.4 11.4l-52 52A8 8 0 0152 102z"
+                        fillRule="evenodd"
+                    />
+                </svg>
+            </Icon>
+            <span>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Obcaecati, laborum. Natus ducimus eligendi earum id totam animi
+                voluptatum sint debitis! Totam fuga nostrum quis dolorem dolores
+                officia dolor, voluptates minima.
+            </span>
+        </Bullet>
+    </Story>
+</Preview>
+
+Align icon so that it is center to the text.
+
+<Preview>
+    <Story name="Middle">
+        <Bullet alignment="middle">
+            <Icon>
+                <svg viewBox="0 0 128 128">
+                    <path
+                        d="M52 102a8 8 0 01-5.7-2.3l-28-28a8 8 0 0111.4-11.4L52 82.7l46.3-46.4a8 8 0 0111.4 11.4l-52 52A8 8 0 0152 102z"
+                        fillRule="evenodd"
+                    />
+                </svg>
+            </Icon>
+            <span>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Obcaecati, laborum. Natus ducimus eligendi earum id totam animi
+                voluptatum sint debitis! Totam fuga nostrum quis dolorem dolores
+                officia dolor, voluptates minima.
+            </span>
+        </Bullet>
+    </Story>
+</Preview>
+
+Align icon so that it is aligned bottom to the text.
+
+<Preview>
+    <Story name="Bottom">
+        <Bullet alignment="bottom">
+            <Icon>
+                <svg viewBox="0 0 128 128">
+                    <path
+                        d="M52 102a8 8 0 01-5.7-2.3l-28-28a8 8 0 0111.4-11.4L52 82.7l46.3-46.4a8 8 0 0111.4 11.4l-52 52A8 8 0 0152 102z"
+                        fillRule="evenodd"
+                    />
+                </svg>
+            </Icon>
+            <span>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Obcaecati, laborum. Natus ducimus eligendi earum id totam animi
+                voluptatum sint debitis! Totam fuga nostrum quis dolorem dolores
+                officia dolor, voluptates minima.
+            </span>
+        </Bullet>
+    </Story>
+</Preview>

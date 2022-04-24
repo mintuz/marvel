@@ -1,0 +1,38 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import { AccountCircle } from 'styled-icons/material'
+import { Icon } from '@mintuz/marvel'
+
+<Meta title="Objects/Icon" component={Icon} />
+
+# Icon
+
+## Props
+
+<Props of={Icon} />
+
+## Examples
+
+You can provide your own SVG as a child of Icon
+
+<Preview>
+    <Story name="Provide own SVG">
+        <Icon width="32px" height="32px">
+            <svg viewBox="0 0 128 128">
+                <path
+                    d="M52 102a8 8 0 01-5.7-2.3l-28-28a8 8 0 0111.4-11.4L52 82.7l46.3-46.4a8 8 0 0111.4 11.4l-52 52A8 8 0 0152 102z"
+                    fillRule="evenodd"
+                />
+            </svg>
+        </Icon>
+    </Story>
+</Preview>
+
+Icon also supports [Styled Icons](https://styled-icons.js.org/)
+
+<Preview>
+    <Story name="Use Styled Icons">
+        <Icon width="32px" height="32px">
+            <AccountCircle />
+        </Icon>
+    </Story>
+</Preview>

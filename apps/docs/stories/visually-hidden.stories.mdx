@@ -1,0 +1,20 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import { VisuallyHidden } from '@mintuz/marvel'
+
+<Meta title="Components/VisuallyHidden" component={VisuallyHidden} />
+
+# VisuallyHidden
+
+VisuallyHidden is a component to visually hide an element but still be visible to screen readers.
+
+## Props
+
+<Props of={VisuallyHidden} />
+
+## Examples
+
+<Preview>
+    <Story name="Default">
+        <VisuallyHidden as="span">Hidden Text</VisuallyHidden>
+    </Story>
+</Preview>

@@ -1,0 +1,41 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import {
+    DataList,
+    DataItemTitle,
+    DataItemDescription,
+    DataItemDescriptions,
+} from '@mintuz/marvel'
+
+<Meta title="Components/DataList" component={DataList} />
+
+# DataList
+
+Renders a description list element with some simple styling.
+
+## Examples
+
+<Preview>
+    <Story name="Default">
+        <DataList>
+            <DataItemTitle>Firefox</DataItemTitle>
+            <DataItemDescription>
+                A free, open source, cross-platform, graphical web browser
+                developed by the Mozilla Corporation and hundreds of volunteers.
+            </DataItemDescription>
+        </DataList>
+    </Story>
+</Preview>
+
+Group related descriptions together for a given item.
+
+<Preview>
+    <Story name="Grouped">
+        <DataList>
+            <DataItemTitle>Firefox</DataItemTitle>
+            <DataItemDescriptions>
+                <DataItemDescription>A browser</DataItemDescription>
+                <DataItemDescription>A red fox</DataItemDescription>
+            </DataItemDescriptions>
+        </DataList>
+    </Story>
+</Preview>

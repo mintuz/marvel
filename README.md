@@ -1,10 +1,10 @@
-# Marvel UI
+# Marvel
 
 [![Version](https://img.shields.io/npm/v/@mintuz/marvel)](https://www.npmjs.com/package/@mintuz/marvel)
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/@mintuz/marvel)](https://bundlephobia.com/result?p=@mintuz/marvel)
 ![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/@mintuz/marvel)
 
-Marvel UI is a component library that aims to be fully accessible and customizable for your project.
+Marvel is a component library that aims to be fully accessible and customizable for your project.
 
 ## Getting Started
 

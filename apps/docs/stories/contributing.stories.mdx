@@ -1,0 +1,150 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Marvel/Contributing" />
+
+# Contributing
+
+So you want to contribute to Marvel? great it’s actually one of the core principles `Everyone owns the system`
+
+Before you jump in and start writing code, please take a moment to read the guidelines and setup, it’ll help avoid friction when it comes to getting your change merged into the system.
+
+## Choosing what to do.
+
+Contributing to Marvel can be done in two ways, either raising an issue or writing some code.
+
+### Raising an issue
+
+Before writing a single line of code, it’s important to raise an issue so that it can be discussed between core developers and the community. It will save you wasting time and it’ll also make sure, what you write is beneficial to everyone using Marvel.
+
+Issues can be categorised as the following
+
+-   `Bug` - Something unexpected or not working as documented.
+-   `Enhancement` - A new component or new functionality of a current component.
+-   `Meta` - Update to documentation or build process.
+-   `Question` - Questions about Marvel usage
+
+Issues can also have secondary categories and they include the following.
+
+-   `Support Required` - Would like some support from a core developer.
+-   `First Issue` - An issue where a newcomer to Marvel can contribute.
+
+### Writing Code
+
+Take a look at the issues tab on Github and pick something that interests you. If it’s your first time contributing to Marvel, it might be worth picking a `First Issue`.
+
+## Setup
+
+Clone the repository onto your machine
+
+`git clone https://github.com/mintuz/marvel.git`
+
+Then install your dependencies using yarn
+
+`yarn`
+
+A few commands have been written to get you started
+
+-   `yarn storybook` - Build and run the storybook instance
+-   `yarn build` - Compiles the code
+-   `yarn test` Runs unit and UI automation tests.
+
+## Architecture
+
+Every Object, Component, Layout and Utility must be
+
+-   Documented
+-   Responsive
+-   Accessible
+-   Work cross-browser
+-   Pass all tests
+
+### Objects
+
+Objects are React components without theming. For example `Bullet`, `Icon`, and `Horionzontal List`.
+
+-   An object always touches all four sides of its parent container.
+-   An object itself never has widths floats or margins applied to itself.
+-   Objects accept children to allow for composition.
+-   An object does not applying theming attributes such as background colour or borders to itself or child elements.
+-   All objects are title cased for example `Bullet`, `Icon` or `HoriozontalList`
+-   Every object needs a story written using Storybook DocPage MDX syntax.
+
+### Components
+
+Components are React components that can be composed of smaller Objects with the ability to be themed, For example `Accordion`, `Tabs` and `Button`
+
+-   A component always touches all four sides of its parent container.
+-   A component itself never has widths floats or margins applied to itself.
+-   A Component can accept children to allow for composition.
+-   All components are title cased for example `Button`, `Accordion` or `FieldInput`
+-   Every component needs a story written using Storybook DocPage MDX syntax.
+
+### Theming
+
+Theming is powered by a dependency called [Styled System](https://styled-system.com/).
+
+When a component has multiple variants such as the `Button` component having primary and secondary variants, please make use of the `variant()` function provided by styled-system. It’ll expose a prop on the components API called `variant`
+
+```
+// Theme
+const theme = {
+	myKey: {
+		primary: {
+			backgroundColor: 'black',
+		}
+	}
+};
+
+
+// Component creation
+const Component = styled.div
+	position: relative;
+	${variant({scale: 'myKey'})}
+`;
+
+// Component usage
+<Component variant="primary" />
+```
+
+When you want to access the theme values, use the `css()` function provided by styled-system.
+
+```
+// Theme
+const theme = {
+	space: [0, 4, 8, 12, 16, 24],
+};
+
+
+// Component creation
+const Component = styled.div`
+	${css({
+		marginLeft: [2], /* 8px from the theme */
+	})}
+`;
+
+// Component usage
+<Component />
+```
+
+## Testing
+
+Every public facing Component should have a form of test around it. React Testing Library is the choice of framework used for testing as it allows you to test your code as two different types of users, the developer consuming the component and the end user on your website.
+
+Where possible, implementation details should not be tested and mocks should be used sparsely.
+
+In cases where implementation details would be tested to make the test possible, please look into alternative methods. For example, the Carousel component is tested using Cypress.io because creating a unit test in Jest would require mocking out the browser APIs.
+
+## Pull Request
+
+So you’ve written some code and followed the guidelines, the next step is opening a Pull Request (PR for short).
+
+When you open a Pull Request, the description will be pre-populated with a description template, Please fill out the necessary details as it’ll make it easier for the reviewer to understand what changes were carried out. It’s also a chance for you to check your code before submitting it as it’ll prompt you to make sure certain tasks have been carried out such as `package.json` version bumping.
+
+Even if the reviewer is happy with the changes made, your pull request may not be merged straight away. Certain quality gates have been setup and all pull requests need a green tick and passing build before the code will be merged.
+
+## Whats happens next
+
+Once the code is merged into master, two things will happen.
+
+1. The documentation will be updated and published using the stories you created within Storybook.
+2. A new version of the system package will be created and published to the NPM registry.

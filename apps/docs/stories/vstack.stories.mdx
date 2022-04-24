@@ -1,0 +1,50 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import { VStack, VStackEnd, Box } from '@mintuz/marvel'
+
+<Meta title="Objects/VStack" component={VStack} />
+
+# VStack
+
+VStack is a container component to space child components consistently across pages.
+
+## Props
+
+<Props of={VStack} />
+
+## Examples
+
+### Default Behaviour
+
+<Preview>
+    <Story name="Default">
+        <VStack>
+            <span>Line One</span>
+            <span>Line Two</span>
+            <span>Line Three</span>
+        </VStack>
+    </Story>
+</Preview>
+
+### Change Spacing
+
+<Preview>
+    <Story name="Change Spacing">
+        <VStack spacing={2}>
+            <span>Line One</span>
+            <span>Line Two</span>
+            <span>Line Three</span>
+        </VStack>
+    </Story>
+</Preview>
+
+### Push Component To End
+
+<Preview>
+    <Story name="Push component to end">
+        <VStack height="250px">
+            <span>Line One</span>
+            <span>Line Two</span>
+            <VStackEnd>Line Three</VStackEnd>
+        </VStack>
+    </Story>
+</Preview>

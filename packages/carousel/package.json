@@ -1,0 +1,40 @@
+{
+    "name": "@mintuz/marvel-carousel",
+    "version": "1.0.0",
+    "description": "A standalone carousel",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "scripts": {
+        "check:types": "tsc --project tsconfig.json --noEmit",
+        "check:types:watch": "yarn check-types -- --watch",
+        "prettier": "prettier",
+        "rollup": "rollup -c",
+        "build:types": "tsc --project tsconfig.json --declaration --emitDeclarationOnly --outDir dist",
+        "build": "yarn rollup && yarn build:types",
+        "build:watch": "rollup -c -w",
+        "lint": "eslint ./src --fix"
+    },
+    "author": "Adam Bulmer <github@mintuz.com>",
+    "license": "MIT",
+    "peerDependencies": {
+        "react": "16 - 18",
+        "react-dom": "16 - 18",
+        "styled-components": "^5.0.0"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@mintuz/marvel-tsconfig": "*",
+        "@mintuz/marvel-eslint-preset": "*",
+        "@rollup/plugin-commonjs": "^21.1.0",
+        "@rollup/plugin-node-resolve": "^13.2.1",
+        "@rollup/plugin-typescript": "^8.3.2",
+        "@types/styled-components": "^5.1.25",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "rollup": "^2.70.2",
+        "styled-components": "^5.3.5",
+        "ts-loader": "^9.2.8",
+        "tslib": "^2.4.0",
+        "typescript": "^4.6.3"
+    }
+}
