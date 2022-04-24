@@ -15,5 +15,5 @@ Marvel is a component library that aims to be fully accessible and customizable 
 
 1. `yarn install`
 2. `yarn build`
-3. `yarn storybook`
+3. `yarn dev`
 4. `yarn test`
