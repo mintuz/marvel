@@ -24,6 +24,7 @@ const StyledAccordionHeader = styled(RadixAccordion.AccordionHeader)``
 const StyledAccordionButton = styled(RadixAccordion.AccordionTrigger)`
     width: 100%;
     background-color: ${colorValue('accordionButtonBackgroundColor')};
+    color: ${colorValue('accordionButtonForegroundColor')};
     border: none;
     ${css({
         fontSize: [1],
@@ -55,9 +56,11 @@ const StyledAccordionChevron = styled(KeyboardArrowDown)`
 const StyledAccordionContent = styled(RadixAccordion.Content)`
     ${css({ padding: [4] })}
     background-color: ${colorValue('accordionContentBackgroundColor')};
+    color: ${colorValue('accordionContentForegroundColor')};
 `
 
 type AccordionProps = {
+    /** Allow singluar or multiple AccordionItems to be open. */
     type?: 'single' | 'multiple'
     collapsible?: boolean
     disabled?: boolean
@@ -65,8 +68,11 @@ type AccordionProps = {
 }
 
 type AccordionItemProps = {
+    /** Required ID for initial Accordion Items */
     id: string
+    /** Component to render within the AccordionItem button. */
     header: ReactElement
+    /** Content to render within the Accordion Item */
     children: React.ReactElement
 }
 

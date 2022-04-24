@@ -14,10 +14,10 @@ const DataItem = styled.div`
     })}
 
     & + & {
-        border-top: 1px solid;
+        border-top: 2px solid;
 
         ${css({
-            borderColor: 'grey',
+            borderColor: 'defaultBorderColor',
         })}
     }
 `

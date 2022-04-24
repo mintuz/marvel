@@ -1,7 +1,7 @@
 {
     "name": "@mintuz/marvel-theme",
     "version": "1.0.0",
-    "description": "Theme Helpers for Marvel UI",
+    "description": "Theme Helpers for Marvel",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
     "scripts": {

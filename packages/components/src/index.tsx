@@ -6,6 +6,9 @@ export {
 } from '@mintuz/marvel-theme'
 
 export { Box } from './layout/Box'
+export { VStack, VStackEnd } from './layout/VStack'
+export { Cluster } from './layout/Cluster'
+export { Ladder } from './layout/Ladder'
 export { Grid, GridItem, GridWrap } from './layout/Grid'
 
 export { Checkbox } from './form/Checkbox'
@@ -22,6 +25,8 @@ export {
     DataItemDescription,
     DataItemDescriptions,
 } from './DataList'
+
+export { VisuallyHidden } from './VisuallyHidden'
 export { Button } from './Button'
 export { HorizontalList } from './HorizontalList'
 export { Icon } from './Icon'

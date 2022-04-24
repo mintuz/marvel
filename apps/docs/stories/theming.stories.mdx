@@ -1,0 +1,46 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import { defaultTheme } from '@mintuz/marvel'
+import { ColorGrid } from '../components/ColorGrid'
+
+<Meta title="Foundations/Theming" component={ColorGrid} />
+
+# Theming
+
+Marvel provides a `<ThemeProvider>` component that is required to render components properly. When a `theme` object is not supplied, a default theme will be applied.
+
+## Default Theme Colors
+
+<Preview>
+    <Story name="Default">
+        <ColorGrid theme={defaultTheme} />
+    </Story>
+</Preview>
+
+## Accessing the Theme
+
+Their are several ways to access the theme object.
+
+### Shorthand Theme Access
+
+```
+import styled from 'styled-components'
+import { colorValue, typographyValue } from '@mintuz/marvel-theme'
+
+const Component = styled.div`
+    font-size: ${typographyValue('body')};
+    background-color: ${colorValue('accent')};
+`;
+```
+
+### CSS Helper Method
+
+```
+import styled from 'styled-components'
+import { css } from '@mintuz/marvel-theme'
+
+const Component = styled.div`
+    ${css({
+        fontSize: [3]
+    })}
+`;
+```

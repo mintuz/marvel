@@ -13,9 +13,9 @@ type Colors = {
 type Primitives = {
     breakpoints: string[]
     space: number[]
-    fontSizes: number[]
+    fontSizes: string[]
     fontFamily: string
-    lineHeights: number[]
+    lineHeight: number
     fontWeights: number[]
     colors: Colors
 }
