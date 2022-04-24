@@ -15,13 +15,16 @@
         "format": "prettier --write \"**/*.{ts,tsx,md}\""
     },
     "devDependencies": {
+        "eslint": "7.32.0",
         "prettier": "^2.5.1",
-        "turbo": "1.2.5",
-        "eslint": "7.32.0"
+        "turbo": "1.2.5"
     },
     "engines": {
         "npm": ">=7.0.0",
         "node": ">=14.0.0"
     },
-    "packageManager": "yarn@1.22.15"
+    "packageManager": "yarn@1.22.15",
+    "dependencies": {
+        "@changesets/cli": "^2.22.0"
+    }
 }
