@@ -20,14 +20,22 @@ type Primitives = {
     colors: Colors
 }
 
+type TextStyle = {
+    fontSize: string
+    lineHeight?: string
+    fontWeight?: string
+    letterSpacing?: string
+    textTransform?: string
+}
+
 type TextStyles = {
-    caption: string
-    body: string
-    displayOne: string
-    displayTwo: string
-    displayThree: string
-    displayFour: string
-    displayFive: string
+    caption: TextStyle
+    body: TextStyle
+    displayOne: TextStyle
+    displayTwo: TextStyle
+    displayThree: TextStyle
+    displayFour: TextStyle
+    displayFive: TextStyle
 }
 
 type ButtonStyle = {

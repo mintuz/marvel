@@ -50,13 +50,15 @@ export const defaultTheme: Theme = {
         accordionContentForegroundColor: primitives.colors.black,
     },
     typography: {
-        caption: primitives.fontSizes[0],
-        body: primitives.fontSizes[1],
-        displayOne: primitives.fontSizes[5],
-        displayTwo: primitives.fontSizes[4],
-        displayThree: primitives.fontSizes[3],
-        displayFour: primitives.fontSizes[2],
-        displayFive: primitives.fontSizes[2],
+        caption: {
+            fontSize: primitives.fontSizes[0],
+        },
+        body: { fontSize: primitives.fontSizes[1] },
+        displayOne: { fontSize: primitives.fontSizes[5] },
+        displayTwo: { fontSize: primitives.fontSizes[4] },
+        displayThree: { fontSize: primitives.fontSizes[3] },
+        displayFour: { fontSize: primitives.fontSizes[2] },
+        displayFive: { fontSize: primitives.fontSizes[2] },
     },
     button: {
         primary: {
