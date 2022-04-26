@@ -28,7 +28,7 @@ export const Text = styled.p<TextProps>`
     ${layout}
     ${flexbox}
     ${variant({
-        scale: 'textStyle',
+        scale: 'typography',
     })}
 `
 
