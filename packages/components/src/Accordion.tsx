@@ -13,9 +13,8 @@ const StyledAccordion = styled(RadixAccordion.Root)`
 
 const StyledAccordionItem = styled(RadixAccordion.AccordionItem)`
     width: 100%;
-    border-bottom: 2px solid ${colorValue('accordionBorderColor')};
     & + & {
-        border: none;
+        border-top: 2px solid ${colorValue('accordionBorderColor')};
     }
 `
 
