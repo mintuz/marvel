@@ -1,4 +1,4 @@
-import React, { useState, FC, forwardRef } from 'react'
+import React, { useState, FC, forwardRef, InputHTMLAttributes } from 'react'
 import styled from 'styled-components'
 import { css } from '@mintuz/marvel-theme'
 import { Add, Remove } from 'styled-icons/material'
@@ -56,18 +56,18 @@ const Value = styled.div`
 
 const LabelText = styled.label``
 
-export type StepperProps = {
+export type StepperProps = InputHTMLAttributes<HTMLInputElement> & {
     id: string
     label: string
-    incrementBy?: number
-    onChange: (newValue: number) => void
     value: number
+    incrementBy?: number
+    onChange?: (newValue: number) => void
 }
 
 export const Stepper: FC<StepperProps> = forwardRef<
     HTMLInputElement,
     StepperProps
->(({ id, label, incrementBy = 1, onChange, value }, ref) => {
+>(({ id, label, incrementBy = 1, onChange, value, ...inputProps }, ref) => {
     const [internalValue, setValue] = useState<number>(value)
 
     useEffect(() => {
@@ -83,7 +83,7 @@ export const Stepper: FC<StepperProps> = forwardRef<
                         const newValue = internalValue - incrementBy
 
                         setValue(newValue)
-                        onChange(newValue)
+                        onChange && onChange(newValue)
                     }}
                 >
                     <Remove size="1em" />
@@ -94,7 +94,7 @@ export const Stepper: FC<StepperProps> = forwardRef<
                         const newValue = internalValue + incrementBy
 
                         setValue(newValue)
-                        onChange(newValue)
+                        onChange && onChange(newValue)
                     }}
                 >
                     <Add size="1em" />
@@ -103,6 +103,7 @@ export const Stepper: FC<StepperProps> = forwardRef<
                 <Value>{internalValue}</Value>
                 <VisuallyHidden>
                     <input
+                        {...inputProps}
                         id={id}
                         ref={ref}
                         value={`${internalValue}`}
