@@ -104,7 +104,6 @@ export const Stepper: FC<StepperProps> = forwardRef<
                 <VisuallyHidden>
                     <input
                         id={id}
-                        name="test"
                         ref={ref}
                         value={`${internalValue}`}
                         type="number"
