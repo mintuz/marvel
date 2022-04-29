@@ -1,7 +1,9 @@
-import React, { useState, FC } from 'react'
+import React, { useState, FC, forwardRef } from 'react'
 import styled from 'styled-components'
 import { css } from '@mintuz/marvel-theme'
 import { Add, Remove } from 'styled-icons/material'
+import { VisuallyHidden } from '../VisuallyHidden'
+import { useEffect } from 'react'
 
 const StyledStepper = styled.div`
     display: flex;
@@ -55,40 +57,61 @@ const Value = styled.div`
 const LabelText = styled.label``
 
 export type StepperProps = {
-    value: number
+    id: string
     label: string
-    incrementBy: number
+    incrementBy?: number
+    onChange: (newValue: number) => void
+    value: number
 }
 
-export const Stepper: FC<StepperProps> = ({
-    value = 0,
-    label,
-    incrementBy = 1,
-}) => {
-    const [internalValue, setValue] = useState(value)
+export const Stepper: FC<StepperProps> = forwardRef<
+    HTMLInputElement,
+    StepperProps
+>(({ id, label, incrementBy = 1, onChange, value }, ref) => {
+    const [internalValue, setValue] = useState<number>(value)
+
+    useEffect(() => {
+        setValue(value)
+    }, [value])
+
     return (
         <StyledStepper>
-            <LabelText> {label}</LabelText>
+            <LabelText htmlFor={id}>{label}</LabelText>
             <StepperControls>
                 <ButtonMinus
-                    aria-label="Remove"
                     onClick={() => {
-                        setValue(internalValue - incrementBy)
+                        const newValue = internalValue - incrementBy
+
+                        setValue(newValue)
+                        onChange(newValue)
                     }}
                 >
                     <Remove size="1em" />
+                    <VisuallyHidden>Remove</VisuallyHidden>
                 </ButtonMinus>
                 <ButtonPlus
-                    aria-label="Plus"
                     onClick={() => {
-                        setValue(internalValue + incrementBy)
+                        const newValue = internalValue + incrementBy
+
+                        setValue(newValue)
+                        onChange(newValue)
                     }}
                 >
                     <Add size="1em" />
+                    <VisuallyHidden>Add</VisuallyHidden>
                 </ButtonPlus>
                 <Value>{internalValue}</Value>
-                <input type="hidden" value={internalValue} />
+                <VisuallyHidden>
+                    <input
+                        id={id}
+                        name="test"
+                        ref={ref}
+                        value={`${internalValue}`}
+                        type="number"
+                        readOnly
+                    />
+                </VisuallyHidden>
             </StepperControls>
         </StyledStepper>
     )
-}
+})
