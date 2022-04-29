@@ -13,6 +13,11 @@
             "outputs": [],
             "cache": false
         },
+        "test": {
+            "dependsOn": ["^test"],
+            "outputs": [],
+            "cache": false
+        },
         "lint": {
             "outputs": []
         },
