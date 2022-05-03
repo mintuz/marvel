@@ -9,7 +9,7 @@ Marvel is a component library that aims to be fully accessible and customizable 
 ## Getting Started
 
 1. `yarn add @mintuz/marvel react react-dom styled-components --save`
-2. See [documentation](https://mintuz.github.io/marvel/) for importing a specific component
+2. See [documentation](https://marvel.mintuz.com) for importing a specific component
 
 ## Development
 
