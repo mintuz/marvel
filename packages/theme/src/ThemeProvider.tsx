@@ -44,7 +44,6 @@ const ResetStyle = createGlobalStyle`
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
   }
 
   /* Remove list styles on ul, ol elements with a class attribute */
@@ -62,11 +61,6 @@ const ResetStyle = createGlobalStyle`
   img {
     max-width: 100%;
     display: block;
-  }
-
-  /* Natural flow and rhythm in articles by default */
-  article > * + * {
-    margin-top: 1em;
   }
 
   /* Inherit fonts for inputs and buttons */
@@ -102,6 +96,7 @@ const FontFamilyStyle = createGlobalStyle`
   body,
   html {
     font-family: ${themeGet('fontFamily')}
+    line-height: ${themeGet('lineHeight')}
   }
 `
 
