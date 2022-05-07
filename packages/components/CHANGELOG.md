@@ -1,5 +1,11 @@
 # @mintuz/marvel
 
+## 1.1.0
+
+### Minor Changes
+
+- 7edfdc8: Update 1.1.0 : Type issues
+
 ## 1.0.3
 
 ### Patch Changes
