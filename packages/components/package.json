@@ -13,9 +13,9 @@
     "build": "yarn rollup && yarn build:types",
     "build:watch": "rollup -c -w",
     "lint": "eslint ./src --fix",
-    "test": "vitest",
+    "test": "vitest run",
     "test:watch": "vitest watch",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest --coverage"
   },
   "author": "Adam Bulmer <github@mintuz.com>",
   "license": "MIT",
