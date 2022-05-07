@@ -14,7 +14,7 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "release": "yarn test && yarn build && yarn changeset publish"
+    "release": "yarn build && yarn test && yarn changeset publish"
   },
   "devDependencies": {
     "eslint": "7.32.0",
