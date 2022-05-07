@@ -1,11 +1,11 @@
-import styled from 'styled-components'
-import { variant, layout, LayoutProps } from 'styled-system'
-import { css } from '@mintuz/marvel-theme'
-import { ButtonHTMLAttributes } from 'react'
+import styled from 'styled-components';
+import { variant, layout, LayoutProps } from 'styled-system';
+import { css } from '@mintuz/marvel-theme';
+import { ButtonHTMLAttributes } from 'react';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-    variant?: string
-} & LayoutProps
+  variant?: string;
+} & LayoutProps;
 
 export const Button = styled.button<ButtonProps>`
     display: inline-flex;
@@ -17,16 +17,16 @@ export const Button = styled.button<ButtonProps>`
     justify-content: center;
 
     ${css({
-        paddingLeft: [4],
-        paddingRight: [4],
-        paddingTop: [2],
-        paddingBottom: [2],
-        borderRadius: [1],
+      paddingLeft: [4],
+      paddingRight: [4],
+      paddingTop: [2],
+      paddingBottom: [2],
+      borderRadius: [1],
     })}
 
     ${variant({
-        scale: 'button',
+      scale: 'button',
     })}
 
     ${layout}
-`
+`;

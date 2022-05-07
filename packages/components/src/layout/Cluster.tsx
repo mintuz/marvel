@@ -1,25 +1,41 @@
-import styled from 'styled-components'
-import { system, layout, LayoutProps } from 'styled-system'
+import styled from 'styled-components';
+import { system, layout, LayoutProps, variant } from 'styled-system';
 
 type ClusterProps = {
-    /** Spacing unit defined within theme object */
-    spacing: number
-} & LayoutProps
+  /** Spacing unit defined within theme object */
+  spacing: number;
+  /** Horizontal alignment */
+  alignment: 'start' | 'center' | 'end';
+} & LayoutProps;
 
 export const Cluster = styled.div<ClusterProps>`
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
     align-items: center;
     ${system({
-        spacing: {
-            property: 'gap',
-            scale: 'space',
-        },
+      spacing: {
+        property: 'gap',
+        scale: 'space',
+      },
     })}
     ${layout}
-`
+    ${variant({
+      prop: 'alignment',
+      variants: {
+        start: {
+          justifyContent: 'flex-start',
+        },
+        center: {
+          justifyContent: 'center',
+        },
+        end: {
+          justifyContent: 'flex-end',
+        },
+      },
+    })}
+`;
 
 Cluster.defaultProps = {
-    spacing: 4,
-}
+  spacing: 4,
+  alignment: 'start',
+};

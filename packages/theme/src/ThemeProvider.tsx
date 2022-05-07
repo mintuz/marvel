@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 import {
-    ThemeProvider as StyledThemeProvider,
-    createGlobalStyle,
-} from 'styled-components'
-import { themeGet } from './system'
-import { Theme } from './interface'
-import { defaultTheme } from './defaultTheme'
+  ThemeProvider as StyledThemeProvider,
+  createGlobalStyle,
+} from 'styled-components';
+import { themeGet } from './system';
+import { Theme } from './interface';
+import { defaultTheme } from './defaultTheme';
 
 const ResetStyle = createGlobalStyle`
   /* Box sizing rules */
@@ -44,7 +44,6 @@ const ResetStyle = createGlobalStyle`
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
   }
 
   /* Remove list styles on ul, ol elements with a class attribute */
@@ -62,11 +61,6 @@ const ResetStyle = createGlobalStyle`
   img {
     max-width: 100%;
     display: block;
-  }
-
-  /* Natural flow and rhythm in articles by default */
-  article > * + * {
-    margin-top: 1em;
   }
 
   /* Inherit fonts for inputs and buttons */
@@ -96,33 +90,34 @@ const ResetStyle = createGlobalStyle`
       scroll-behavior: auto !important;
     }
   }
-`
+`;
 
 const FontFamilyStyle = createGlobalStyle`
   body,
   html {
     font-family: ${themeGet('fontFamily')}
+    line-height: ${themeGet('lineHeight')}
   }
-`
+`;
 
 export type ThemeProviderProps = {
-    theme: Theme
-    children: React.ReactElement
-}
+  theme: Theme;
+  children: React.ReactElement;
+};
 
 export const ThemeProvider: FC<ThemeProviderProps> = ({
-    children,
-    theme = defaultTheme,
+  children,
+  theme = defaultTheme,
 }) => (
-    <StyledThemeProvider
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        theme={theme}
-    >
-        <>
-            <ResetStyle />
-            <FontFamilyStyle />
-            {children}
-        </>
-    </StyledThemeProvider>
-)
+  <StyledThemeProvider
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    theme={theme}
+  >
+    <>
+      <ResetStyle />
+      <FontFamilyStyle />
+      {children}
+    </>
+  </StyledThemeProvider>
+);
