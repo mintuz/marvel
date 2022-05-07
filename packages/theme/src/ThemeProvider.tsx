@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 import {
-    ThemeProvider as StyledThemeProvider,
-    createGlobalStyle,
-} from 'styled-components'
-import { themeGet } from './system'
-import { Theme } from './interface'
-import { defaultTheme } from './defaultTheme'
+  ThemeProvider as StyledThemeProvider,
+  createGlobalStyle,
+} from 'styled-components';
+import { themeGet } from './system';
+import { Theme } from './interface';
+import { defaultTheme } from './defaultTheme';
 
 const ResetStyle = createGlobalStyle`
   /* Box sizing rules */
@@ -90,7 +90,7 @@ const ResetStyle = createGlobalStyle`
       scroll-behavior: auto !important;
     }
   }
-`
+`;
 
 const FontFamilyStyle = createGlobalStyle`
   body,
@@ -98,26 +98,26 @@ const FontFamilyStyle = createGlobalStyle`
     font-family: ${themeGet('fontFamily')}
     line-height: ${themeGet('lineHeight')}
   }
-`
+`;
 
 export type ThemeProviderProps = {
-    theme: Theme
-    children: React.ReactElement
-}
+  theme: Theme;
+  children: React.ReactElement;
+};
 
 export const ThemeProvider: FC<ThemeProviderProps> = ({
-    children,
-    theme = defaultTheme,
+  children,
+  theme = defaultTheme,
 }) => (
-    <StyledThemeProvider
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        theme={theme}
-    >
-        <>
-            <ResetStyle />
-            <FontFamilyStyle />
-            {children}
-        </>
-    </StyledThemeProvider>
-)
+  <StyledThemeProvider
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    theme={theme}
+  >
+    <>
+      <ResetStyle />
+      <FontFamilyStyle />
+      {children}
+    </>
+  </StyledThemeProvider>
+);

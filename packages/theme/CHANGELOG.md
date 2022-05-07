@@ -4,4 +4,4 @@
 
 ### Patch Changes
 
--   update text style to include overrides for typography
+- update text style to include overrides for typography
